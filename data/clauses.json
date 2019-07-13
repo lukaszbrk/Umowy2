@@ -1,0 +1,85 @@
+{
+  "Clauses": {
+    "Commencement": {
+      "Description_PL": "Nazwa umowy wraz z oznaczeniem czasu i miejsca jej zawarcia",
+      "Description_EN": "The title and introductory clause, which states the type of agreement involved, perhaps the date of the agreement, and the parties to the agreement",
+      "Keywords": "",
+      "Examples": {
+        "0": {
+          "pl": "Niniejsza Umowa Zakupu („Umowa”) zostaje zawarta w dniu ___ roku („Data Wejścia w Życie”) między ___, („___”) i ___ („Dostawca”).",
+          "eng": "This Purchase Agreement (“Agreement”) is entered into on ___ (the “Effective Date”) by and between ___, (“___”) and ___ (“Supplier”).",
+          "keywords": [
+            "enter into",
+            "zawrzeć"
+          ]
+        },
+        "1": {
+          "pl": "___ z siedzibą w ___, o kapitale zakładowym w wysokości ___ złotych, wpisanej do Krajowego Rejestru Sądowego pod numerem KRS ___, NIP ___, REGON ___, zwanym dalej Pracodawcą, reprezentowanym przez:",
+          "eng": "___ with its registered office in ___, with share capital of PLN ___, entered into the National Court Register under number: ___, NIP[Tax ID No.]: ___, REGON [National Business Registry Number]: ___, hereinafter referred to as Employer, represented by:",
+          "keywords": [
+            "National Court Register",
+            "zawrzeć",
+            "Krajowy Rejestr Sądowy",
+            "share capital",
+            "kapitał zakładowy",
+            "REGON",
+            "National Business Registry Number"
+          ]
+        }
+      }
+    },
+    "Recitals": {
+      "Examples": {
+        "0": {
+          "pl": "Nabywca, działający na zlecenie Leasingobiorcy i podpisawszy Umowę Leasingową nr ___, zleca skonstruowanie i nwyraża chęć zakupu Żurawia Portowego Jezdnego (zwanego dalej „Żurawiem”) nopisanego w niniejszej Umowie, a Wykonawca zobowiązuje się do skonstruowania i sprzedaży dla Nabywcy jednego, nowego Żurawia typu ___, zgodnie z postanowieniami niniejszej Umowy. W związku z powyższym strony wspólnie uzgodniły, co następuje:",
+          "eng": "WHEREAS the Purchaser acting on the order of the Lessee and having executed Lease Agreement no. ___, desires to have constructed and to purchase the Mobile Harbor Crane (hereinafter referred to as\n“the Crane”) described herein AND WHEREAS the Contractor engages to construct\nand to sell to the Purchaser one brand new Crane, type ___ in accordance with the provisions of this Contract. THEREFORE the contracting parties mutually agree as follows:",
+          "keywords": [
+            "whereas",
+            "therefore"
+          ]
+        },
+        "1": {
+          "pl": "ZWAŻYWSZY, że ___ zawarł Umowę rejestracyjną z Internet  Corporation for Assigned Names and Numbers („ICANN”) w celu obsługi wspólnego  Systemu Rejestracji, serwerów nazw TLD i innych urządzeń dla domeny  najwyższego poziomu .ORG; ZWAŻYWSZY, że wielu rejestratorów świadczy usługi  rejestracji nazw domen w ramach domeny najwyższego poziomu .ORG; ZWAŻYWSZY, że Rejestrator chce działać jako rejestrator  nazw domen najwyższego poziomu .ORG. W związku z obustronnymi obietnicami, korzyściami i  zobowiązaniami zawartymi w niniejszej Umowie, w zamian za odpowiednie wynagrodzenie, którego odbiór, adekwatność i wystarczalność są niniejszym potwierdzone, ___ i Rejestrator, niniejszym uzgadniają, co następuje:",
+          "eng": "WHEREAS, ___ has entered a Registry Agreement with the Internet Corporation for Assigned Names and Numbers to operate a shared  registration system, TLD nameservers, and other equipment for the .ORG  top-level domain; WHEREAS, multiple registrars provide Internet domain name registration services within the .ORG top-level domain; WHEREAS, Registrar wishes to act as a registrar for domain names within the .ORG top-level domain. NOW, THEREFORE, for and in consideration of the mutual  promises, benefits and covenants contained herein and for other good and  valuable consideration, the receipt, adequacy and sufficiency of which are  hereby acknowledged, ___ and Registrar, intending to be legally bound, hereby agree as follows:",
+          "keywords": [
+            "therefore",
+            "whereas",
+            "covenant",
+            "zobowiązać się",
+            "zważywszy"
+          ]
+        }
+      },
+      "Description_PL": "Przedstawienie okolicznosci poprzedzających zawarcie umowy",
+      "Description_EN": "The recitals to a contract state any background information that the parties regard as relevant.",
+      "Keywords": ""
+    },
+    "Definitions": {
+      "Examples": {
+        "0": {
+          "pl": "Dla celów niniejszej Umowy Partnerstwa, zastosowanie będą miały następujące definicje:",
+          "eng": "For the purposes of this Agreement the terms listed below shall have the following meaning:",
+          "keywords": [
+      
+            "definicje",
+            "terms",
+            "meaning"
+          ]
+        },
+        "1": {
+          "pl": "Terminy użyte w niniejszych Ogólnych Warunkach Umów Najmu (zwanych dalej „Ogólnymi Warunkami”) zawartych pomiędzy ___ (zwaną dalej „Wynajmującym”) i jej klientami (zwanymi dalej „Najemcą”) lub w Umowie mają następujące znaczenie:",
+          "eng": "Definitions in the General Terms of Lease Agreements (hereinafter referred to as “General Terms”) concluded between ___ (hereinafter referred to as “Lessor”) and its clients (hereinafter referred to as “Lessees”) or in the Agreement shall have the following meaning:",
+          "keywords": [
+            "definitions",
+            "definicje",
+            "meaning",
+            "termin"
+          ]
+        }
+      },
+      "Description_PL": "Definicje kluczowych terminöw",
+      "Description_EN": "Defined term makes a contract easier to read by allowing the drafter to use throughout the contract the shorter defined term instead of the longer definition. It also ensures that whatever is defined is expressed consistently throughout the contract ",
+      "Keywords": ""
+    }
+  }
+}
