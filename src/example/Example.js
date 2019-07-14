@@ -1,25 +1,38 @@
-import _ from "lodash";
 import axios from "axios";
 import React, { Component } from "react";
+import { Grid, Header, Segment, Label, List } from "semantic-ui-react";
+import "./Example.css";
 
-import Autosuggest from 'react-autosuggest';
+import Autosuggest from "react-autosuggest";
 
-// Imagine you have a list of languages that you'd like to autosuggest.
-const languages = [
+let source = [
   {
-    name: 'C',
-    year: 1972
+    clause: "Commencement",
+    keywords: [
+      "enter into",
+      "zawrzeć",
+      "National Court Register",
+      "Krajowy Rejestr Sądowy",
+      "share capital",
+      "kapitał zakładowy",
+      "REGON",
+      "National Business Registry Number"
+    ]
   },
   {
-    name: 'Elm',
-    year: 2012
+    clause: "Recitals",
+    keywords: [
+      "therefore",
+      "whereas",
+      "covenant",
+      "zobowiązać się",
+      "zważywszy"
+    ]
   },
-
   {
-    name: 'C++',
-    year: 1989
-  },
-
+    clause: "Definitions",
+    keywords: ["definitions", "definicje", "meaning", "termin", "terms"]
+  }
 ];
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
@@ -27,24 +40,40 @@ const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
 
-  return inputLength === 0 ? languages : languages.filter(lang =>
-    lang.name.toLowerCase().slice(0, inputLength) === inputValue
-  );
+  return inputLength === 0
+    ? source
+    : source.filter(
+        lang => 
+        lang.clause.toLowerCase().includes(inputValue)
+      );
 };
 
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
-const getSuggestionValue = suggestion => "suggestion.name";
+const getSuggestionValue = suggestion => "Selected: " + suggestion.clause;
+
+const onClickLabel = e => {
+  console.log(e.target.className);
+  e.stopPropagation();
+};
 
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
-  <div>
-    {suggestion.name}
-  </div>
+  <Segment>
+    {suggestion.clause}
+
+    <div style={undefined}>
+      {suggestion.keywords.map(keyword => (
+        <Label onClick={onClickLabel} className={keyword} key={keyword}>
+          {keyword}
+        </Label>
+      ))}
+    </div>
+  </Segment>
 );
 
- export default class Example extends React.Component {
+export default class SearchExampleStandard extends Component {
   constructor() {
     super();
 
@@ -54,9 +83,9 @@ const renderSuggestion = suggestion => (
     // Suggestions also need to be provided to the Autosuggest,
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
-      value: '',
-      suggestions: languages,
-      data: ''
+      value: "",
+      suggestions: source,
+      data: ""
     };
   }
 
@@ -80,14 +109,12 @@ const renderSuggestion = suggestion => (
       suggestions: []
     });
   };
+
   componentWillMount() {
     axios
       .get("https://my-json-server.typicode.com/lukaszbrk/clauses/db")
       .then(res => {
-        
-        this.setState(
-          { data: res.data }
-        );
+        this.setState({ data: res.data });
       })
       .catch(err => console.log(err));
   }
@@ -95,25 +122,36 @@ const renderSuggestion = suggestion => (
   render() {
     const { value, suggestions } = this.state;
 
-    // Autosuggest will pass through all these props to the input.
     const inputProps = {
-      placeholder: 'Type a programming language',
+      placeholder: "Type a programming language",
       value,
       onChange: this.onChange
     };
 
     // Finally, render it!
+
     return (
-      <Autosuggest
-      alwaysRenderSuggestions={true}
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-      />
+      <Grid>
+        <Grid.Column width={6}>
+          <Autosuggest
+            alwaysRenderSuggestions={true}
+            suggestions={suggestions}
+            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+            getSuggestionValue={getSuggestionValue}
+            renderSuggestion={renderSuggestion}
+            inputProps={inputProps}
+          />
+        </Grid.Column>
+        <Grid.Column width={10}>
+          <Segment>
+            <Header>State</Header>
+            <pre style={{ overflowX: "auto" }} />
+            <Header>Options</Header>
+            <pre style={{ overflowX: "auto" }} />
+          </Segment>
+        </Grid.Column>
+      </Grid>
     );
   }
 }
-
