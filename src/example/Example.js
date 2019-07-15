@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Grid, Header, Segment, Label, List } from "semantic-ui-react";
+import { Grid, Header, Segment, Label, List, Image } from "semantic-ui-react";
 import "./Example.css";
+
+import lodash from "lodash";
 
 import Autosuggest from "react-autosuggest";
 
@@ -40,12 +42,50 @@ const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
 
-  return inputLength === 0
-    ? source
-    : source.filter(
-        lang => 
-        lang.clause.toLowerCase().includes(inputValue)
-      );
+  function getUnique(arr,comp){
+
+    //store the comparison  values in array
+const unique =  arr.map(e=> e[comp]). 
+  // store the keys of the unique objects
+  map((e,i,final) =>final.indexOf(e) === i && i) 
+  // eliminate the dead keys & return unique objects
+ .filter((e)=> arr[e]).map(e=>arr[e]);
+
+return unique
+
+}
+  
+  let found_clauses = [];
+  let found_keywords = [];
+
+  if (inputLength < 2) {
+
+    return source
+  }
+  else {
+
+
+    source.map(entry=>(entry.keywords).
+    map(keyword=>keyword.toLowerCase().includes(inputValue)? found_keywords.push(entry):{}))
+
+
+    found_clauses = source.filter(lang => lang.clause.toLowerCase().includes(inputValue));
+    //console.log(found_clauses)
+    //console.log(found_keywords)
+
+    const uniq1 = [...new Set(found_clauses)];
+
+    const uniq2 = [...new Set(found_keywords)];
+
+    const all = uniq1.concat( uniq2)
+
+     console.log(uniq1)
+    console.log(uniq2)
+    console.log(uniq1.concat( uniq2))
+    //console.log( {...found_clauses.clause, ...found_keywords.clause})
+    return getUnique(all, 'clause')
+  }
+
 };
 
 // When suggestion is clicked, Autosuggest needs to populate the input
@@ -54,7 +94,7 @@ const getSuggestions = value => {
 const getSuggestionValue = suggestion => "Selected: " + suggestion.clause;
 
 const onClickLabel = e => {
-  console.log(e.target.className);
+  //console.log(e.target.className);
   e.stopPropagation();
 };
 
@@ -145,10 +185,16 @@ export default class SearchExampleStandard extends Component {
         </Grid.Column>
         <Grid.Column width={10}>
           <Segment>
-            <Header>State</Header>
-            <pre style={{ overflowX: "auto" }} />
-            <Header>Options</Header>
-            <pre style={{ overflowX: "auto" }} />
+            <Grid divided="vertically">
+              <Grid.Row columns={2}>
+                <Grid.Column>
+                  <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                </Grid.Column>
+                <Grid.Column>
+                  <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Segment>
         </Grid.Column>
       </Grid>
