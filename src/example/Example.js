@@ -130,7 +130,8 @@ export default class SearchExampleStandard extends Component {
       value: "",
       suggestions: source,
       data: "",
-      selectedClause: ""
+      selectedClause: "",
+      resetPagination:false
     };
   }
 
@@ -159,7 +160,8 @@ export default class SearchExampleStandard extends Component {
   onSuggestionSelected = (e, {suggestionIndex}) => {
     //TODO clicking again returns 0
     console.log(source[suggestionIndex]['clause']);
-    this.setState({value: '', selectedClause: source[suggestionIndex]['clause']}, ()=>this.setState({  suggestions:[source[suggestionIndex]]}))
+    this.setState({value: '', selectedClause: source[suggestionIndex]['clause']}, 
+    ()=>this.setState({  suggestions:[source[suggestionIndex]]}, ()=>{this.setState({resetPagination:true})}))
 
       
   };
@@ -206,6 +208,7 @@ export default class SearchExampleStandard extends Component {
         <Columns 
           data={this.state.data}
           selectedClause={this.state.selectedClause}
+          resetPagination={this.state.resetPagination}
 
         
         />
