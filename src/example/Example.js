@@ -1,11 +1,9 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Grid,  Segment, Label  } from "semantic-ui-react";
+import { Grid, Segment, Label } from "semantic-ui-react";
 import "./Example.css";
 
-import Columns from "./Columns.js"
-
-
+import MainScreen from "./MainScreen.js";
 
 import Autosuggest from "react-autosuggest";
 
@@ -32,7 +30,7 @@ let source = [
       "zobowiązać się",
       "zważywszy"
     ],
-    other: ''
+    other: ""
   },
   {
     clause: "Definitions",
@@ -42,7 +40,6 @@ let source = [
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
 const getSuggestions = value => {
-
   //TODO check every word in the input
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
@@ -80,11 +77,8 @@ const getSuggestions = value => {
     //console.log(found_clauses)
     //console.log(found_keywords)
 
+    const all = found_clauses.concat(found_keywords);
 
-    const all = (found_clauses.concat(found_keywords));
-
-
-   
     //console.log( {...found_clauses.clause, ...found_keywords.clause})
     return getUnique(all, "clause");
   }
@@ -95,28 +89,7 @@ const getSuggestions = value => {
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => "Selected: " + suggestion.clause;
 
-const onClickLabel = e => {
-  //console.log(e.target.className);
-  e.stopPropagation();
-};
-
-
-
-// Use your imagination to render suggestions.
-const renderSuggestion = suggestion => (
-  <Segment>
-    {suggestion.clause}
-
-    <div style={undefined}>
-      {suggestion.keywords.map(keyword => (
-        <Label onClick={onClickLabel} className={keyword} key={keyword}>
-          {keyword}
-        </Label>
-      ))}
-    </div>
-  </Segment>
-);
-
+///state
 export default class SearchExampleStandard extends Component {
   constructor() {
     super();
@@ -130,10 +103,34 @@ export default class SearchExampleStandard extends Component {
       value: "",
       suggestions: source,
       data: "",
-      selectedClause: "",
-      resetPagination:false
+      selectedClause: false, //changed
+      resetPagination: false,
+      keywordSelected: false
     };
   }
+
+  onClickLabel = e => {
+    e.stopPropagation();
+    //console.log((e.target.className).slice(9))
+
+    this.setState({
+      keywordSelected: e.target.className.slice(9)
+    });
+  };
+  // Use your imagination to render suggestions.
+  renderSuggestion = suggestion => (
+    <Segment>
+      {suggestion.clause}
+
+      <div style={undefined}>
+        {suggestion.keywords.map(keyword => (
+          <Label onClick={this.onClickLabel} className={keyword} key={keyword}>
+            {keyword}
+          </Label>
+        ))}
+      </div>
+    </Segment>
+  );
 
   onChange = (event, { newValue }) => {
     this.setState({
@@ -153,17 +150,22 @@ export default class SearchExampleStandard extends Component {
   onSuggestionsClearRequested = () => {
     this.setState({
       suggestions: source,
-      
+      keywordSelected: false
     });
   };
 
-  onSuggestionSelected = (e, {suggestionIndex}) => {
-    //TODO clicking again returns 0
-    console.log(source[suggestionIndex]['clause']);
-    this.setState({value: '', selectedClause: source[suggestionIndex]['clause']}, 
-    ()=>this.setState({  suggestions:[source[suggestionIndex]]}, ()=>{this.setState({resetPagination:true})}))
-
-      
+  onSuggestionSelected = (e, { suggestionValue, suggestionIndex }) => {
+    //TODO clicking again returns 0, keywordselected: false
+    //console.log(suggestionValue.substr(10));
+    this.setState(
+      { value: "", selectedClause: suggestionValue.substr(10) },
+      () =>
+        this.setState({ suggestions: source }, () => {
+          this.setState({ resetPagination: true }, () => {
+            this.setState({ keywordSelected: false });
+          });
+        })
+    );
   };
 
   componentWillMount() {
@@ -193,24 +195,21 @@ export default class SearchExampleStandard extends Component {
             alwaysRenderSuggestions={true}
             suggestions={suggestions}
             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-       
             getSuggestionValue={getSuggestionValue}
-            renderSuggestion={renderSuggestion}
+            renderSuggestion={this.renderSuggestion}
             inputProps={inputProps}
-            onSuggestionsClearRequested = {this.onSuggestionsClearRequested}
-
+            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
             onSuggestionSelected={this.onSuggestionSelected}
             focusInputOnSuggestionClick={false}
             //highlightFirstSuggestion={true}
-         
           />
         </Grid.Column>
-        <Columns 
+        <MainScreen
           data={this.state.data}
           selectedClause={this.state.selectedClause}
           resetPagination={this.state.resetPagination}
-
-        
+          // add https://www.npmjs.com/package/natural via nodejs
+          keywordSelected={this.state.keywordSelected}
         />
       </Grid>
     );
