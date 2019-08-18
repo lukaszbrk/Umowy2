@@ -18,7 +18,9 @@ let source = [
       "share capital",
       "kapitał zakładowy",
       "REGON",
-      "National Business Registry Number"
+      "National Business Registry Number",
+      "test",
+      "test2"
     ]
   },
   {
@@ -34,7 +36,7 @@ let source = [
   },
   {
     clause: "Definitions",
-    keywords: ["definitions", "definicje", "meaning", "termin", "terms"]
+    keywords: ["definitions", "definicje", "meaning", "termin", "terms", "test",  "test2"]
   }
 ];
 
@@ -105,7 +107,7 @@ export default class SearchExampleStandard extends Component {
       data: "",
       selectedClause: false, //changed
       resetPagination: false,
-      keywordSelected: false
+      selectedKeyword: false
     };
   }
 
@@ -114,7 +116,7 @@ export default class SearchExampleStandard extends Component {
     //console.log((e.target.className).slice(9))
 
     this.setState({
-      keywordSelected: e.target.className.slice(9)
+      selectedKeyword: e.target.className.slice(9)
     });
   };
   // Use your imagination to render suggestions.
@@ -150,19 +152,19 @@ export default class SearchExampleStandard extends Component {
   onSuggestionsClearRequested = () => {
     this.setState({
       suggestions: source,
-      keywordSelected: false
+      selectedKeyword: false
     });
   };
 
   onSuggestionSelected = (e, { suggestionValue, suggestionIndex }) => {
-    //TODO clicking again returns 0, keywordselected: false
+    //TODO clicking again returns 0, selectedKeyword: false
     //console.log(suggestionValue.substr(10));
     this.setState(
       { value: "", selectedClause: suggestionValue.substr(10) },
       () =>
         this.setState({ suggestions: source }, () => {
           this.setState({ resetPagination: true }, () => {
-            this.setState({ keywordSelected: false });
+            this.setState({ selectedKeyword: false });
           });
         })
     );
@@ -209,7 +211,7 @@ export default class SearchExampleStandard extends Component {
           selectedClause={this.state.selectedClause}
           resetPagination={this.state.resetPagination}
           // add https://www.npmjs.com/package/natural via nodejs
-          keywordSelected={this.state.keywordSelected}
+          selectedKeyword={this.state.selectedKeyword}
         />
       </Grid>
     );
