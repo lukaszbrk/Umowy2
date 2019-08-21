@@ -2,10 +2,13 @@
 
 import React from "react";
 import { List } from "semantic-ui-react";
+import ColumnsforKeyword from "./ColumnsforKeyword.js";
 
 import { useState, useEffect  } from "react";
 
 const KeywordScreen = ({ data }) => {
+
+  //console.log(data["dataforColumns"]);
 
 
 
@@ -54,6 +57,7 @@ const KeywordScreen = ({ data }) => {
         </List.Item>
       );
     }
+    
 
     //add/replace "old" keyword for state
 
@@ -83,7 +87,7 @@ const KeywordScreen = ({ data }) => {
       */}
 
        {
-      (!ListNumber)? <List divided relaxed>{Test(data)}</List> : <p>Column Screen</p>
+      (!ListNumber)? <List divided relaxed>{Test(data)}</List> : <ColumnsforKeyword data={data}/>
       }
     </div>
   );

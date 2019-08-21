@@ -93,6 +93,8 @@ const getSuggestionValue = suggestion => "Selected: " + suggestion.clause;
 
 ///state
 export default class SearchExampleStandard extends Component {
+
+
   constructor() {
     super();
 
@@ -110,6 +112,8 @@ export default class SearchExampleStandard extends Component {
       selectedKeyword: false
     };
   }
+
+
 
   onClickLabel = e => {
     e.stopPropagation();
@@ -163,9 +167,9 @@ export default class SearchExampleStandard extends Component {
       { value: "", selectedClause: suggestionValue.substr(10) },
       () =>
         this.setState({ suggestions: source }, () => {
-          this.setState({ resetPagination: true }, () => {
+
             this.setState({ selectedKeyword: false });
-          });
+ 
         })
     );
   };
@@ -180,6 +184,8 @@ export default class SearchExampleStandard extends Component {
   }
 
   render() {
+
+    console.log("rendering Example screen")
     const { value, suggestions } = this.state;
 
     const inputProps = {
@@ -209,7 +215,7 @@ export default class SearchExampleStandard extends Component {
         <MainScreen
           data={this.state.data}
           selectedClause={this.state.selectedClause}
-          resetPagination={this.state.resetPagination}
+   
           // add https://www.npmjs.com/package/natural via nodejs
           selectedKeyword={this.state.selectedKeyword}
         />

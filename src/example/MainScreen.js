@@ -8,14 +8,13 @@ import KeywordScreen from "./KeywordScreen.js";
 import ClauseScreen from "./ClauseScreen.js";
 
 const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
-  function dataforColumnsScreen(selectedClause, selectedKeyword) {
+  console.log("rendering Main screen");
+
+  function selectScreen(selectedClause, selectedKeyword) {
     if (selectedKeyword) {
       prepDataforKeywordScreen(data, selectedKeyword);
       return (
-        <KeywordScreen
-          data={prepDataforKeywordScreen(data, selectedKeyword)}
-          selectedKeyword={selectedKeyword}
-        />
+        <KeywordScreen data={prepDataforKeywordScreen(data, selectedKeyword)} />
       );
     } else if (selectedClause) {
       return (
@@ -27,7 +26,9 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
   }
 
   function prepDataforClauseScreen(data, selectedClause) {
-    return data["Clauses"][selectedClause]["Examples"];
+    let _data = data["Clauses"][selectedClause]["Examples"];
+
+    return { _data, selectedClause };
   }
 
   function prepDataforKeywordScreen(data, selectedKeyword) {
@@ -35,7 +36,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
     let dataforColumns = [];
     let _clauseDescription = [];
     let aux = [];
-    let aux2 = {}
+    let aux2 = {};
 
     for (clause in data["Clauses"]) {
       for (example in data["Clauses"][clause]["Examples"]) {
@@ -44,9 +45,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
             selectedKeyword
           )
         ) {
-
           aux2[clause] = aux2[clause] ? aux2[clause] + 1 : 1;
-
 
           dataforColumns.push([
             clause,
@@ -60,14 +59,14 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
             _clauseDescription.push([
               clause,
               data["Clauses"][clause]["Description_PL"],
-              data["Clauses"][clause]["Description_EN"], 0
+              data["Clauses"][clause]["Description_EN"],
+              0
             ]);
 
             aux.push(clause);
 
             //console.log(Object.keys(clause) + " was not found, "+"adding to : "+_clauseDescription)
           }
-       
         }
       }
     }
@@ -84,7 +83,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
         <Divider />
 
         <p>Content: {selectedKeyword}</p>
-        {dataforColumnsScreen(selectedClause, selectedKeyword)}
+        {selectScreen(selectedClause, selectedKeyword)}
       </Segment>
     </Grid.Column>
   );
