@@ -8,9 +8,14 @@ import KeywordScreen from "./KeywordScreen.js";
 import ClauseScreen from "./ClauseScreen.js";
 
 const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
-  console.log("rendering Main screen");
+
+
+  console.log("Rendering Main screen");
+
 
   function selectScreen(selectedClause, selectedKeyword) {
+
+
     if (selectedKeyword) {
       prepDataforKeywordScreen(data, selectedKeyword);
       return (
@@ -30,12 +35,13 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
 
     return { _data, selectedClause };
   }
-
+  //prune?
   function prepDataforKeywordScreen(data, selectedKeyword) {
     let clause, example;
     let dataforColumns = [];
     let _clauseDescription = [];
     let aux = [];
+    // aux2 object: clause + number of examples for a given clause
     let aux2 = {};
 
     for (clause in data["Clauses"]) {
@@ -47,31 +53,31 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
         ) {
           aux2[clause] = aux2[clause] ? aux2[clause] + 1 : 1;
 
-          dataforColumns.push([
-            clause,
+          dataforColumns.push(
+    
             [
               data["Clauses"][clause]["Examples"][example]["pl"],
               data["Clauses"][clause]["Examples"][example]["eng"]
             ]
-          ]);
+          );
 
           if (!aux.includes(clause)) {
             _clauseDescription.push([
               clause,
               data["Clauses"][clause]["Description_PL"],
               data["Clauses"][clause]["Description_EN"],
-              0
+              
             ]);
 
             aux.push(clause);
 
-            //console.log(Object.keys(clause) + " was not found, "+"adding to : "+_clauseDescription)
+       
           }
         }
       }
     }
 
-    //console.log(aux2);
+
 
     return { dataforColumns, _clauseDescription, aux2, selectedKeyword };
   }

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Container } from "semantic-ui-react";
 
-import Example from "./example/Example";
+import Main from "./example/Main";
 
 
 
@@ -23,7 +23,7 @@ document.head.appendChild(styleLink);
 
 ReactDOM.render(
   <App>
-    <Example />
+    <Main />
   </App>,
   document.getElementById("root")
 );

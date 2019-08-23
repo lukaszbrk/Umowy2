@@ -7,6 +7,8 @@ import MainScreen from "./MainScreen.js";
 
 import Autosuggest from "react-autosuggest";
 
+//Clauses and keywords for the left side screen
+//TODO mismatch between source and data
 let source = [
   {
     clause: "Commencement",
@@ -19,8 +21,8 @@ let source = [
       "kapitał zakładowy",
       "REGON",
       "National Business Registry Number",
-      "test",
-      "test2"
+      "test", //rm
+      "test2" //rm
     ]
   },
   {
@@ -36,28 +38,23 @@ let source = [
   },
   {
     clause: "Definitions",
-    keywords: ["definitions", "definicje", "meaning", "termin", "terms", "test",  "test2"]
+    keywords: [
+      "definitions",
+      "definicje",
+      "meaning",
+      "termin",
+      "terms",
+      "test", //rm
+      "test2" //rm
+    ]
   }
 ];
 
-// Teach Autosuggest how to calculate suggestions for any given input value.
+// How to calculate suggestions for any given input value.
 const getSuggestions = value => {
   //TODO check every word in the input
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
-
-  function getUnique(arr, comp) {
-    //store the comparison values in array
-    const unique = arr
-      .map(e => e[comp])
-      // store the keys of the unique objects
-      .map((e, i, final) => final.indexOf(e) === i && i)
-      // eliminate the dead keys & return unique objects
-      .filter(e => arr[e])
-      .map(e => arr[e]);
-
-    return unique;
-  }
 
   let found_clauses = [];
   let found_keywords = [];
@@ -76,12 +73,25 @@ const getSuggestions = value => {
     found_clauses = source.filter(lang =>
       lang.clause.toLowerCase().includes(inputValue)
     );
-    //console.log(found_clauses)
-    //console.log(found_keywords)
+
 
     const all = found_clauses.concat(found_keywords);
 
-    //console.log( {...found_clauses.clause, ...found_keywords.clause})
+      //copy pasted
+  function getUnique(arr, comp) {
+    //store the comparison values in array
+    const unique = arr
+      .map(e => e[comp])
+      // store the keys of the unique objects
+      .map((e, i, final) => final.indexOf(e) === i && i)
+      // eliminate the dead keys & return unique objects
+      .filter(e => arr[e])
+      .map(e => arr[e]);
+
+    return unique;
+  }
+
+ 
     return getUnique(all, "clause");
   }
 };
@@ -93,8 +103,6 @@ const getSuggestionValue = suggestion => "Selected: " + suggestion.clause;
 
 ///state
 export default class SearchExampleStandard extends Component {
-
-
   constructor() {
     super();
 
@@ -113,17 +121,17 @@ export default class SearchExampleStandard extends Component {
     };
   }
 
-
-
   onClickLabel = e => {
+    // prevents referring to the parent
     e.stopPropagation();
-    //console.log((e.target.className).slice(9))
 
     this.setState({
       selectedKeyword: e.target.className.slice(9)
     });
   };
-  // Use your imagination to render suggestions.
+
+
+  // Rendering suggestions
   renderSuggestion = suggestion => (
     <Segment>
       {suggestion.clause}
@@ -145,7 +153,7 @@ export default class SearchExampleStandard extends Component {
   };
 
   // Autosuggest will call this function every time you need to update suggestions.
-  // You already implemented this logic above, so just use it.
+
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
       suggestions: getSuggestions(value)
@@ -160,21 +168,20 @@ export default class SearchExampleStandard extends Component {
     });
   };
 
-  onSuggestionSelected = (e, { suggestionValue, suggestionIndex }) => {
-    //TODO clicking again returns 0, selectedKeyword: false
-    //console.log(suggestionValue.substr(10));
+  onSuggestionSelected = (e, { suggestionValue }) => {
+
     this.setState(
+
+      //substr to remove ui id
       { value: "", selectedClause: suggestionValue.substr(10) },
       () =>
         this.setState({ suggestions: source }, () => {
-
-            this.setState({ selectedKeyword: false });
- 
+          this.setState({ selectedKeyword: false });
         })
     );
   };
 
-  componentWillMount() {
+  componentDidMount() {
     axios
       .get("https://my-json-server.typicode.com/lukaszbrk/clauses/db")
       .then(res => {
@@ -184,8 +191,7 @@ export default class SearchExampleStandard extends Component {
   }
 
   render() {
-
-    console.log("rendering Example screen")
+    console.log("Rendering Example screen");
     const { value, suggestions } = this.state;
 
     const inputProps = {
@@ -194,7 +200,6 @@ export default class SearchExampleStandard extends Component {
       onChange: this.onChange
     };
 
-    // Finally, render it!
 
     return (
       <Grid>
@@ -215,7 +220,6 @@ export default class SearchExampleStandard extends Component {
         <MainScreen
           data={this.state.data}
           selectedClause={this.state.selectedClause}
-   
           // add https://www.npmjs.com/package/natural via nodejs
           selectedKeyword={this.state.selectedKeyword}
         />

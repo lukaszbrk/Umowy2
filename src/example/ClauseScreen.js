@@ -1,10 +1,9 @@
 import React from "react";
 import { Segment, Divider, Pagination } from "semantic-ui-react";
-import { useState, useLayoutEffect, useEffect } from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useState, useEffect } from "react";
 import Columns from "./Columns.js";
 
-
+//no. of pages in pagination
 function objectLength(obj) {
   var result = 0;
   for (var prop in obj) {
@@ -16,6 +15,7 @@ function objectLength(obj) {
 }
 
 const ClauseScreen = ({ data }) => {
+
   console.log("rendering Clause screen");
 
   const { _data, selectedClause } = data;
@@ -26,14 +26,14 @@ const ClauseScreen = ({ data }) => {
   useEffect(() => {
  
     setactivePage(1);
-
+//set pagination after selecting a new clause
   }, [selectedClause]);
 
   const onPageChange = (e, { activePage }) => {
 
-    console.log("ActivePage before onclick: " + activePage);
+  
     setactivePage(activePage);
-    console.log("ActivePage after onclick: " + activePage);
+
   };
 
   return (
@@ -49,7 +49,7 @@ const ClauseScreen = ({ data }) => {
       />
 
       <Divider />
-
+      {/*pagination does not reset immediately; throws undefined after  */}
       {objectLength(_data) >= activePage ? (
         <Columns _data={_data} activePage={activePage} />
       ) : (
