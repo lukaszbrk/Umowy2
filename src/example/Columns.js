@@ -12,7 +12,9 @@ const pStyle = {
 };
 
 const Columns = ({ _data, activePage }) => {
-  console.log("rendered columns");
+
+
+
 
   return (
     <Grid divided="vertically">

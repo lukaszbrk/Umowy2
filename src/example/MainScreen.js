@@ -4,7 +4,7 @@ import React from "react";
 import { Grid, Segment, Divider } from "semantic-ui-react";
 
 import DefaultScreen from "./DefaultScreen.js";
-import KeywordScreen from "./KeywordScreen.js";
+import KeywordSelectionScreen from "./KeywordSelectionScreen.js";
 import ClauseScreen from "./ClauseScreen.js";
 
 const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
@@ -17,9 +17,9 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
 
 
     if (selectedKeyword) {
-      prepDataforKeywordScreen(data, selectedKeyword);
+      prepDataforKeywordSelectionScreen(data, selectedKeyword);
       return (
-        <KeywordScreen data={prepDataforKeywordScreen(data, selectedKeyword)} />
+        <KeywordSelectionScreen data={prepDataforKeywordSelectionScreen(data, selectedKeyword)} />
       );
     } else if (selectedClause) {
       return (
@@ -32,11 +32,11 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
 
   function prepDataforClauseScreen(data, selectedClause) {
     let _data = data["Clauses"][selectedClause]["Examples"];
-
+    
     return { _data, selectedClause };
   }
   //prune?
-  function prepDataforKeywordScreen(data, selectedKeyword) {
+  function prepDataforKeywordSelectionScreen(data, selectedKeyword) {
     let clause, example;
     let dataforColumns = [];
     let _clauseDescription = [];
@@ -53,13 +53,12 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
         ) {
           aux2[clause] = aux2[clause] ? aux2[clause] + 1 : 1;
 
-          dataforColumns.push(
-    
+          dataforColumns.push([
+            clause,
             [
-              data["Clauses"][clause]["Examples"][example]["pl"],
-              data["Clauses"][clause]["Examples"][example]["eng"]
+              data["Clauses"][clause]["Examples"][example]
             ]
-          );
+          ]);
 
           if (!aux.includes(clause)) {
             _clauseDescription.push([

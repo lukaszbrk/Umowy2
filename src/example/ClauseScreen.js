@@ -49,6 +49,8 @@ const ClauseScreen = ({ data }) => {
       />
 
       <Divider />
+      _data
+       {console.log(_data)}
       {/*pagination does not reset immediately; throws undefined after  */}
       {objectLength(_data) >= activePage ? (
         <Columns _data={_data} activePage={activePage} />
