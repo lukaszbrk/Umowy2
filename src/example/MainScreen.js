@@ -10,7 +10,7 @@ import ClauseScreen from "./ClauseScreen.js";
 const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
 
 
-  console.log("Rendering Main screen");
+  //console.log("Rendering Main screen");
 
 
   function selectScreen(selectedClause, selectedKeyword) {

@@ -16,7 +16,7 @@ function objectLength(obj) {
 
 const ClauseScreen = ({ data }) => {
 
-  console.log("rendering Clause screen");
+  //console.log("rendering Clause screen");
 
   const { _data, selectedClause } = data;
 

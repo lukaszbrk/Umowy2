@@ -191,7 +191,7 @@ export default class SearchExampleStandard extends Component {
   }
 
   render() {
-    console.log("Rendering Example screen");
+    //console.log("Rendering Example screen");
     const { value, suggestions } = this.state;
 
     const inputProps = {

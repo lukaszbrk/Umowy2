@@ -7,7 +7,7 @@ import ColumnsforKeyword from "./ColumnsforKeyword.js";
 import { useState, useEffect } from "react";
 
 const KeywordSelectionScreen = ({ data }) => {
-  //console.log(data["dataforColumns"])
+  console.log("useffect trigger is: "+[data["selectedKeyword"]])
 
   function returntoKeywordSelectionScreen() {
 
@@ -21,8 +21,10 @@ const KeywordSelectionScreen = ({ data }) => {
   const [ListItem, setListItem] = useState("");
 
   useEffect(() => {
- 
+    console.log("useffect trigger is: "+[data["selectedKeyword"]])
     setListItem("");
+    console.log("ListItem is: "+ListItem)
+    
     //change
   }, [data["selectedKeyword"]]);
 
@@ -84,7 +86,7 @@ const KeywordSelectionScreen = ({ data }) => {
     <div>
       <p>Keywords Screen</p>
       <p>{"Number of pairs: " + data["dataforColumns"].length}</p>
-      {!ListItem ? (
+      {!ListItem | !data["aux2"][ListItem]? (
         <List divided relaxed>
           {renderList(data)}
         </List>
