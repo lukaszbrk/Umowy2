@@ -12,10 +12,6 @@ const pStyle = {
 };
 
 const Columns = ({ _data, activePage }) => {
-
-
-
-
   return (
     <Grid divided="vertically">
       <Grid.Row columns={2}>

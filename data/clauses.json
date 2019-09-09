@@ -10,7 +10,9 @@
           "eng": "This Purchase Agreement (“Agreement”) is entered into on ___ (the “Effective Date”) by and between ___, (“___”) and ___ (“Supplier”).",
           "keywords": [
             "enter into",
-            "zawrzeć"
+            "zawrzeć",
+            "test",
+            "test2"
           ]
         },
         "1": {
@@ -23,7 +25,22 @@
             "share capital",
             "kapitał zakładowy",
             "REGON",
-            "National Business Registry Number"
+            "National Business Registry Number",
+            "test2"
+          ]
+        },
+        "2": {
+          "pl": "xxx",
+          "eng": "yyy",
+          "keywords": [
+            "National Court Register",
+            "zawrzeć",
+            "Krajowy Rejestr Sądowy",
+            "share capital",
+            "kapitał zakładowy",
+            "REGON",
+            "National Business Registry Number",
+            "test2"
           ]
         }
       }
@@ -60,10 +77,10 @@
           "pl": "Dla celów niniejszej Umowy Partnerstwa, zastosowanie będą miały następujące definicje:",
           "eng": "For the purposes of this Agreement the terms listed below shall have the following meaning:",
           "keywords": [
-      
+            "definitions",
             "definicje",
-            "terms",
-            "meaning"
+            "meaning",
+            "test"
           ]
         },
         "1": {
@@ -73,12 +90,115 @@
             "definitions",
             "definicje",
             "meaning",
-            "termin"
+            "termin",
+            "test2",
+            "terms"
           ]
         }
       },
       "Description_PL": "Definicje kluczowych terminöw",
       "Description_EN": "Defined term makes a contract easier to read by allowing the drafter to use throughout the contract the shorter defined term instead of the longer definition. It also ensures that whatever is defined is expressed consistently throughout the contract ",
+      "Keywords": ""
+    },
+    "Warranties and Representations": {
+      "Examples": {
+        "0": {
+          "pl": "Dostawca gwarantuje Klientowi, że dostarczone Produkty są odpowiedniej jakości oraz są zgodne ze wszystkimi istotnymi danymi w specyfikacji Produktu.",
+          "eng": "The Supplier warrants to the Customer that the Products, as delivered to the Customer, will be of sound materials and workmanship and will comply in all material respects with the Specification.",
+          "keywords": [
+            "gwarantować",
+            "jakość",
+            "warranty",
+            "comply"
+          ]
+        },
+        "1": {
+          "pl": "Dostawca ponosi odpowiedzialność z tytułu niniejszej gwarancji, tylko jeśli Klient pisemnie powiadomi dostawcę o wszelkich wadach w ciągu trzydziestu (30) dni od daty, kiedy zostały one wykryte.",
+          "eng": "The Supplier shall only be liable under this warranty provided that the Customer gives written notice of any defects to the Supplier within thirty (30) days after such date as they are or should first reasonably have been discovered.",
+          "keywords": [
+            "odpowiedzialność",
+            "wada",
+            "liable",
+            "warranty",
+            "defect",
+            "discovery",
+            "notice"
+          ]
+        },
+        "2": {
+          "pl": "Dostawca nie ponosi odpowiedzialności za szkody pośrednie lub wtórne, utratę zysków lub roszczenia osób trzecich w odniesieniu do Produktów (Dostawca ponosi odpowiedzialność za śmierć lub uszkodzenie ciała wynikające z wad Produktów spowodowanych zaniedbaniem Dostawcy).",
+          "eng": "The Supplier shall not be liable for any indirect or consequential losses, loss of profits or third party claims in relation to the Products (with the exception that the Supplier shall remain liable for death or personal injury arising out of defects in the Products to the extent attributable to the Supplier’s negligence).",
+          "keywords": [
+            "odpowiedzialność",
+            "szkody",
+            "roszczenia",
+            "zaniedbanie",
+            "consequential",
+            "claim",
+            "injury"
+          ]
+        }
+      },
+      "Description_PL": "Potwierdzenie prawdziwosci faktów, które skloniły je do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
+      "Description_EN": "Representations and warranties are assurances that one party gives to another party; assurances are statements that the party can rely on as factual.",
+      "Keywords": ""
+    },
+    "Default": {
+      "Examples": {
+        "0": {
+          "pl": "Dla celów niniejszej Umowy Partnerstwa, zastosowanie będą miały następujące definicje:",
+          "eng": "For the purposes of this Agreement the terms listed below shall have the following meaning:",
+          "keywords": [
+            "definitions",
+            "definicje",
+            "meaning",
+            "test"
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "Naruszenie postanowień umowy",
+      "Description_EN": "The omission or failure to fulfill a duty, observe a promise, discharge an obligation, or perform an agreement",
+      "Keywords": ""
+    },
+    "Force Majeure": {
+      "Examples": {
+        "0": {
+          "pl": "\n \n  \n  \nDostawca nie ponosi odpowiedzialności za niedostarczanie\n  Produktów lub usług technicznych na mocy niniejszej Umowy, jeśli wynika to ze\n  wszelkich okoliczności niezależnych od dostawcy, w tym ognia, eksplozji,\n  terroryzmu, strajków, burzy, powodzi lub działań, poleceń lub interwencji\n  wszelkich stosownych władz lokalnych lub rządowych.\n\n  \n \n",
+          "eng": "The Supplier shall not be liable for any failure in the  supply of the Products or technical service under this Agreement where such failure results from any circumstances beyond the reasonable control of the Supplier including but not limited to fire, explosion, terrorism, stoppages or work due to industrial action, lightening, storm, floods or acts, orders or intervention of any applicable local or governmental or public or private authority or utility.",
+          "keywords": [
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
       "Keywords": ""
     }
   }

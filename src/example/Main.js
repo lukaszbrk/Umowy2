@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Grid, Segment, Label } from "semantic-ui-react";
+import { Grid, Segment, Label, Popup } from "semantic-ui-react";
 import "./Example.css";
 
 import MainScreen from "./MainScreen.js";
@@ -23,7 +23,8 @@ let source = [
       "National Business Registry Number",
       "test", //rm
       "test2" //rm
-    ]
+    ],
+    description: "Nazwa umowy wraz z oznaczeniem czasu i miejsca jej zawarcia",
   },
   {
     clause: "Recitals",
@@ -34,7 +35,7 @@ let source = [
       "zobowiązać się",
       "zważywszy"
     ],
-    other: ""
+    description: "Przedstawienie okolicznosci poprzedzających zawarcie umowy"
   },
   {
     clause: "Definitions",
@@ -46,8 +47,49 @@ let source = [
       "terms",
       "test", //rm
       "test2" //rm
-    ]
-  }
+      
+    ],
+    description: "Definicje kluczowych terminöw",
+  },
+
+  {
+    clause: "Warranties and Representations",
+    keywords: [
+      "gwarantować",
+      "jakość",
+      "warranty",
+      "comply",
+      "odpowiedzialność",
+      "wada",
+      "liable",
+      "defect",
+      "discovery",
+      "notice",
+      "szkody",
+      "roszczenia",
+      "zaniedbanie",
+      "consequential",
+      "claim",
+      "injury"
+      
+    ],
+    description: "Potwierdzenie prawdziwosci faktów, które skloniły je do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
+ 
+  },
+
+  {
+    clause: "Force Majeure",
+    keywords: [
+      "okoliczności",
+      "odpowiedzialność",
+      "strajk",
+      "liability",
+      "stoppage",
+      "circumstances",
+      "notice"
+    ],
+    description: "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje",
+  },
 ];
 
 // How to calculate suggestions for any given input value.
@@ -133,7 +175,7 @@ export default class SearchExampleStandard extends Component {
 
   // Rendering suggestions
   renderSuggestion = suggestion => (
-    <Segment>
+    <Popup content= {suggestion.description}   trigger={<Segment>
       {suggestion.clause}
 
       <div style={undefined}>
@@ -143,7 +185,7 @@ export default class SearchExampleStandard extends Component {
           </Label>
         ))}
       </div>
-    </Segment>
+    </Segment>} />
   );
 
   onChange = (event, { newValue }) => {
@@ -183,7 +225,7 @@ export default class SearchExampleStandard extends Component {
 
   componentDidMount() {
     axios
-      .get("https://my-json-server.typicode.com/lukaszbrk/clauses/db")
+      .get("https://api.myjson.com/bins/1cv7tx")
       .then(res => {
         this.setState({ data: res.data });
       })

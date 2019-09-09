@@ -41,9 +41,10 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
     let dataforColumns = [];
     let _clauseDescription = [];
     let aux = [];
-    // aux2 object: clause + number of examples for a given clause
-    let aux2 = {};
+    // clause_n_number object: clause + number of examples for a given clause
+    let clause_n_number = {};
 
+    //check if the examples in clauses contain selected keyword
     for (clause in data["Clauses"]) {
       for (example in data["Clauses"][clause]["Examples"]) {
         if (
@@ -51,7 +52,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
             selectedKeyword
           )
         ) {
-          aux2[clause] = aux2[clause] ? aux2[clause] + 1 : 1;
+          clause_n_number[clause] = clause_n_number[clause] ? clause_n_number[clause] + 1 : 1;
 
           dataforColumns.push([
             clause,
@@ -78,7 +79,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
 
 
 
-    return { dataforColumns, _clauseDescription, aux2, selectedKeyword };
+    return { dataforColumns, _clauseDescription, clause_n_number, selectedKeyword };
   }
 
   return (

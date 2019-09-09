@@ -5,8 +5,8 @@ import Columns from "./Columns.js";
 
 //no. of pages in pagination
 function objectLength(obj) {
-  var result = 0;
-  for (var prop in obj) {
+  let result = 0;
+  for (let prop in obj) {
     if (obj.hasOwnProperty(prop)) {
       result++;
     }
@@ -15,25 +15,19 @@ function objectLength(obj) {
 }
 
 const ClauseScreen = ({ data }) => {
-
   //console.log("rendering Clause screen");
 
   const { _data, selectedClause } = data;
 
   const [activePage, setactivePage] = useState(1);
 
-
   useEffect(() => {
- 
     setactivePage(1);
-//set pagination after selecting a new clause
+    //set pagination after selecting a new clause
   }, [selectedClause]);
 
   const onPageChange = (e, { activePage }) => {
-
-  
     setactivePage(activePage);
-
   };
 
   return (
@@ -49,9 +43,8 @@ const ClauseScreen = ({ data }) => {
       />
 
       <Divider />
-      _data
-       {console.log(_data)}
-      {/*pagination does not reset immediately; throws undefined after  */}
+
+      {/*activepage does not reset immediately  */}
       {objectLength(_data) >= activePage ? (
         <Columns _data={_data} activePage={activePage} />
       ) : (
