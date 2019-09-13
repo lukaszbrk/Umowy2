@@ -146,22 +146,19 @@
     "Default": {
       "Examples": {
         "0": {
-          "pl": "Dla celów niniejszej Umowy Partnerstwa, zastosowanie będą miały następujące definicje:",
-          "eng": "For the purposes of this Agreement the terms listed below shall have the following meaning:",
-          "keywords": [
-            "definitions",
-            "definicje",
-            "meaning",
-            "test"
-          ]
-        },
-        "1": {
           "pl": "",
           "eng": "",
           "keywords": [
             "",
             "",
             "",
+            ""
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
             "",
             "",
             ""
@@ -175,30 +172,28 @@
     "Force Majeure": {
       "Examples": {
         "0": {
-          "pl": "\n \n  \n  \nDostawca nie ponosi odpowiedzialności za niedostarczanie\n  Produktów lub usług technicznych na mocy niniejszej Umowy, jeśli wynika to ze\n  wszelkich okoliczności niezależnych od dostawcy, w tym ognia, eksplozji,\n  terroryzmu, strajków, burzy, powodzi lub działań, poleceń lub interwencji\n  wszelkich stosownych władz lokalnych lub rządowych.\n\n  \n \n",
-          "eng": "The Supplier shall not be liable for any failure in the  supply of the Products or technical service under this Agreement where such failure results from any circumstances beyond the reasonable control of the Supplier including but not limited to fire, explosion, terrorism, stoppages or work due to industrial action, lightening, storm, floods or acts, orders or intervention of any applicable local or governmental or public or private authority or utility.",
+          "pl": "Dostawca nie ponosi odpowiedzialności za niedostarczanie Produktów lub usług technicznych na mocy niniejszej Umowy, jeśli wynika to ze wszelkich okoliczności niezależnych od dostawcy, w tym ognia, eksplozji, terroryzmu, strajków, burzy, powodzi lub działań, poleceń lub interwencji wszelkich stosownych władz lokalnych lub rządowych.",
+          "eng": "The Supplier shall not be liable for any failure in the supply of the Products or technical service under this Agreement where such failure results from any circumstances beyond the reasonable control of the Supplier including but not limited to fire, explosion, terrorism, stoppages or work due to industrial action, lightening, storm, floods or acts, orders or intervention of any applicable local or governmental or public or private authority or utility.",
           "keywords": [
-            "",
-            "",
-            "",
-            ""
+            "okoliczności",
+            "odpowiedzialność",
+            "strajk",
+            "liability",
+            "stoppage"
           ]
         },
         "1": {
-          "pl": "",
-          "eng": "",
+          "pl": "Gdy Dostawca dowie się o okolicznościach opisanych pkt 10.1, niezwłocznie powiadomi Klienta o tych okolicznościach i ich przewidywanym wpływie na wykonywane przez niego zobowiązania Umowy.",
+          "eng": "In the event that the Supplier becomes aware of any such circumstances, as described in clause 10.1, the Supplier shall as soon as is reasonably practicable notify the Customer of the circumstances and the anticipated effect on performance of this contract by the Supplier.",
           "keywords": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "okoliczności",
+            "circumstances",
+            "notice"
           ]
         }
       },
-      "Description_PL": "",
-      "Description_EN": "",
+      "Description_PL": "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje",
+      "Description_EN": "An event or effect that can be neither anticipated nor controlled",
       "Keywords": ""
     }
   }

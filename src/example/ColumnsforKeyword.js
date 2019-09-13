@@ -7,7 +7,23 @@ import Columns from "./Columns.js";
 
 import { useState, useEffect } from "react";
 
+import {longestCommonSubstring, findWords} from "./utils.js"
+
+
+function markKeywords(text, ListItem) {
+
+  let lcs = longestCommonSubstring(text, ListItem)
+
+  console.log("LCS is: "+lcs)
+
+  let markedText = findWords(lcs, text)
+
+  return markedText
+
+
+}
 function objectLength(obj) {
+
   var result = 0;
   for (var prop in obj) {
     if (obj.hasOwnProperty(prop)) {
@@ -33,7 +49,15 @@ const ColumnsforKeyword = ({ data, Butts, ListItem }) => {
     _data[counter] = {
       pl: filtered[arr][1][0]["pl"],
       eng: filtered[arr][1][0]["eng"]
+
+
     };
+    console.log('-----------------------------------------')
+    console.log("Text is: "+filtered[arr][1][0]["pl"])
+    console.log("Keyword is: "+data["selectedKeyword"])
+
+    console.log(markKeywords(filtered[arr][1][0]["pl"], data["selectedKeyword"]))
+
 
     counter++;
   }
@@ -44,6 +68,8 @@ const ColumnsforKeyword = ({ data, Butts, ListItem }) => {
 
   useEffect(() => {
     setactivePage(1);
+
+    //change
   }, [objectLength(data["dataforColumns"])]);
 
   const onPageChange = (e, { activePage }) => {
@@ -51,6 +77,8 @@ const ColumnsforKeyword = ({ data, Butts, ListItem }) => {
   };
 
   return (
+
+ 
     <Segment>
       <Pagination
         activePage={activePage}

@@ -7,8 +7,8 @@ import MainScreen from "./MainScreen.js";
 
 import Autosuggest from "react-autosuggest";
 
-//Clauses and keywords for the left side screen
-//TODO mismatch between source and data
+//Clauses and keywords 
+
 let source = [
   {
     clause: "Commencement",
