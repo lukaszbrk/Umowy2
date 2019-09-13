@@ -41,7 +41,7 @@ const ClauseScreen = ({ data }) => {
   const [activePage, setactivePage] = useState(1);
 
  
-  const cl = ()=>{ return ( <Columns _data ={_data} activePage={activePage}/>)}
+
   useEffect(() => {
 
     console.log("In useEffect")

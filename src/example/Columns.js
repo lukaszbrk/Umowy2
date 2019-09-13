@@ -11,35 +11,42 @@ const pStyle = {
   border: "1px solid blue"
 };
 
+
 const Columns = ({ _data, activePage }) => {
   return (
     <Grid divided="vertically">
-      <Grid.Row columns={2}>
+      <Grid.Row columns={2} >
         <Grid.Column>
           <Container textAlign="justified">
-            <p contentEditable="true" style={pStyle}>
-              {_data[activePage - 1]["pl"]}
-              <CopyToClipboard text={_data[activePage - 1]["pl"]}>
-                <Button size="mini" basic floated="right">
-                  <Icon name="copy" />
-                  Kopiuj
-                </Button>
-              </CopyToClipboard>
-            </p>
+            <p
+              contentEditable="true"
+              style={pStyle}
+              dangerouslySetInnerHTML={{ __html: _data[activePage - 1]["pl"] }}
+            ></p>
+            <CopyToClipboard text={_data[activePage - 1]["pl"]}>
+              <Button size="mini" basic floated="right">
+                <Icon name="copy" />
+                Kopiuj
+              </Button>
+            </CopyToClipboard>
           </Container>
         </Grid.Column>
         <Grid.Column>
           {
             <Container textAlign="justified">
-              <p contentEditable="true" style={pStyle}>
-                {_data[activePage - 1]["eng"]}
-                <CopyToClipboard text={_data[activePage - 1]["eng"]}>
-                  <Button size="mini" basic floated="right">
-                    <Icon name="copy" />
-                    Copy
-                  </Button>
-                </CopyToClipboard>
-              </p>
+              <p
+                style={pStyle}
+                contentEditable="true"
+                dangerouslySetInnerHTML={{
+                  __html: _data[activePage - 1]["eng"]
+                }}
+              ></p>
+              <CopyToClipboard text={_data[activePage - 1]["eng"]}>
+                <Button size="mini" basic floated="right">
+                  <Icon name="copy" />
+                  Copy
+                </Button>
+              </CopyToClipboard>
             </Container>
           }
         </Grid.Column>

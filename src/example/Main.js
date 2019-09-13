@@ -7,90 +7,11 @@ import MainScreen from "./MainScreen.js";
 
 import Autosuggest from "react-autosuggest";
 
-//Clauses and keywords 
+import {getSource} from "./Keys_n_Clauses"
 
-let source = [
-  {
-    clause: "Commencement",
-    keywords: [
-      "enter into",
-      "zawrzeć",
-      "National Court Register",
-      "Krajowy Rejestr Sądowy",
-      "share capital",
-      "kapitał zakładowy",
-      "REGON",
-      "National Business Registry Number",
-      "test", //rm
-      "test2" //rm
-    ],
-    description: "Nazwa umowy wraz z oznaczeniem czasu i miejsca jej zawarcia",
-  },
-  {
-    clause: "Recitals",
-    keywords: [
-      "therefore",
-      "whereas",
-      "covenant",
-      "zobowiązać się",
-      "zważywszy"
-    ],
-    description: "Przedstawienie okolicznosci poprzedzających zawarcie umowy"
-  },
-  {
-    clause: "Definitions",
-    keywords: [
-      "definitions",
-      "definicje",
-      "meaning",
-      "termin",
-      "terms",
-      "test", //rm
-      "test2" //rm
-      
-    ],
-    description: "Definicje kluczowych terminöw",
-  },
+//Clauses and keywords
 
-  {
-    clause: "Warranties and Representations",
-    keywords: [
-      "gwarantować",
-      "jakość",
-      "warranty",
-      "comply",
-      "odpowiedzialność",
-      "wada",
-      "liable",
-      "defect",
-      "discovery",
-      "notice",
-      "szkody",
-      "roszczenia",
-      "zaniedbanie",
-      "consequential",
-      "claim",
-      "injury"
-      
-    ],
-    description: "Potwierdzenie prawdziwosci faktów, które skloniły je do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
- 
-  },
-
-  {
-    clause: "Force Majeure",
-    keywords: [
-      "okoliczności",
-      "odpowiedzialność",
-      "strajk",
-      "liability",
-      "stoppage",
-      "circumstances",
-      "notice"
-    ],
-    description: "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje",
-  },
-];
+let source = getSource()
 
 // How to calculate suggestions for any given input value.
 const getSuggestions = value => {
@@ -105,7 +26,7 @@ const getSuggestions = value => {
     return source;
   } else {
     source.map(entry =>
-      entry.keywords.map(keyword =>
+      entry.keywords.pl.concat(entry.keywords.en).map(keyword =>
         keyword.toLowerCase().includes(inputValue)
           ? found_keywords.push(entry)
           : {}
@@ -116,24 +37,22 @@ const getSuggestions = value => {
       lang.clause.toLowerCase().includes(inputValue)
     );
 
-
     const all = found_clauses.concat(found_keywords);
 
-      //copy pasted
-  function getUnique(arr, comp) {
-    //store the comparison values in array
-    const unique = arr
-      .map(e => e[comp])
-      // store the keys of the unique objects
-      .map((e, i, final) => final.indexOf(e) === i && i)
-      // eliminate the dead keys & return unique objects
-      .filter(e => arr[e])
-      .map(e => arr[e]);
+    //copy pasted
+    function getUnique(arr, comp) {
+      //store the comparison values in array
+      const unique = arr
+        .map(e => e[comp])
+        // store the keys of the unique objects
+        .map((e, i, final) => final.indexOf(e) === i && i)
+        // eliminate the dead keys & return unique objects
+        .filter(e => arr[e])
+        .map(e => arr[e]);
 
-    return unique;
-  }
+      return unique;
+    }
 
- 
     return getUnique(all, "clause");
   }
 };
@@ -172,20 +91,30 @@ export default class SearchExampleStandard extends Component {
     });
   };
 
-
   // Rendering suggestions
   renderSuggestion = suggestion => (
-    <Popup content= {suggestion.description}   trigger={<Segment>
-      {suggestion.clause}
+    <Popup
+      content={suggestion.description}
+      trigger={
+        <Segment>
+          {suggestion.clause}
 
-      <div style={undefined}>
-        {suggestion.keywords.map(keyword => (
-          <Label onClick={this.onClickLabel} className={keyword} key={keyword}>
-            {keyword}
-          </Label>
-        ))}
-      </div>
-    </Segment>} />
+          <div style={undefined}>
+            {suggestion.keywords.pl
+              .concat(suggestion.keywords.en)
+              .map(keyword => (
+                <Label
+                  onClick={this.onClickLabel}
+                  className={keyword}
+                  key={keyword}
+                >
+                  {keyword}
+                </Label>
+              ))}
+          </div>
+        </Segment>
+      }
+    />
   );
 
   onChange = (event, { newValue }) => {
@@ -211,9 +140,7 @@ export default class SearchExampleStandard extends Component {
   };
 
   onSuggestionSelected = (e, { suggestionValue }) => {
-
     this.setState(
-
       //substr to remove ui id
       { value: "", selectedClause: suggestionValue.substr(10) },
       () =>
@@ -241,7 +168,6 @@ export default class SearchExampleStandard extends Component {
       value,
       onChange: this.onChange
     };
-
 
     return (
       <Grid>
