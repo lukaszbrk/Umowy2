@@ -16,8 +16,9 @@ const KeywordSelectionScreen = ({ data }) => {
   const Butts = () => {
     return (
       <Button
+   
         onClick={returntoKeywordSelectionScreen}
-        content="Return to the results"
+        content="Wróć do wyników"
       />
     );
   };
@@ -27,7 +28,7 @@ const KeywordSelectionScreen = ({ data }) => {
   useEffect(() => {
     setListItem("");
 
-    //change here
+    //change 
   }, [data["selectedKeyword"]]);
 
   const onClikedItem = (e) => {
@@ -65,8 +66,8 @@ const KeywordSelectionScreen = ({ data }) => {
 
   return (
     <div>
-      <p>Keywords Screen</p>
-      <p>{"Number of pairs: " + data["dataforColumns"].length}</p>
+    
+      <p>{"Liczba przykładów: " + data["dataforColumns"].length}</p>
       {/*initial render - listitem not selected | no data for the given selection (after render ) => render the list */}
       {!ListItem | !data["clause_n_number"][ListItem] ? (
         <List divided relaxed>

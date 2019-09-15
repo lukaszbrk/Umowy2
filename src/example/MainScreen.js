@@ -44,7 +44,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
     // clause_n_number object: clause + number of examples for a given clause
     let clause_n_number = {};
 
-    //check if the examples in clauses contain selected keyword
+    //check if the examples in clauses contain the selected keyword; count the occurence
     for (clause in data["Clauses"]) {
       for (example in data["Clauses"][clause]["Examples"]) {
         if (
@@ -85,10 +85,10 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
   return (
     <Grid.Column width={10}>
       <Segment>
-        <p>Screen Description</p>
+        <p><b>Przykłady</b></p>
         <Divider />
 
-        <p>Content: {selectedKeyword}</p>
+        {/*<p>Content: {selectedKeyword}</p>*/}
         {selectScreen(selectedClause, selectedKeyword)}
       </Segment>
     </Grid.Column>

@@ -31,7 +31,7 @@ const ClauseScreen = ({ data }) => {
   };
 
   return (
-    <Segment>
+    <div>
       <Pagination
         activePage={activePage}
         boundaryRange={0}
@@ -50,7 +50,7 @@ const ClauseScreen = ({ data }) => {
       ) : (
         <Columns _data={_data} activePage={1} />
       )}
-    </Segment>
+    </div>
   );
 };
 export default ClauseScreen;

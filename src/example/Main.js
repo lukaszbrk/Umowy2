@@ -9,6 +9,19 @@ import Autosuggest from "react-autosuggest";
 
 import {getSource} from "./Keys_n_Clauses"
 
+
+const inputStyle = {
+
+
+
+  padding: "5px 5px",
+ 
+
+
+  border: "1px solid ",
+  borderRadius: "2px"
+}
+
 //Clauses and keywords
 
 let source = getSource()
@@ -92,18 +105,20 @@ export default class SearchExampleStandard extends Component {
   };
 
   // Rendering suggestions
+
+  //renderSuggestionsContainer
   renderSuggestion = suggestion => (
     <Popup
       content={suggestion.description}
       trigger={
         <Segment>
-          {suggestion.clause}
+          <b>{suggestion.clause}</b>
 
-          <div style={undefined}>
+          <div >
             {suggestion.keywords.pl
               .concat(suggestion.keywords.en)
               .map(keyword => (
-                <Label
+                <Label style={{marginTop: '2px'}}
                   onClick={this.onClickLabel}
                   className={keyword}
                   key={keyword}
@@ -150,9 +165,23 @@ export default class SearchExampleStandard extends Component {
     );
   };
 
+ /* renderSuggestionsContainer = ({ containerProps, children, query }) => (
+    <div {...containerProps}>
+        {
+        <div style={{position:'relative'}}>
+          
+          <br/>
+     
+        </div>
+      }
+      {children}
+    
+    </div>
+  );
+*/
   componentDidMount() {
     axios
-      .get("https://api.myjson.com/bins/1cv7tx")
+      .get("https://api.myjson.com/bins/147dtt")
       .then(res => {
         this.setState({ data: res.data });
       })
@@ -166,13 +195,14 @@ export default class SearchExampleStandard extends Component {
     const inputProps = {
       placeholder: "Klauzula, słowo kluczowe",
       value,
-      onChange: this.onChange
+      onChange: this.onChange,
+      style: inputStyle
     };
 
     return (
       <Grid>
         <Grid.Column width={6}>
-          <Autosuggest
+          <Autosuggest menuStyle  ={inputStyle}
             alwaysRenderSuggestions={true}
             suggestions={suggestions}
             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -182,6 +212,7 @@ export default class SearchExampleStandard extends Component {
             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
             onSuggestionSelected={this.onSuggestionSelected}
             focusInputOnSuggestionClick={false}
+            //renderSuggestionsContainer={this.renderSuggestionsContainer}
             //highlightFirstSuggestion={true}
           />
         </Grid.Column>

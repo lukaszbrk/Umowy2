@@ -110,7 +110,7 @@ const ColumnsforKeyword = ({ data, Butts, ListItem }) => {
   return (
 
  
-    <Segment>
+    <div >
       <Pagination
         activePage={activePage}
         boundaryRange={0}
@@ -120,12 +120,13 @@ const ColumnsforKeyword = ({ data, Butts, ListItem }) => {
         totalPages={data["clause_n_number"][ListItem]}
         onPageChange={onPageChange}
       />
-      {/* button for returnomh to the selection*/}
+      {/* button for returning to the selection*/}
+      <span> </span>
       <Butts />
       <Divider />
 
       <Columns _data={_data} activePage={activePage} />
-    </Segment>
+    </div>
   );
 };
 

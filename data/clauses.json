@@ -28,20 +28,6 @@
             "National Business Registry Number",
             "test2"
           ]
-        },
-        "2": {
-          "pl": "xxx",
-          "eng": "yyy",
-          "keywords": [
-            "National Court Register",
-            "zawrzeć",
-            "Krajowy Rejestr Sądowy",
-            "share capital",
-            "kapitał zakładowy",
-            "REGON",
-            "National Business Registry Number",
-            "test2"
-          ]
         }
       }
     },
@@ -139,10 +125,42 @@
           ]
         }
       },
-      "Description_PL": "Potwierdzenie prawdziwosci faktów, które skloniły je do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
+      "Description_PL": "Potwierdzenie prawdziwosci faktów, które skloniły strony do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
       "Description_EN": "Representations and warranties are assurances that one party gives to another party; assurances are statements that the party can rely on as factual.",
       "Keywords": ""
     },
+
+
+    "Termination": {
+      "Examples": {
+        "0": {
+          "pl": "Po wygaśnięciu lub rozwiązaniu niniejszej Umowy, licencja udzielona w punkcie 4.1 powyżej wygasa, a XXX zaprzestanie używania Znaków Sponsora.",
+          "eng": "Upon any expiration or termination of this Agreement, the license granted in Section 4.1 above will terminate, and XXX will cease its use of the Sponsor Marks.",
+          "keywords": [
+            "wygaśnięcie",
+            "rozwiązanie",
+            "expiration",
+            "termination"
+            
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+
+
+
     "Default": {
       "Examples": {
         "0": {
@@ -194,6 +212,98 @@
       },
       "Description_PL": "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje",
       "Description_EN": "An event or effect that can be neither anticipated nor controlled",
+      "Keywords": ""
+    },
+    "Governing law": {
+      "Examples": {
+        "0": {
+          "pl": "Niniejsza umowa podlega prawu kraju Sprzedającego oraz będzie zgodnie z nim interpretowana.",
+          "eng": "This contract shall be governed by and construed in accordance with the law of Seller’s country.",
+          "keywords": [
+            "podlegać",
+            "interpretować",
+            "governed",
+            "construed"
+          ]
+        },
+        "1": {
+          "pl": "Prawem właściwym dla wykładni niniejszej Umowy będzie prawo stanu Kalifornia, przy czym przyjęte w nim norm kolizyjne nie będą uwzględniane.",
+          "eng": "This Agreement will be governed by, and construed in accordance with the laws of the State of California without regard to its conflict of laws provisions.",
+          "keywords": [
+            "prawo właściwe",
+            "wykładnia",
+            "norma kolizyjna",
+            "govern",
+            "construe",
+            "conflict"
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+    "Notices": {
+      "Examples": {
+        "0": {
+          "pl": "Powiadomienia muszą mieć formę pisemną i być przesyłane na adres Sprzedającego lub Nabywcy, przy czym zostaną uznane za doręczone w pierwszym dniu roboczym po ich doręczeniu osobistym lub (z zastrzeżeniem potwierdzenia nadania) faksem, lub - w przypadku nadania przesyłką priorytetową lub ekspresową - po upływie pięciu dni roboczych od daty nadania na adres Nabywcy lub Sprzedającego.",
+          "eng": "Notices must be in writing to Seller's or Buyer's address and are deemed delivered on the first working day after delivery by hand or (subject to confirmation of transmission) by facsimile, or, where sent by first class or express post, five clear working days after the date of posting to Buyer's or Seller's address.",
+          "keywords": [
+            "z zastrzeżeniem",
+            "powiadomienia",
+            "nadanie",
+            "przesyłka",
+            "dzień roboczy",
+            "nadanie",
+            "notice",
+            "deemed",
+            "facsimile",
+            "delivery",
+            "woking day",
+            "subject to"
+            
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+
+    "Confidentiality": {
+      "Examples": {
+        "0": {
+          "pl": "Dla celów niniejszej Umowy za informacje poufne uznaje się PRÓBKI, wyniki badań przeprowadzonych w ramach ZAMIERZONEGO CELU oraz wszelkie informacje i dane dotyczące PRÓBEK (w tym skład chemiczny, makrostruktura i działanie), ujawnione na mocy niniejszej Umowy w jakiejkolwiek formie przez Stroną Ujawniającą na rzecz Stroną Ujawniającej lub uzyskane przez Stronę Otrzymującą w trakcie wykonywania działań w ramach ZAMIERZONEGO CELU („Informacje Poufne”), z wyjątkiem informacji lub danych, co do których Strona Ujawniająca może dowieść na podstawie materiałów w formie pisemnej, że:",
+          "eng": "For the purposes of this Agreement shall be considered as confidential the SAMPLES, the outcomes of the activities under the CONTEMPLATED PURPOSE and any information and data relating to the SAMPLES (including chemical composition, macrostructure and performances), disclosed hereunder in any form by DISCLOSER to DISCLOSEE and/or acquired by DISCLOSEE in performing the activities under the CONTEMPLATED PURPOSE (all the foregoing hereinafter collectively referred to as “CONFIDENTIAL INFORMATION”), except information or data for which DISCLOSEE may prove, by written evidence, that:",
+          "keywords": [
+            "informacje poufne",
+            "ujawniać",
+            "confidential",
+            "disclose"
+            
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
       "Keywords": ""
     }
   }
