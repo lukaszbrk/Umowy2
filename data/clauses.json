@@ -265,12 +265,20 @@
           ]
         },
         "1": {
-          "pl": "",
-          "eng": "",
+          "pl": "Wszelkie powiadomienia wymagane lub wymienione w niniejszej Umowie będą uważane za ważne dla celów niniejszej Umowy wyłącznie jeśli (a) są na piśmie, (b) w języku angielskim, (c) odnoszą się do niniejszej Umowy, (d) są doręczane osobiście przez cieszącego się dobrą reputacją kuriera lub wysłane listem poleconym, opłaconym z góry, z potwierdzeniem odbioru, i (e) dostarczane są na następujący adres (lub na adres wskazany przez odbiorcę stronie wysyłającej zgodnie z punktem 7.5):",
+          "eng": "Any notice that is required by, or otherwise specified in, this Agreement will be deemed to be a valid notice for the purposes of this Agreement only if it (a) is in writing, (b) is in the English language, (c) makes reference to this Agreement, (d) is delivered in person, by reputable courier, or mailed by certified or registered mail, postage prepaid, return receipt requested, and (e) is delivered to the following address (or to such other address as may be designated by the receiving party to the sending party in accordance with this Section 7.5):",
           "keywords": [
-            "",
-            "",
-            ""
+            "powiadomienia",
+            "doręczanie",
+            "kurier",
+            "list polecony",
+            "adres",
+            "notice",
+            "deem",
+            "courier",
+            "registered mail",
+            "return receipt",
+            "address"
           ]
         }
       },
@@ -299,6 +307,122 @@
             "",
             "",
             ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+
+    "Severability": {
+      "Examples": {
+        "0": {
+          "pl": "Jeżeli którekolwiek z postanowień niniejszej Umowy zostanie uznane za niewykonalne, postanowienie takie zostanie wyegzekwowane w maksymalnym możliwym zakresie, aby zrealizować intencje stron, a pozostałe postanowienia niniejszej Umowy nie zostaną naruszone i zachowają pełną moc i skuteczność zgodnie z ich warunkami.",
+          "eng": "If any provision of this Agreement is held to be unenforceable, such provision will be enforced to the maximum extent possible so as to effect the intent of the parties, and the other provisions of this Agreement will not be affected and will remain in full force and effect in accordance with their terms.",
+          "keywords": [
+            "niewykonalne",
+            "egzekwować",
+            "moc",
+            "skuteczność",
+            "unenforceable",
+            "enforce",
+            "full force and effect"
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+
+    "Assignment": {
+      "Examples": {
+        "0": {
+          "pl": "Żadna ze stron nie ma prawa cedować, przekazywać ani w inny sposób przenosić (dobrowolnie, z mocy prawa lub w inny sposób) niniejszej Umowy lub praw lub obowiązków z niej wynikających bez uprzedniej pisemnej zgody drugiej strony, przy czym kaźda strona może przenieść (bez konieczności uzyskania zgody drugiej strony) niniejszą Umowę wraz ze wszystkimi prawami i obowiązkami z niej wynikającymi na stronę trzecią która nabyła wszystkie lub większość majątku takiej strony, lub z którą się łączy.",
+          "eng": "Neither party will, or will have the right to, assign, delegate or otherwise transfer (whether voluntarily, by operation of law or otherwise) this Agreement or any of its rights or obligations hereunder without the prior written consent of the other party; provided, however, that either party may assign (without the need to obtain the other party’s consent) this Agreement, together with all of its rights and obligations hereunder, to a third party that acquires all or substantially all of such party’s assets or into which such party is merged.",
+          "keywords": [
+            "cesja",
+            "przenieść",
+            "łączyć się",
+            "majątek",
+            "assign",
+            "delegate",
+            "transfer",
+            "assets"
+
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+
+       "Arbitration": {
+      "Examples": {
+        "0": {
+          "pl": "Wszelkie spory, różnice zdań i roszczenia wynikające z niniejszej Umowy lub z nią związane będą rozstrzygane w drodze arbitrażu w hrabstwie Santa Clara w Kalifornii, prowadzonego przez jednego arbitra.",
+          "eng": "Any dispute, claim or controversy arising out of or relating to this Agreement will be determined by arbitration in Santa Clara County, California conducted by a single arbitrator.",
+          "keywords": [
+            "spory",
+            "roszczenia",
+            "arbitraż",
+            "arbiter",
+            "dispute",
+            "claim",
+            "controversy",
+            "arbitration",
+            "arbitrator"
+          ]
+        },
+        "1": {
+          "pl": "Orzeczenie na podstawie decyzji podjętej w wyniku takiego arbitrażu może zostać wydane przez każdy sąd właściwy.",
+          "eng": "Judgment on the award rendered by such arbitration may be entered in any court having jurisdiction.",
+          "keywords": [
+            "orzeczenie",
+            "arbitraż",
+            "sąd właściwy",
+            "wydać",
+            "judgment",
+            "award",
+            "render",
+            "arbitration",
+            "court",
+            "jurisdiction"
+          ]
+        },
+        "2": {
+          "pl": "Paragraf ten nie wyklucza możliwości dochodzenia przez strony w sądzie właściwym zarządzenia środków tymczasowej ochrony prawnej.",
+          "eng": "This clause will not preclude parties from seeking provisional remedies in aid of arbitration from a court of competent jurisdiction.",
+          "keywords": [
+            "sąd właściwy",
+            "środki",
+            "ochrona prawna",
+            "preclude",
+            "provisional remedy",
+            "arbitration",
+            "competent",
+            "jurisdiction"
+           
           ]
         }
       },

@@ -92,7 +92,7 @@ export function detLang(keyword) {
           if (  s[entry]["keywords"]["pl"].includes(keyword))
 
           {
-            console.log("found")
+            //console.log("found")
             pl = true
             break;
           }

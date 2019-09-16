@@ -1,7 +1,7 @@
 //move components to different files
 
 import React from "react";
-import { List, Button } from "semantic-ui-react";
+import { List, Button, Segment } from "semantic-ui-react";
 import ColumnsforKeyword from "./ColumnsforKeyword.js";
 
 import { useState, useEffect } from "react";
@@ -16,7 +16,9 @@ const KeywordSelectionScreen = ({ data }) => {
   const Butts = () => {
     return (
       <Button
-   
+      
+        basic
+        size="medium"
         onClick={returntoKeywordSelectionScreen}
         content="Wróć do wyników"
       />
@@ -39,6 +41,8 @@ const KeywordSelectionScreen = ({ data }) => {
     let rndrdList = [];
     for (let i = 0; i < data["_clauseDescription"].length; i++) {
       rndrdList.push(
+ 
+        <Segment>
         <List.Item
           style={{ cursor: "pointer" }}
           key={data["_clauseDescription"][i][0]}
@@ -58,6 +62,8 @@ const KeywordSelectionScreen = ({ data }) => {
             </p>
           </List.Content>
         </List.Item>
+        </Segment>
+       
       );
     }
 
@@ -71,7 +77,9 @@ const KeywordSelectionScreen = ({ data }) => {
       {/*initial render - listitem not selected | no data for the given selection (after render ) => render the list */}
       {!ListItem | !data["clause_n_number"][ListItem] ? (
         <List divided relaxed>
+                 <Segment.Group>
           {renderList(data)}
+          </Segment.Group>
         </List>
       ) : (
         <ColumnsforKeyword data={data} Butts={Butts} ListItem={ListItem} />

@@ -52,6 +52,7 @@ const getSuggestions = value => {
 
     const all = found_clauses.concat(found_keywords);
 
+
     //copy pasted
     function getUnique(arr, comp) {
       //store the comparison values in array
@@ -95,6 +96,23 @@ export default class SearchExampleStandard extends Component {
     };
   }
 
+  
+  sortAlph = arr => { 
+  
+  
+    arr.sort(function(x,y){
+        var a = String(x).toUpperCase();
+        var b = String(y).toUpperCase();
+        if (a > b)
+           return 1
+        if (a < b)
+           return -1
+        return 0;
+      });
+  
+  return arr
+  }
+
   onClickLabel = e => {
     // prevents referring to the parent
     e.stopPropagation();
@@ -115,8 +133,8 @@ export default class SearchExampleStandard extends Component {
           <b>{suggestion.clause}</b>
 
           <div >
-            {suggestion.keywords.pl
-              .concat(suggestion.keywords.en)
+            {this.sortAlph(suggestion.keywords.pl)
+              .concat(this.sortAlph(suggestion.keywords.en))
               .map(keyword => (
                 <Label style={{marginTop: '2px'}}
                   onClick={this.onClickLabel}
@@ -219,7 +237,7 @@ export default class SearchExampleStandard extends Component {
         <MainScreen
           data={this.state.data}
           selectedClause={this.state.selectedClause}
-          // add https://www.npmjs.com/package/natural via nodejs
+          // add https://www.npmjs.com/package/natural 
           selectedKeyword={this.state.selectedKeyword}
         />
       </Grid>

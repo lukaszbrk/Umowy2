@@ -121,7 +121,7 @@ const ColumnsforKeyword = ({ data, Butts, ListItem }) => {
         onPageChange={onPageChange}
       />
       {/* button for returning to the selection*/}
-      <span> </span>
+      <span>  </span>
       <Butts />
       <Divider />
 
