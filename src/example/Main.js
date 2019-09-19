@@ -1,30 +1,25 @@
+// add https://www.npmjs.com/package/natural
 import axios from "axios";
 import React, { Component } from "react";
-import { Grid, Segment, Label, Popup } from "semantic-ui-react";
+import { Segment, Label, Popup } from "semantic-ui-react";
 import "./Example.css";
 
 import MainScreen from "./MainScreen.js";
 
 import Autosuggest from "react-autosuggest";
 
-import {getSource} from "./Keys_n_Clauses"
-
+import { getSource } from "./Keys_n_Clauses";
 
 const inputStyle = {
-
-
-
   padding: "5px 5px",
- 
-
 
   border: "1px solid ",
   borderRadius: "2px"
-}
+};
 
 //Clauses and keywords
 
-let source = getSource()
+let source = getSource();
 
 // How to calculate suggestions for any given input value.
 const getSuggestions = value => {
@@ -35,25 +30,28 @@ const getSuggestions = value => {
   let found_clauses = [];
   let found_keywords = [];
 
+
+  //search for keywords
   if (inputLength < 1) {
     return source;
   } else {
     source.map(entry =>
-      entry.keywords.pl.concat(entry.keywords.en).map(keyword =>
-        keyword.toLowerCase().includes(inputValue)
-          ? found_keywords.push(entry)
-          : {}
-      )
+      entry.keywords.pl
+        .concat(entry.keywords.en)
+        .map(keyword =>
+          keyword.toLowerCase().includes(inputValue)
+            ? found_keywords.push(entry)
+            : {}
+        )
     );
-
+    //search for clauses
     found_clauses = source.filter(lang =>
       lang.clause.toLowerCase().includes(inputValue)
     );
 
     const all = found_clauses.concat(found_keywords);
 
-
-    //copy pasted
+    //remove duplicates (copy pasted)
     function getUnique(arr, comp) {
       //store the comparison values in array
       const unique = arr
@@ -76,7 +74,7 @@ const getSuggestions = value => {
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => "Selected: " + suggestion.clause;
 
-///state
+
 export default class SearchExampleStandard extends Component {
   constructor() {
     super();
@@ -95,23 +93,18 @@ export default class SearchExampleStandard extends Component {
       selectedKeyword: false
     };
   }
+  //sort keywords
+  sortAlph = arr => {
+    arr.sort(function(x, y) {
+      var a = String(x).toUpperCase();
+      var b = String(y).toUpperCase();
+      if (a > b) return 1;
+      if (a < b) return -1;
+      return 0;
+    });
 
-  
-  sortAlph = arr => { 
-  
-  
-    arr.sort(function(x,y){
-        var a = String(x).toUpperCase();
-        var b = String(y).toUpperCase();
-        if (a > b)
-           return 1
-        if (a < b)
-           return -1
-        return 0;
-      });
-  
-  return arr
-  }
+    return arr;
+  };
 
   onClickLabel = e => {
     // prevents referring to the parent
@@ -132,18 +125,28 @@ export default class SearchExampleStandard extends Component {
         <Segment>
           <b>{suggestion.clause}</b>
 
-          <div >
-            {this.sortAlph(suggestion.keywords.pl)
-              .concat(this.sortAlph(suggestion.keywords.en))
-              .map(keyword => (
-                <Label style={{marginTop: '2px'}}
-                  onClick={this.onClickLabel}
-                  className={keyword}
-                  key={keyword}
-                >
-                  {keyword}
-                </Label>
-              ))}
+          <div>
+            {this.sortAlph(suggestion.keywords.pl).map(keyword => (
+              <Label
+                style={{ marginTop: "2px" }}
+                onClick={this.onClickLabel}
+                className={keyword}
+                key={keyword}
+              >
+                {keyword}
+              </Label>
+            ))}
+            <br />
+            {this.sortAlph(suggestion.keywords.en).map(keyword => (
+              <Label
+                style={{ marginTop: "2px" }}
+                onClick={this.onClickLabel}
+                className={keyword}
+                key={keyword}
+              >
+                {keyword}
+              </Label>
+            ))}
           </div>
         </Segment>
       }
@@ -183,7 +186,7 @@ export default class SearchExampleStandard extends Component {
     );
   };
 
- /* renderSuggestionsContainer = ({ containerProps, children, query }) => (
+  /* renderSuggestionsContainer = ({ containerProps, children, query }) => (
     <div {...containerProps}>
         {
         <div style={{position:'relative'}}>
@@ -198,8 +201,9 @@ export default class SearchExampleStandard extends Component {
   );
 */
   componentDidMount() {
+    // db/local storage
     axios
-      .get("https://api.myjson.com/bins/147dtt")
+      .get("https://api.myjson.com/bins/hp9mp")
       .then(res => {
         this.setState({ data: res.data });
       })
@@ -218,9 +222,10 @@ export default class SearchExampleStandard extends Component {
     };
 
     return (
-      <Grid>
-        <Grid.Column width={6}>
-          <Autosuggest menuStyle  ={inputStyle}
+      <React.Fragment>
+        <div style={{ height: "100%", width: "30%", left: 0 }}>
+          <Autosuggest
+            menuStyle={inputStyle}
             alwaysRenderSuggestions={true}
             suggestions={suggestions}
             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -233,14 +238,23 @@ export default class SearchExampleStandard extends Component {
             //renderSuggestionsContainer={this.renderSuggestionsContainer}
             //highlightFirstSuggestion={true}
           />
-        </Grid.Column>
-        <MainScreen
-          data={this.state.data}
-          selectedClause={this.state.selectedClause}
-          // add https://www.npmjs.com/package/natural 
-          selectedKeyword={this.state.selectedKeyword}
-        />
-      </Grid>
+        </div>
+        {/*TODO add menu below; add styling */}
+        <div
+          style={{
+            position: "fixed",
+            right: 5,
+
+            width: "60%"
+          }}
+        >
+          <MainScreen
+            data={this.state.data}
+            selectedClause={this.state.selectedClause}
+            selectedKeyword={this.state.selectedKeyword}
+          />
+        </div>
+      </React.Fragment>
     );
   }
 }

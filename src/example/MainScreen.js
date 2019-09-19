@@ -1,4 +1,4 @@
-//move components to different files
+//TODO move Clause nad Keywords components to directories
 
 import React from "react";
 import { Grid, Segment, Divider } from "semantic-ui-react";
@@ -35,16 +35,16 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
     
     return { _data, selectedClause };
   }
-  //prune?
+  //TODO rewrite
   function prepDataforKeywordSelectionScreen(data, selectedKeyword) {
     let clause, example;
     let dataforColumns = [];
     let _clauseDescription = [];
     let aux = [];
-    // clause_n_number object: clause + number of examples for a given clause
+    // clause_n_number object: clause + number of examples for the given clause
     let clause_n_number = {};
 
-    //check if the examples in clauses contain the selected keyword; count the occurence
+    //check if the examples in clauses contain the selected keyword; count the occurences
     for (clause in data["Clauses"]) {
       for (example in data["Clauses"][clause]["Examples"]) {
         if (
@@ -83,8 +83,8 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
   }
 
   return (
-    <Grid.Column width={10}>
-      <Segment>
+    <Grid.Column width={10} >
+      <Segment >
         <p><b>Przykłady</b></p>
         <Divider />
 

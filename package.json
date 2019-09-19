@@ -12,6 +12,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "react-sticky": "^6.0.3",
     "semantic-ui-react": "^0.87.3"
   },
   "scripts": {

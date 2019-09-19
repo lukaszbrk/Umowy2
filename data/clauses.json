@@ -25,8 +25,8 @@
             "share capital",
             "kapitał zakładowy",
             "REGON",
-            "National Business Registry Number",
-            "test2"
+            "National Business Registry Number"
+         
           ]
         }
       }
@@ -154,8 +154,10 @@
           ]
         }
       },
-      "Description_PL": "",
-      "Description_EN": "",
+      "Description_PL": "Postanowienia dotyczące rozwiązywania umowy",
+      "Description_EN": "Provisions concerning the termination of the agreement",
+
+
       "Keywords": ""
     },
 
@@ -214,7 +216,7 @@
       "Description_EN": "An event or effect that can be neither anticipated nor controlled",
       "Keywords": ""
     },
-    "Governing law": {
+    "Governing Law": {
       "Examples": {
         "0": {
           "pl": "Niniejsza umowa podlega prawu kraju Sprzedającego oraz będzie zgodnie z nim interpretowana.",
@@ -239,8 +241,8 @@
           ]
         }
       },
-      "Description_PL": "",
-      "Description_EN": "",
+      "Description_PL": "Klauzula wskazująca prawo, jakie strony przyjeły za nadrzędne w stosunku do zawartej przez siebie umowy, czyli prawo stanowiące podstawę wykładni jej postanowień",
+      "Description_EN": "Contract provision specifying the governing jurisdiction over disputes arising from or relating to this contract",
       "Keywords": ""
     },
     "Notices": {
@@ -282,8 +284,8 @@
           ]
         }
       },
-      "Description_PL": "",
-      "Description_EN": "",
+      "Description_PL": "Klauzula ta określa tryb prowadzenia korespondencji związanej z umową",
+      "Description_EN": "A notice clause states how the parties to a contract will communicate with each other in written form",
       "Keywords": ""
     },
 
@@ -340,7 +342,7 @@
           ]
         }
       },
-      "Description_PL": "",
+      "Description_PL": "Klauzula określająca skutki, jakie dla całości umowy wynikają z uznania części jej postanowień za nieważne lub niewykonalne",
       "Description_EN": "",
       "Keywords": ""
     },

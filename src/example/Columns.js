@@ -5,9 +5,8 @@ import { Container, Grid, Button, Icon } from "semantic-ui-react";
 
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-const pStyle = {
+const columnsStyle = {
   padding: "10px",
-  paddingBottom: "50px",
   border: "1px solid blue"
 };
 
@@ -20,7 +19,7 @@ const Columns = ({ _data, activePage }) => {
           <Container textAlign="justified">
             <p
               contentEditable="true"
-              style={pStyle}
+              style={columnsStyle}
               dangerouslySetInnerHTML={{ __html: _data[activePage - 1]["pl"] }}
             ></p>
             <CopyToClipboard text={_data[activePage - 1]["pl"]}>
@@ -35,7 +34,7 @@ const Columns = ({ _data, activePage }) => {
           {
             <Container textAlign="justified">
               <p
-                style={pStyle}
+                style={columnsStyle}
                 contentEditable="true"
                 dangerouslySetInnerHTML={{
                   __html: _data[activePage - 1]["eng"]
