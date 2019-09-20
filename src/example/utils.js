@@ -65,7 +65,8 @@ export function longestCommonSubstring(string1, string2) {
 
 export function findWords(str, text_to_process) {
   let color = "<mark style='background-color: yellow;'>";
-  let myRegexp = new RegExp("(" + str + ")([^a-z]+|[a-z]+)", "gi");
+  //TODO polish characters
+  let myRegexp = new RegExp("([A-Za-z]?)(" + str + ")([^A-Za-z]?|[A-Za-z]+)", "giu");
   var match = myRegexp.exec(text_to_process);
 
   if (match[0] === null) {
