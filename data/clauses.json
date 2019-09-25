@@ -112,6 +112,20 @@
           ]
         },
         "2": {
+          "pl": "Jeśli okaże się, że w ciągu pierwszych dwunastu miesięcy od dostarczenia Produktów do Klienta, Produkty te są niezgodne z gwarancjami podanynymi w pkt 9.1, Dostawca, wedle wyboru Klienta, wymieni te Produkty na Produkty zgodne z wymaganiami lub zwróci kwotę zapłaconą za takie niezgodne Produkty, pod warunkiem, że zostały spełnione wymagania określone w pkt 9.2",
+          "eng": "If it is shown that the Products or any of them fail to comply with the warranties given under Clause 9.1 within the first twelve months after their delivery to the Customer and provided the requirements detailed in Clause 9.2 have been met, the Supplier will at the Customer’s option, either replace the Products with compliant Products or refund the price paid in respect of such non-compliant Products.",
+          "keywords": [
+            "gwarancja",
+            "niezgodność",
+            "wymienić",
+            "zwrot",
+            "warranty",
+            "non-compliance",
+            "replace",
+            "refund"
+          ]
+        },
+        "3": {
           "pl": "Dostawca nie ponosi odpowiedzialności za szkody pośrednie lub wtórne, utratę zysków lub roszczenia osób trzecich w odniesieniu do Produktów (Dostawca ponosi odpowiedzialność za śmierć lub uszkodzenie ciała wynikające z wad Produktów spowodowanych zaniedbaniem Dostawcy).",
           "eng": "The Supplier shall not be liable for any indirect or consequential losses, loss of profits or third party claims in relation to the Products (with the exception that the Supplier shall remain liable for death or personal injury arising out of defects in the Products to the extent attributable to the Supplier’s negligence).",
           "keywords": [
@@ -145,12 +159,13 @@
           ]
         },
         "1": {
-          "pl": "",
-          "eng": "",
+          "pl": "Jeżeli Dostawca lub Klient anulują umowę z przyczyn, za które odpowiada Dostawca, Dostawca zapłaci odszkodowanie Klientowi w wysokości 10% wartości niniejszej Umowy.",
+          "eng": "In case either Supplier or Customer cancels the contract due to the reasons that remain under Supplier's responsibility, the Supplier shell be obliged to pay to Customer compensation at the value of 10% of the value of the Agreement.",
           "keywords": [
-            "",
-            "",
-            ""
+            "anulować",
+            "odszkodowanie",
+            "cancel",
+            "compensation"
           ]
         }
       },
@@ -210,6 +225,33 @@
             "circumstances",
             "notice"
           ]
+        },
+
+        "2": {
+          "pl": "Sprzedawca nie będzie ponosił odpowiedzialności za niedotrzymanie warunków Umowy wynikające z okoliczności (w tym także obejmujące zaniedbania ze strony Sprzedawcy), które znajdują się poza kontrolą Sprzedawcy i które uniemożliwiają Sprzedawcy dotrzymanie warunków umowy lub ograniczają go w tym względzie.",
+          "eng": "Seller shall not be liable for any failure to comply with the contract related to any circumstances whatever (whether or not involving Seller's negligence) which are beyond Seller's reasonable control and which prevent or restrict Seller from complying with the contract.",
+          "keywords": [
+            "odpowiedzialność",
+            "dotrzymać",
+            "zaniedbanie",
+            "liability",
+            "comply",
+            "negligence"
+          ]
+        },
+
+        "3": {
+          "pl": "Niemniej Sprzedawca może w zasadnych przypadkach oraz bez ponoszenia odpowiedzialności zawiesić wykonywanie wszystkich lub niektórych jego zobowiązań na mocy Umowy lub odstąpić od ich wykonywania , jeśli zdolność Sprzedawcy do dotrzymania takich zobowiązań zostanie w znacznym stopniu ograniczona.",
+          "eng": "However, Seller may where reasonable and without liability suspend or terminate all or some of its obligations under the contract if Seller’s ability to fulfil such obligations is materially impaired.",
+          "keywords": [
+            "odpowiedzialność",
+            "odstąpienie",
+            "zobowiązanie",
+            "suspend",
+            "terminate",
+            "obligation"
+         
+          ]
         }
       },
       "Description_PL": "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje",
@@ -238,6 +280,26 @@
             "govern",
             "construe",
             "conflict"
+          ]
+        },
+
+        "2": {
+          "pl": "Do niniejszej umowy ani transakcji w niej przewidzianych nie ma zastosowania Konwencja Narodów Zjednoczonych o umowach międzynarodowej sprzedaży towarów.",
+          "eng": "The United Nations Convention on Contracts for the International Sale of Goods shall not apply to this contract or the transactions contemplated by this contract.",
+          "keywords": [
+    
+            "Konwencja Narodów Zjednoczonych o umowach międzynarodowej sprzedaży towarów",
+            "United Nations Convention on Contracts for the International Sale of Goods"
+          ]
+        },
+
+        "3": {
+          "pl": "W sprawach nie uregulowanych w niniejszej Umowie będą miały zastosowanie przepisy Kodeksu cywilnego",
+          "eng": "The provisions of the Civil Code shall apply in matters not regulated by the Contract",
+          "keywords": [
+    
+            "Civil Code",
+            "Kodeks cywilny"
           ]
         }
       },
@@ -303,16 +365,55 @@
           ]
         },
         "1": {
-          "pl": "",
-          "eng": "",
+          "pl": "Strona Otrzymująca zachowa poufność Informacji Poufnych Strony Ujawniającej i dołoży wszelkich starań, aby zachować tajność i poufność Informacji Poufnych, w tym m.in. wdrażając zasadne fizyczne zabezpieczenia i procedury operacyjne.",
+          "eng": "The Receiving Party shall treat as strictly confidential, and use all reasonable efforts to preserve the secrecy and confidentiality of, all Confidential Information of the Disclosing Party, including implementing reasonable physical security measures and operating procedures.",
           "keywords": [
-            "",
-            "",
-            ""
+            "tajne",
+            "zabezpieczenia",
+            "confidential",
+            "secrecy",
+            "measures"
           ]
+        },
+
+        "2": {
+          "pl": "The Receiving Party agrees that it will use any Confidential Information of the Disclosing Party solely for the purpose of exercising its right or performing its obligations under this Agreement and for no other purposes whatsoever.",
+          "eng": "Strona będzie wykorzystywać Informacje Poufne Strony Ujawniającej wyłącznie w celu korzystania ze swoich praw lub wykonywania zobowiązań wynikających z Umowy.",
+          "keywords": [
+            "poufne",
+            "zobowiązania",
+            "exercise",
+            "obligation"
+            
+          ]
+        },
+
+        
+        "3": {
+          "pl": "Strona Otrzymująca zobowiązuje się nie ujawniać żadnych Informacji Poufnych Strony Ujawniającej innym osobom. Jeżeli jednak Strona Otrzymująca jest korporacją, spółką osobową lub podobnym podmiotem, ujawnienie Informacji Poufnych jest dozwolone jej członkom kadry kierowniczej, pracownikom, wykonawcom i przedstawicielom, którzy muszą w uzasadnionych przypadkach poznać takie Informacje Poufne, pod warunkiem że Strona Otrzymująca poinformuje ich o poufnym charakterze Informacji Poufnych i procedurach wymaganych w celu zachowania ich poufności, i uzyska od nich pisemne potwierdzenia tego, że zgodzili się być indywidualnie zobowiązani warunkami dotyczącymi poufności określonymi w Umowie.",
+
+
+          "eng": "The Receiving Party shall make no disclosures whatsoever of any Confidential Information of the Disclosing Party to others; provided, however, that if the Receiving Party is a corporation, partnership, or similar entity, disclosure is permitted to the Receiving Party's officers, employees, contractors and agents who have a demonstrable need to know such Confidential Information, provided the Receiving Party shall advise such personnel of the confidential nature of the Confidential Information and of the procedures required to maintain the confidentiality thereof, and shall require them to acknowledge in writing that they have read, understand, and agree to be individually bound by the confidentiality terms of this Agreement.",
+          "keywords": [
+            "ujawniać",
+            "poufne",
+            "ujawnienie",
+            "obligation",
+            "disclose",
+            "bound"
+            
+          ]
+        },
+        "4":{
+
+          "pl": "Niezależnie od powyższego, niniejszy akt nie nakłada na strony żadnych zobowiązań w odniesieniu do informacji, które (i) zostały ujawnione w przypadku braku umowy o zachowaniu poufności i Strona ujawniająca wyraziła pisemną zgodę na ujawnienie tych informacji przed ich ujawnieniem; lub (ii) są lub weszły do domeny publicznej bez winy Strony otrzymującej; lub (iii) są znane Stronie otrzymującej przed ich ujawnieniem; lub (iv) zostały opracowane niezależnie przez Stronę otrzymującą bez wykorzystania Informacji poufnych; lub (v) są powszechnie udostępniane przez Stronę ujawniającą bez ograniczeń w zakresie ujawnienia, lub (vi) należy ujawnić na mocy przepisów prawa, regulacji lub nakazu sądowego; pod warunkiem, że w przypadku, gdy Strona otrzymująca jest zobowiązana na mocy przepisów prawa, regulacji lub nakazu sądowego do ujawnienia Informacji poufnych Strony ujawniającej, Strona otrzymująca niezwłocznie powiadomi o tym Stronę ujawniającą na piśmie przed dokonaniem takiego ujawnienia, aby ułatwić Stronie ujawniającej starania o wydanie nakazu zabezpieczającego lub innego stosownego środka zaradczego od właściwych władz, na koszt Strony ujawniającej.",
+          "eng":"Notwithstanding the foregoing, this subsection imposes no obligation upon the parties with respect to information that (i) is disclosed in the absence of a confidentiality agreement and such disclosure was agreed to by the Disclosing Party in writing prior to such disclosure; or (ii) is or has entered the public domain through no fault of the Receiving Party; or (iii) is known by the Receiving Party prior to the time of disclosure; or (iv) is independently developed by the Receiving Party without use of the Confidential Information; or (v) is made generally available by the Disclosing Party without restriction on disclosure; or (vi) is required to be disclosed by law, regulation or court order; provided, that in the event the Receiving Party is required by law, regulation or court order to disclose any of Disclosing Party's Confidential Information, Receiving Party will promptly notify Disclosing Party in writing prior to making any such disclosure in order to facilitate Disclosing Party seeking a protective order or other appropriate remedy from the proper authority, at the Disclosing Party's expense.",
+
+          "keywords": ["zobowiązania",
+          "domena publiczna", "nakaz", "ujawnienie", "środek zaradczy", "obligation", "disclose", "confidential", "public domain", "order", "remedy"]
         }
       },
-      "Description_PL": "",
+      "Description_PL": "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w zwiazku z realizacją wiążącej je umowy",
       "Description_EN": "",
       "Keywords": ""
     },

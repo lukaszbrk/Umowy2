@@ -203,7 +203,7 @@ export default class SearchExampleStandard extends Component {
   componentDidMount() {
     // db/local storage
     axios
-      .get("https://api.myjson.com/bins/hp9mp")
+      .get("https://api.myjson.com/bins/yg05x")
       .then(res => {
         this.setState({ data: res.data });
       })

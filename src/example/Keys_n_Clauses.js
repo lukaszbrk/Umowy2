@@ -41,20 +41,23 @@ export function getSource() {
           "wada",
           "szkody",
           "roszczenia",
-          "zaniedbanie"
+          "zaniedbanie",
+          "niezgodność",
+          "wymienić",
+          "zwrot"
         ],
         en: [
           "warranty",
-          "comply",
-
+          "compliance",
           "liable",
           "defect",
           "discovery",
           "notice",
-
           "consequential",
           "claim",
-          "injury"
+          "injury",
+          "replace",
+          "refund"
         ]
       },
       description:
@@ -64,8 +67,8 @@ export function getSource() {
     {
       clause: "Termination",
       keywords: {
-        pl: ["wygaśnięcie", "rozwiązanie"],
-        en: ["expiration", "termination"]
+        pl: ["wygaśnięcie", "rozwiązanie", "anulować", "odszkodowanie"],
+        en: ["expiration", "termination", "cancel", "compensation"]
       },
       description: "Postanowienia dotyczące rozwiązywania umowy"
     },
@@ -83,9 +86,28 @@ export function getSource() {
     {
       clause: "Force Majeure",
       keywords: {
-        pl: ["okoliczności", "odpowiedzialność", "strajk"],
+        pl: [
+          "okoliczności",
+          "odpowiedzialność",
+          "strajk",
+          "dotrzymać",
+          "zaniedbanie",
+          "odpowiedzialność",
+          "odstąpienie",
+          "zobowiązanie"
+        ],
 
-        en: ["liability", "stoppage", "circumstances", "notice"]
+        en: [
+          "liability",
+          "stoppage",
+          "circumstances",
+          "notice",
+          "comply",
+          "negligence",
+          "suspend",
+          "terminate",
+          "obligation"
+        ]
       },
       description:
         "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje"
@@ -99,13 +121,85 @@ export function getSource() {
           "interpretować",
           "prawo właściwe",
           "wykładnia",
-          "norma kolizyjna"
+          "norma kolizyjna",
+          "Konwencja Narodów Zjednoczonych",
+
+          "Kodeks cywilny"
         ],
 
-        en: ["govern", "construe", "conflict"]
+        en: [
+          "govern",
+          "construe",
+          "conflict",
+          "United Nations Convention",
+          "Civil Code"
+        ]
       },
       description:
         "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje"
+    },
+    {
+      clause: "Notices",
+      keywords: {
+        pl: [
+          "z zastrzeżeniem",
+          "powiadomienia",
+          "nadanie",
+          "przesyłka",
+          "dzień roboczy",
+          "nadanie",
+          "doręczanie",
+          "kurier",
+          "list polecony",
+          "adres"
+        ],
+
+        en: [
+          "notice",
+          "deem",
+          "facsimile",
+          "delivery",
+          "woking day",
+          "subject to",
+          "courier",
+          "registered mail",
+          "return receipt",
+          "address"
+        ]
+      },
+      description:
+        "Klauzula określa tryb prowadzenia korespondencji pomiędzy stronami umowy"
+    },
+
+    {
+      clause: "Confidentiality",
+      keywords: {
+        pl: [
+          "poufne",
+          "ujawniać",
+          "tajne",
+          "zabezpieczenia",
+          "zobowiązania",
+          "domena publiczna",
+          "nakaz",
+          "środek zaradczy"
+        ],
+
+        en: [
+          "confidential",
+          "disclose",
+          "secrecy",
+          "measures",
+
+          "bound",
+          "obligation",
+          "public domain",
+          "order",
+          "remedy"
+        ]
+      },
+      description:
+        "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w zwiazku z realizacją wiążącej je umowy"
     }
   ];
 
@@ -118,9 +212,7 @@ export function detLang(keyword) {
   let s = getSource();
 
   for (entry in s) {
-  
     if (s[entry]["keywords"]["pl"].includes(keyword)) {
-   
       pl = true;
       break;
     }
