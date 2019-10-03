@@ -26,7 +26,6 @@
             "kapitał zakładowy",
             "REGON",
             "National Business Registry Number"
-         
           ]
         }
       }
@@ -143,8 +142,6 @@
       "Description_EN": "Representations and warranties are assurances that one party gives to another party; assurances are statements that the party can rely on as factual.",
       "Keywords": ""
     },
-
-
     "Termination": {
       "Examples": {
         "0": {
@@ -155,7 +152,6 @@
             "rozwiązanie",
             "expiration",
             "termination"
-            
           ]
         },
         "1": {
@@ -167,17 +163,150 @@
             "cancel",
             "compensation"
           ]
+        },
+        "2": {
+          "pl": "Jeżeli jedna ze Stron w istotny sposób naruszy którekolwiek ze swoich zobowiązań wynikających z niniejszej Umowy i naruszenie takie nie zostanie naprawione w ciągu trzydziestu dni kalendarzowych od dnia pisemnego powiadomienia o tym naruszeniu przez drugą Stronę, wówczas druga Strona może rozwiązać niniejszą Umowę, pisemnie powiadamiając o tym drugą Stronę, w dniu określonym w tym powiadomieniu.",
+          "eng": "In the event that either party materially breaches any of its obligations under this Agreement and such breach is not substantially cured within thirty calendar days after written notice thereof is given by the other party, then the non-breaching party may, by giving written notice thereof to the other party, terminate this Agreement as of the date specified in such notice of termination.",
+          "keywords": [
+            "naruszyć",
+            "naprawić",
+            "powiadomienie",
+            "breach",
+            "cure",
+            "notice"
+       
+          ]
+        },
+
+        "3": {
+          "pl": "Każda ze Stron może rozwiązać niniejszą Umowę, jeżeli druga Strona zostanie uznana za niewypłacalną lub postawiona w stan upadłości, lub jeżeli zostanie wszczęte postępowanie przez stronę domagającą się odszkodowania, restrukturyzacji lub układu na podstawie przepisów prawa upadłościowego, dokonania cesji na rzecz wierzycieli, powołania syndyka, likwidatora, powiernika nieruchomości i aktywów Strony, likwidacji, rozwiązania i zakończenia działalności gospodarczej danej Strony.",
+          "eng": "Either party may terminate this Agreement if the other party is adjudged insolvent or bankrupt, or if proceedings are instituted by or against a party seeking relief, reorganization or arrangement under any laws relating to insolvency, or seeking any assignment for the benefit of creditors, or seeking the appointment of a receiver, liquidator or trustee of a party's property or assets or the liquidation, dissolution or winding up of a party's business.",
+          "keywords": [
+            "niewypłacalność",
+            "upadłość",
+            "wszczynać",
+            "postępowanie",
+            "odszkodowanie",
+            "restrukturyzacja",
+            "układ",
+            "cesja",
+            "wierzyciel",
+            "syndyk",
+            "likwidator",
+            "powiernik",
+            "likwidacja",
+            "rozwiązanie",
+
+            "insolvent",
+            "bankrupt",
+            "institute",
+            "proceeding",
+            "relief",
+            "reorganization",
+            "arrangement",
+            "creditor",
+            "receiver",
+            "liquidator",
+            "trustee",
+            "disolution",
+            "wind up"
+
+
+
+      
+       
+          ]
         }
       },
       "Description_PL": "Postanowienia dotyczące rozwiązywania umowy",
       "Description_EN": "Provisions concerning the termination of the agreement",
-
-
       "Keywords": ""
     },
+    "Indemnification": {
+      "Examples": {
+        "0": {
+          "pl": "Rejestrator, na własny koszt i w ciągu trzydziestu dni od przedstawienia żądania przez xxx zgodnie z niniejszym par., przejmie odpowiedzialność za xxx i jej podwykonawców, a także jej dyrektorów, członków kadry kierowniczej, pracowników, pełnomocników, przedstawicieli i ich podmiotów stowarzyszonych w stosunku do wszelkich roszczeń, pozwów, postępowań wszczętych przeciwko nim w oparciu o lub wynikających  z roszczeń dotyczących: (ii)  produktów lub usług Rejestratora; (ii) wszelkich porozumień, w tym polityki rozstrzygania sporów Rejestratora, z każdym Posiadaczem nazwy zarejestrowanej lub Rejestratorem; lub (iii) działalności Rejestratora związanej z rejestracją nazw domen, w tym prowadzenia kampanii reklamowej Rejestratora,  składania wniosków o rejestrację nazw domen, systemami i innymi procesami, pobieraniem opłat, naliczaniem opłat oraz obsługą klienta.",
+          "eng": "Registrar, at its own expense and within thirty days after presentation of a demand by xxx under this Section, will indemnify, defend and hold harmless xxx and its subcontractors, and the directors, officers, employees, representatives, agents and affiliates of each of them, against any claim, suit, action, or other proceeding brought against any such party(ies) based on or arising from any claim or alleged claim: (i) relating to any product or service of Registrar; (ii) relating to any agreement, including Registrar's dispute policy, with any Registered Name Holder or Registrar; or (iii) relating to Registrar's domain name registration business, including, but not limited to, Registrar's advertising, domain name application process, systems and other processes, fees charged, billing practices and customer service.",
+          "keywords": [
+            "żądanie",
+            "odpowiedzialność",
+            "podwykonawca",
+            "dyrektor",
+            "kierownictwo",
+            "przedstawiciel",
+            "pełnomocnik",
+            "roszczenie",
+            "pozew",
+            "postępowanie",
+            "wszczęcie",
+            "defend",
+            "hold harmless",
+            "subcontractor",
+            "director",
+            "officer",
+            "agent",
+            "representative",
+            "claim",
+            "suit",
+            "action",
+            "proceeding"
+          ]
+        },
+        "1": {
+          "pl": "xxx niezwłocznie powiadomi Rejestratora o każdym takim roszczeniu, a na pisemny wniosek Rejestratora xxx dostarczy Rejestratorowi wszystkie dostępne informacje i udzieli Rejestratorowi uzasadnionej pomocy w celu obrony przed takimi roszczeniami pod warunkiem, że Rejestrator zwróci xxx poniesione i uzasadnione koszty w związku z udzielaniem takich informacji i pomocy.",
+          "eng": "xxx shall provide Registrar with prompt notice of any such claim, and upon Registrar's written request, xxx will provide to Registrar all available information and assistance reasonably necessary for Registrar to defend such claim, provided that Registrar reimburses xxx for xxx’S actual and reasonable costs incurred in connection with providing such information and assistance.",
+          "keywords": [
+            "zwrócić",
+            "powiadomienie",
+            "roszczenie",
+            "ponieść",
+            "koszt",
+            "claim",
+            "incur",
+            "defend",
+            "reimburse"
+          ]
+        },
 
+        "2": {
+          "pl": "Rejestrator nie zawrze ugody ani żadnego porozumienia dotyczącego roszczeń, za które przejął odpowiedzialność bez uprzedniej pisemnej zgody xxx, której ta nie może odmówić bez uzasadnienia.",
+          "eng": "Registrar will not enter into any settlement or compromise of any such indemnifiable claim without xxx’S prior written consent, which consent shall not be unreasonably withheld.",
+          "keywords": [
+            "ugoda",
+            "roszczenie",
+            "odpowiedzialność",
+            "zgoda",
+            "settlement",
+            "claim",
+            "consent"
+          ]
+        },
 
-
+        
+        "3": {
+          "pl": "Rejestrator pokryje  koszty, odszkodowania i wydatki, w tym uzasadnione koszty obsługi prawnej oraz koszty nałożone na xxx lub poniesione przez xxx w związku z takim roszczeniem, pozwem lub postępowaniem.",
+          "eng": "Registrar will pay any and all costs, damages, and expenses, including, but not limited to, reasonable attorneys' fees and costs awarded against or otherwise incurred by xxx in connection with or arising from any such indemnifiable claim, suit, action or proceeding.",
+          "keywords": [
+            "koszt",
+            "odszkodowanie",
+            "wydatki",
+            "nałożyć",
+            "cost",
+            "damages",
+            "expenses",
+            "fee",
+            "award",
+            "incur",
+            "claim",
+            "suit",
+            "action"
+          ]
+        }
+      },
+      "Description_PL": "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie moga zostać  zgloszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkódd, kosztów, etc., jakie moze ona w związku z tym ponieść.",
+      "Description_EN": "",
+      "Keywords": ""
+    },
     "Default": {
       "Examples": {
         "0": {
@@ -226,7 +355,6 @@
             "notice"
           ]
         },
-
         "2": {
           "pl": "Sprzedawca nie będzie ponosił odpowiedzialności za niedotrzymanie warunków Umowy wynikające z okoliczności (w tym także obejmujące zaniedbania ze strony Sprzedawcy), które znajdują się poza kontrolą Sprzedawcy i które uniemożliwiają Sprzedawcy dotrzymanie warunków umowy lub ograniczają go w tym względzie.",
           "eng": "Seller shall not be liable for any failure to comply with the contract related to any circumstances whatever (whether or not involving Seller's negligence) which are beyond Seller's reasonable control and which prevent or restrict Seller from complying with the contract.",
@@ -239,7 +367,6 @@
             "negligence"
           ]
         },
-
         "3": {
           "pl": "Niemniej Sprzedawca może w zasadnych przypadkach oraz bez ponoszenia odpowiedzialności zawiesić wykonywanie wszystkich lub niektórych jego zobowiązań na mocy Umowy lub odstąpić od ich wykonywania , jeśli zdolność Sprzedawcy do dotrzymania takich zobowiązań zostanie w znacznym stopniu ograniczona.",
           "eng": "However, Seller may where reasonable and without liability suspend or terminate all or some of its obligations under the contract if Seller’s ability to fulfil such obligations is materially impaired.",
@@ -250,7 +377,6 @@
             "suspend",
             "terminate",
             "obligation"
-         
           ]
         }
       },
@@ -282,22 +408,18 @@
             "conflict"
           ]
         },
-
         "2": {
           "pl": "Do niniejszej umowy ani transakcji w niej przewidzianych nie ma zastosowania Konwencja Narodów Zjednoczonych o umowach międzynarodowej sprzedaży towarów.",
           "eng": "The United Nations Convention on Contracts for the International Sale of Goods shall not apply to this contract or the transactions contemplated by this contract.",
           "keywords": [
-    
             "Konwencja Narodów Zjednoczonych o umowach międzynarodowej sprzedaży towarów",
             "United Nations Convention on Contracts for the International Sale of Goods"
           ]
         },
-
         "3": {
           "pl": "W sprawach nie uregulowanych w niniejszej Umowie będą miały zastosowanie przepisy Kodeksu cywilnego",
           "eng": "The provisions of the Civil Code shall apply in matters not regulated by the Contract",
           "keywords": [
-    
             "Civil Code",
             "Kodeks cywilny"
           ]
@@ -325,17 +447,16 @@
             "delivery",
             "woking day",
             "subject to"
-            
           ]
         },
         "1": {
           "pl": "Wszelkie powiadomienia wymagane lub wymienione w niniejszej Umowie będą uważane za ważne dla celów niniejszej Umowy wyłącznie jeśli (a) są na piśmie, (b) w języku angielskim, (c) odnoszą się do niniejszej Umowy, (d) są doręczane osobiście przez cieszącego się dobrą reputacją kuriera lub wysłane listem poleconym, opłaconym z góry, z potwierdzeniem odbioru, i (e) dostarczane są na następujący adres (lub na adres wskazany przez odbiorcę stronie wysyłającej zgodnie z punktem 7.5):",
           "eng": "Any notice that is required by, or otherwise specified in, this Agreement will be deemed to be a valid notice for the purposes of this Agreement only if it (a) is in writing, (b) is in the English language, (c) makes reference to this Agreement, (d) is delivered in person, by reputable courier, or mailed by certified or registered mail, postage prepaid, return receipt requested, and (e) is delivered to the following address (or to such other address as may be designated by the receiving party to the sending party in accordance with this Section 7.5):",
           "keywords": [
-            "powiadomienia",
+            "powiadomienie",
             "doręczanie",
             "kurier",
-            "list polecony",
+  
             "adres",
             "notice",
             "deem",
@@ -350,7 +471,6 @@
       "Description_EN": "A notice clause states how the parties to a contract will communicate with each other in written form",
       "Keywords": ""
     },
-
     "Confidentiality": {
       "Examples": {
         "0": {
@@ -361,7 +481,6 @@
             "ujawniać",
             "confidential",
             "disclose"
-            
           ]
         },
         "1": {
@@ -375,7 +494,6 @@
             "measures"
           ]
         },
-
         "2": {
           "pl": "The Receiving Party agrees that it will use any Confidential Information of the Disclosing Party solely for the purpose of exercising its right or performing its obligations under this Agreement and for no other purposes whatsoever.",
           "eng": "Strona będzie wykorzystywać Informacje Poufne Strony Ujawniającej wyłącznie w celu korzystania ze swoich praw lub wykonywania zobowiązań wynikających z Umowy.",
@@ -384,15 +502,10 @@
             "zobowiązania",
             "exercise",
             "obligation"
-            
           ]
         },
-
-        
         "3": {
           "pl": "Strona Otrzymująca zobowiązuje się nie ujawniać żadnych Informacji Poufnych Strony Ujawniającej innym osobom. Jeżeli jednak Strona Otrzymująca jest korporacją, spółką osobową lub podobnym podmiotem, ujawnienie Informacji Poufnych jest dozwolone jej członkom kadry kierowniczej, pracownikom, wykonawcom i przedstawicielom, którzy muszą w uzasadnionych przypadkach poznać takie Informacje Poufne, pod warunkiem że Strona Otrzymująca poinformuje ich o poufnym charakterze Informacji Poufnych i procedurach wymaganych w celu zachowania ich poufności, i uzyska od nich pisemne potwierdzenia tego, że zgodzili się być indywidualnie zobowiązani warunkami dotyczącymi poufności określonymi w Umowie.",
-
-
           "eng": "The Receiving Party shall make no disclosures whatsoever of any Confidential Information of the Disclosing Party to others; provided, however, that if the Receiving Party is a corporation, partnership, or similar entity, disclosure is permitted to the Receiving Party's officers, employees, contractors and agents who have a demonstrable need to know such Confidential Information, provided the Receiving Party shall advise such personnel of the confidential nature of the Confidential Information and of the procedures required to maintain the confidentiality thereof, and shall require them to acknowledge in writing that they have read, understand, and agree to be individually bound by the confidentiality terms of this Agreement.",
           "keywords": [
             "ujawniać",
@@ -401,23 +514,42 @@
             "obligation",
             "disclose",
             "bound"
-            
           ]
         },
-        "4":{
-
+        "4": {
           "pl": "Niezależnie od powyższego, niniejszy akt nie nakłada na strony żadnych zobowiązań w odniesieniu do informacji, które (i) zostały ujawnione w przypadku braku umowy o zachowaniu poufności i Strona ujawniająca wyraziła pisemną zgodę na ujawnienie tych informacji przed ich ujawnieniem; lub (ii) są lub weszły do domeny publicznej bez winy Strony otrzymującej; lub (iii) są znane Stronie otrzymującej przed ich ujawnieniem; lub (iv) zostały opracowane niezależnie przez Stronę otrzymującą bez wykorzystania Informacji poufnych; lub (v) są powszechnie udostępniane przez Stronę ujawniającą bez ograniczeń w zakresie ujawnienia, lub (vi) należy ujawnić na mocy przepisów prawa, regulacji lub nakazu sądowego; pod warunkiem, że w przypadku, gdy Strona otrzymująca jest zobowiązana na mocy przepisów prawa, regulacji lub nakazu sądowego do ujawnienia Informacji poufnych Strony ujawniającej, Strona otrzymująca niezwłocznie powiadomi o tym Stronę ujawniającą na piśmie przed dokonaniem takiego ujawnienia, aby ułatwić Stronie ujawniającej starania o wydanie nakazu zabezpieczającego lub innego stosownego środka zaradczego od właściwych władz, na koszt Strony ujawniającej.",
-          "eng":"Notwithstanding the foregoing, this subsection imposes no obligation upon the parties with respect to information that (i) is disclosed in the absence of a confidentiality agreement and such disclosure was agreed to by the Disclosing Party in writing prior to such disclosure; or (ii) is or has entered the public domain through no fault of the Receiving Party; or (iii) is known by the Receiving Party prior to the time of disclosure; or (iv) is independently developed by the Receiving Party without use of the Confidential Information; or (v) is made generally available by the Disclosing Party without restriction on disclosure; or (vi) is required to be disclosed by law, regulation or court order; provided, that in the event the Receiving Party is required by law, regulation or court order to disclose any of Disclosing Party's Confidential Information, Receiving Party will promptly notify Disclosing Party in writing prior to making any such disclosure in order to facilitate Disclosing Party seeking a protective order or other appropriate remedy from the proper authority, at the Disclosing Party's expense.",
-
-          "keywords": ["zobowiązania",
-          "domena publiczna", "nakaz", "ujawnienie", "środek zaradczy", "obligation", "disclose", "confidential", "public domain", "order", "remedy"]
+          "eng": "Notwithstanding the foregoing, this subsection imposes no obligation upon the parties with respect to information that (i) is disclosed in the absence of a confidentiality agreement and such disclosure was agreed to by the Disclosing Party in writing prior to such disclosure; or (ii) is or has entered the public domain through no fault of the Receiving Party; or (iii) is known by the Receiving Party prior to the time of disclosure; or (iv) is independently developed by the Receiving Party without use of the Confidential Information; or (v) is made generally available by the Disclosing Party without restriction on disclosure; or (vi) is required to be disclosed by law, regulation or court order; provided, that in the event the Receiving Party is required by law, regulation or court order to disclose any of Disclosing Party's Confidential Information, Receiving Party will promptly notify Disclosing Party in writing prior to making any such disclosure in order to facilitate Disclosing Party seeking a protective order or other appropriate remedy from the proper authority, at the Disclosing Party's expense.",
+          "keywords": [
+            "zobowiązania",
+            "domena publiczna",
+            "nakaz",
+            "ujawnienie",
+            "środek zaradczy",
+            "obligation",
+            "disclose",
+            "confidential",
+            "public domain",
+            "order",
+            "remedy"
+          ]
+        },
+        "5": {
+          "pl": "Ponadto, jeśli Strona Ujawniająca nie zapobiegnie ujawnieniu wnioskującemu podmiotowi prawnemu Informacji Poufnych, zobowiązuje się ona ujawnić wyłącznie część Informacji Poufnych, której ujawnienie wymaga prawo.",
+          "eng": "Receiving Party further agrees that if Disclosing Party is not successful in precluding the requesting legal body from requiring the disclosure of the Confidential Information, it will furnish only that portion of the Confidential Information which is legally required.",
+          "keywords": [
+            "disclose",
+            "preclude",
+            "confidential",
+            "disclose",
+            "preclude",
+            "poufne"
+          ]
         }
       },
       "Description_PL": "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w zwiazku z realizacją wiążącej je umowy",
       "Description_EN": "",
       "Keywords": ""
     },
-
     "Severability": {
       "Examples": {
         "0": {
@@ -447,7 +579,6 @@
       "Description_EN": "",
       "Keywords": ""
     },
-
     "Assignment": {
       "Examples": {
         "0": {
@@ -462,7 +593,6 @@
             "delegate",
             "transfer",
             "assets"
-
           ]
         },
         "1": {
@@ -479,8 +609,7 @@
       "Description_EN": "",
       "Keywords": ""
     },
-
-       "Arbitration": {
+    "Arbitration": {
       "Examples": {
         "0": {
           "pl": "Wszelkie spory, różnice zdań i roszczenia wynikające z niniejszej Umowy lub z nią związane będą rozstrzygane w drodze arbitrażu w hrabstwie Santa Clara w Kalifornii, prowadzonego przez jednego arbitra.",
@@ -525,7 +654,36 @@
             "arbitration",
             "competent",
             "jurisdiction"
-           
+          ]
+        },
+
+        "3": {
+          "pl": "Postępowania sądowe mające na celu wyegzekwowanie orzeczenia arbitrażowego będą wnoszone do sądów stanowych i federalnych stanu Virginia; strony mają również prawo wyegzekwowac orzeczenia takiego sądu przed każdym sądem właściwym.",
+          "eng": "Any litigation brought to enforce an arbitration award shall be brought in the state or federal courts of the state of Virginia, U.S.A.; however, the parties shall also have the right to enforce a judgment of such a court in any court of competent jurisdiction.",
+          "keywords": [
+            "postępowanie",
+            "orzeczenie",
+            "egzekwować",
+            "sąd właściwy",
+            "sąd stanowy",
+            "sąd właściwy",
+           "litigation",
+           "enforce",
+           "arbitration award",
+           "state court",
+           "competent court"
+          ]
+        },
+        "4": {
+          "pl": "Każda ze stron ma prawo wystąpić o tymczasowe lub wstępne zabezpieczenie w drodze nakazu lub zakazu sądowego do organu arbitrażowego lub sądu stanowego lub federalnego stanu Virginia w Stanach Zjednoczonych w celu udzielenia pomocy w postępowaniu arbitrażowym lub ochrony praw strony w okresie trwania postępowania arbitrażowego, co nie będzie stanowić odstąpienia od porozumienia dotyczącego arbitrażu.",
+          "eng": "For the purpose of aiding the arbitration and/or preserving the rights of a party during the pendency of an arbitration, each party shall have the right to seek temporary or preliminary injunctive relief from the arbitration panel or a court located in the state or federal courts in the state of Virginia, U.S.A., which shall not be a waiver of this arbitration agreement.",
+          "keywords": [
+            "zabezpieczenie",
+            "nakaz sądowy",
+            "odstąpienie",
+            "injunctive relief",
+            "waive"
+      
           ]
         }
       },

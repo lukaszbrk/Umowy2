@@ -1,8 +1,12 @@
 // add https://www.npmjs.com/package/natural
+// add highlighting labels when searching + hiding and expanding when selecting and searching
+// remove popup
+
 import axios from "axios";
-import React, { Component } from "react";
+import React, { Component, Ref } from "react";
 import { Segment, Label, Popup } from "semantic-ui-react";
 import "./Example.css";
+import "./test.css";
 
 import MainScreen from "./MainScreen.js";
 
@@ -12,10 +16,13 @@ import { getSource } from "./Keys_n_Clauses";
 
 const inputStyle = {
   padding: "5px 5px",
-
-  border: "1px solid ",
-  borderRadius: "2px"
+  
+  border: "1/2px solid ",
+  borderRadius: "3px",
+  
 };
+
+
 
 //Clauses and keywords
 
@@ -90,7 +97,7 @@ export default class SearchExampleStandard extends Component {
       data: "",
       selectedClause: false, //changed
       resetPagination: false,
-      selectedKeyword: false
+      selectedKeyword: false,
     };
   }
   //sort keywords
@@ -118,14 +125,13 @@ export default class SearchExampleStandard extends Component {
   // Rendering suggestions
 
   //renderSuggestionsContainer
-  renderSuggestion = suggestion => (
-    <Popup
-      content={suggestion.description}
-      trigger={
-        <Segment>
-          <b>{suggestion.clause}</b>
+  renderSuggestion = ( suggestion, isHighlighted) => (
+  
+        <Segment className="image-hover-opa">
+         <p> <b>{suggestion.clause}</b></p>
+          <p><small><i>{suggestion.description}</i></small></p>
 
-          <div>
+          <div className="image-hover-opacity">
             {this.sortAlph(suggestion.keywords.pl).map(keyword => (
               <Label
                 style={{ marginTop: "2px" }}
@@ -149,8 +155,8 @@ export default class SearchExampleStandard extends Component {
             ))}
           </div>
         </Segment>
-      }
-    />
+ 
+
   );
 
   onChange = (event, { newValue }) => {
@@ -203,7 +209,7 @@ export default class SearchExampleStandard extends Component {
   componentDidMount() {
     // db/local storage
     axios
-      .get("https://api.myjson.com/bins/yg05x")
+      .get("https://api.myjson.com/bins/k5s1t")
       .then(res => {
         this.setState({ data: res.data });
       })
@@ -223,6 +229,7 @@ export default class SearchExampleStandard extends Component {
 
     return (
       <React.Fragment>
+        
         <div style={{ height: "100%", width: "30%", left: 0 }}>
           <Autosuggest
             menuStyle={inputStyle}
@@ -244,7 +251,7 @@ export default class SearchExampleStandard extends Component {
           style={{
             position: "fixed",
             right: 5,
-
+            top: 20,
             width: "60%"
           }}
         >
@@ -254,6 +261,12 @@ export default class SearchExampleStandard extends Component {
             selectedKeyword={this.state.selectedKeyword}
           />
         </div>
+        <Segment   style={{
+            position: "fixed",
+            bottom: 0,
+            right: 5,
+
+          }}>Informacje o stronie</Segment>
       </React.Fragment>
     );
   }

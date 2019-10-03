@@ -67,10 +67,57 @@ export function getSource() {
     {
       clause: "Termination",
       keywords: {
-        pl: ["wygaśnięcie", "rozwiązanie", "anulować", "odszkodowanie"],
-        en: ["expiration", "termination", "cancel", "compensation"]
+        pl: [
+          "wygaśnięcie",
+          "rozwiązanie",
+          "anulować",
+          "odszkodowanie",
+          "naruszyć",
+          "naprawić",
+          "powiadomienie",
+
+          "niewypłacalność",
+          "upadłość",
+          "wszczynać",
+          "postępowanie",
+ 
+          "restrukturyzacja",
+          "układ",
+          "cesja",
+          "wierzyciel",
+          "syndyk",
+          "likwidator",
+          "powiernik",
+          "likwidacja",
+       
+          
+        ],
+        en: [
+          
+          "insolvent",
+          "bankrupt",
+          "institute",
+          "proceeding",
+          "relief",
+          "reorganization",
+          "arrangement",
+          "creditor",
+          "receiver",
+          "liquidator",
+          "trustee",
+          "disolution",
+          "wind up",
+
+          "expiration",
+          "termination",
+          "cancel",
+          "compensation",
+          "breach",
+          "cure",
+          "notice"
+        ]
       },
-      description: "Postanowienia dotyczące rozwiązywania umowy"
+      description: "Postanowienia regulujące tryb i termin wypowiedzenia umowy"
     },
 
     {
@@ -84,6 +131,59 @@ export function getSource() {
     },
 
     {
+      clause: "Indemnification",
+      keywords: {
+        pl: [
+          "żądanie",
+          "odpowiedzialność",
+          "podwykonawca",
+          "dyrektor",
+          "kierownictwo",
+          "przedstawiciel",
+          "pełnomocnik",
+          "roszczenie",
+          "pozew",
+          "postępowanie",
+          "wszczęcie",
+          "zwrócić",
+          "powiadomienie",
+          "ponieść",
+          "koszt",
+          "ugoda",
+          "zgoda",
+          "odszkodowanie",
+          "wydatki",
+          "nałożyć"
+        ],
+
+        en: [
+          "defend",
+          "hold harmless",
+          "subcontractor",
+          "director",
+          "officer",
+          "agent",
+          "representative",
+          "claim",
+          "suit",
+          "action",
+          "proceeding",
+          "incur",
+          "reimburse",
+          "settlement",
+          "consent",
+          "cost",
+          "damages",
+          "expenses",
+          "fee",
+          "award"
+        ]
+      },
+      description:
+        "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie moga zostać  zgloszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkód, kosztów, etc., jakie moze ona w związku z tym ponieść."
+    },
+
+    {
       clause: "Force Majeure",
       keywords: {
         pl: [
@@ -92,7 +192,6 @@ export function getSource() {
           "strajk",
           "dotrzymać",
           "zaniedbanie",
-          "odpowiedzialność",
           "odstąpienie",
           "zobowiązanie"
         ],
@@ -110,7 +209,7 @@ export function getSource() {
         ]
       },
       description:
-        "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje"
+        "Klauzula, która zwalnia strony umowy od odpowiedzialności za zdarzenia, na które nie mają one wpływu"
     },
 
     {
@@ -138,6 +237,51 @@ export function getSource() {
       description:
         "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje"
     },
+
+    {
+      clause: "Arbitration",
+      keywords: {
+        pl: [
+          "spory",
+          "roszczenie",
+          "arbitraż",
+          "arbiter",
+          "orzeczenie",
+      
+          "sąd właściwy",
+          "wydać",
+          "postępowanie",
+          "egzekwować",
+     
+          "sąd stanowy",
+          "zabezpieczenie",
+          "nakaz sądowy",
+          "odstąpienie"
+        ],
+
+        en: [
+          "dispute",
+          "claim",
+          "controversy",
+          "arbitration",
+          "arbitrator",
+          "judgment",
+          "award",
+          "render",
+          "court",
+          "jurisdiction",
+          "litigation",
+          "enforce",
+          "arbitration award",
+          "state court",
+          "competent court",
+          "injunctive relief",
+          "waive"
+        ]
+      },
+      description: ""
+    },
+
     {
       clause: "Notices",
       keywords: {
@@ -147,10 +291,8 @@ export function getSource() {
           "nadanie",
           "przesyłka",
           "dzień roboczy",
-          "nadanie",
           "doręczanie",
           "kurier",
-          "list polecony",
           "adres"
         ],
 
@@ -190,7 +332,7 @@ export function getSource() {
           "disclose",
           "secrecy",
           "measures",
-
+          "preclude",
           "bound",
           "obligation",
           "public domain",

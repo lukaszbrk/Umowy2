@@ -1,5 +1,5 @@
 import React from "react";
-import { Segment, Divider, Pagination } from "semantic-ui-react";
+import { Divider, Pagination } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import Columns from "./Columns.js";
 

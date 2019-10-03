@@ -50,6 +50,10 @@ body {
   padding: 1px 1px;
 }
 
-.react-autosuggest__suggestion--highlighted {
+.react-autosuggest__suggestion--highlighted 
+ {
   background-color: rgb(0, 72, 206);
+  
+  opacity: 1;
+    height:100%
 }
