@@ -380,7 +380,7 @@
           ]
         }
       },
-      "Description_PL": "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje",
+      "Description_PL": "Klauzua, która zwalnia strony umowy od odpowiedzialności za zdarzenia nad którymi nie panują",
       "Description_EN": "An event or effect that can be neither anticipated nor controlled",
       "Keywords": ""
     },
@@ -517,7 +517,7 @@
           ]
         },
         "4": {
-          "pl": "Niezależnie od powyższego, niniejszy akt nie nakłada na strony żadnych zobowiązań w odniesieniu do informacji, które (i) zostały ujawnione w przypadku braku umowy o zachowaniu poufności i Strona ujawniająca wyraziła pisemną zgodę na ujawnienie tych informacji przed ich ujawnieniem; lub (ii) są lub weszły do domeny publicznej bez winy Strony otrzymującej; lub (iii) są znane Stronie otrzymującej przed ich ujawnieniem; lub (iv) zostały opracowane niezależnie przez Stronę otrzymującą bez wykorzystania Informacji poufnych; lub (v) są powszechnie udostępniane przez Stronę ujawniającą bez ograniczeń w zakresie ujawnienia, lub (vi) należy ujawnić na mocy przepisów prawa, regulacji lub nakazu sądowego; pod warunkiem, że w przypadku, gdy Strona otrzymująca jest zobowiązana na mocy przepisów prawa, regulacji lub nakazu sądowego do ujawnienia Informacji poufnych Strony ujawniającej, Strona otrzymująca niezwłocznie powiadomi o tym Stronę ujawniającą na piśmie przed dokonaniem takiego ujawnienia, aby ułatwić Stronie ujawniającej starania o wydanie nakazu zabezpieczającego lub innego stosownego środka zaradczego od właściwych władz, na koszt Strony ujawniającej.",
+          "pl": "Niezależnie od powyższego, niniejszy podpunkt nie nakłada na strony żadnych zobowiązań w odniesieniu do informacji, które (i) zostały ujawnione w przypadku braku umowy o zachowaniu poufności i Strona ujawniająca wyraziła pisemną zgodę na ujawnienie tych informacji przed ich ujawnieniem; lub (ii) są lub weszły do domeny publicznej bez winy Strony otrzymującej; lub (iii) są znane Stronie otrzymującej przed ich ujawnieniem; lub (iv) zostały opracowane niezależnie przez Stronę otrzymującą bez wykorzystania Informacji poufnych; lub (v) są powszechnie udostępniane przez Stronę ujawniającą bez ograniczeń w zakresie ujawnienia, lub (vi) należy ujawnić na mocy przepisów prawa, regulacji lub nakazu sądowego; pod warunkiem, że w przypadku, gdy Strona otrzymująca jest zobowiązana na mocy przepisów prawa, regulacji lub nakazu sądowego do ujawnienia Informacji poufnych Strony ujawniającej, Strona otrzymująca niezwłocznie powiadomi o tym Stronę ujawniającą na piśmie przed dokonaniem takiego ujawnienia, aby ułatwić Stronie ujawniającej starania o wydanie nakazu zabezpieczającego lub innego stosownego środka zaradczego od właściwych władz, na koszt Strony ujawniającej.",
           "eng": "Notwithstanding the foregoing, this subsection imposes no obligation upon the parties with respect to information that (i) is disclosed in the absence of a confidentiality agreement and such disclosure was agreed to by the Disclosing Party in writing prior to such disclosure; or (ii) is or has entered the public domain through no fault of the Receiving Party; or (iii) is known by the Receiving Party prior to the time of disclosure; or (iv) is independently developed by the Receiving Party without use of the Confidential Information; or (v) is made generally available by the Disclosing Party without restriction on disclosure; or (vi) is required to be disclosed by law, regulation or court order; provided, that in the event the Receiving Party is required by law, regulation or court order to disclose any of Disclosing Party's Confidential Information, Receiving Party will promptly notify Disclosing Party in writing prior to making any such disclosure in order to facilitate Disclosing Party seeking a protective order or other appropriate remedy from the proper authority, at the Disclosing Party's expense.",
           "keywords": [
             "zobowiązania",
@@ -543,6 +543,31 @@
             "disclose",
             "preclude",
             "poufne"
+          ]
+        },
+
+        "6": {
+          "pl": "Przez cały okres obowiązywania niniejszej Umowy i Umów Lokalnych zawartych na mocy niniejszej Umowy oraz przez okres pięciu (5) lat po ich upływie, każda ze Stron zobowiązuje się przestrzegać bezwzględnej poufności w odniesieniu do warunków niniejszej Umowy, Umów Lokalnych zawartych na mocy niniejszej Umowy, badań, wynalazków, specyfikacji, planów produktów, rozwoju, działalności biznesowej, szkoleń, instrukcji, strategii biznesowych itp., jak również wszelkich innych informacji, które należy traktować jako poufne, przekazane Stronie lub które Strona poznała i które nie należą do wiedzy ogólnej(„Informacje Poufne”).",
+          "eng": "For the entire term of this Agreement and any Local Agreement hereunder and for a period[1} {2]of five (5) years thereafter, each Party agrees to observe absolute confidentiality with respect to the terms and conditions of this Agreement, any Local Agreements hereunder, research, inventions, specifications, product plans, development, business activities, training, manuals, business strategies etc. as well as any other information which by its nature should reasonably be understood to be confidential, submitted to the Party or which have come to the Party's attention and do not fall within general knowledge (Confidential Information).",
+          "keywords": [
+            "poufne",
+            "wiedza ogólna",
+            "confidential",
+            "general knowledge"
+      
+          ]
+        },
+        "7": {
+          "pl": "Do Informacji Poufnych nie zaliczają informacje, które 1) znajdują się w domenie publicznej lub trafiają do niej bez naruszenia niniejszej Umowy przez Stronę otrzymującą; 2) znajdowały się w posiadaniu Strony otrzymującej przed ich otrzymaniem od Strony ujawniającej i nie zostały pozyskane przez Stronę otrzymującą od Strony ujawniającej pod warunkiem zachowania poufności lub niewykorzystywania tych informacji; 3) są pozyskiwane przez Stronę otrzymującą od Strony Trzeciej, która nie jest zobowiązana wobec Strony ujawniającej do zachowania poufności tych informacji lub; 4) są niezależnie opracowywane przez Stronę otrzymującą bez użycia jakichkolwiek Informacji Poufnych Strony ujawniającej.",
+          "eng": "Confidential Information shall however not include information which 1) is in or comes into the public domain without breach of this Agreement by the receiving Party; 2) was in the possession of the receiving Party prior to receipt from the disclosing Party and was not acquired by the receiving Party from the disclosing Party under an obligation of confidentiality or non-use; 3) is acquired by the receiving Party from a Third Party not under an obligation of confidentiality or non-use to the disclosing Party; or 4) is independently developed by the receiving Party without use of any Confidential Information of the disclosing Party.",
+          "keywords": [
+            "poufność",
+            "domena publiczna",
+            "naruszenie",
+            "ujawnić",
+            "confidentality",
+            "public domain",
+            "disclose"
           ]
         }
       },
@@ -587,25 +612,25 @@
           "keywords": [
             "cesja",
             "przenieść",
-            "łączyć się",
+            "łączyć",
             "majątek",
+
             "assign",
             "delegate",
             "transfer",
-            "assets"
+            "assets",
+            "merge"
           ]
         },
         "1": {
-          "pl": "",
-          "eng": "",
+          "pl": "O ile niniejsza Umowa nie stanowi inaczej, postanowienia niniejszej Umowy są wiążące dla następców i cesjonariuszy Stron. Żadna ze stron nie może cedować ani przenosić swoich praw lub obowiązków wynikających z niniejszej Umowy bez uprzedniej pisemnej zgody drugiej Strony, która nie może zostać odmówiona bez uzasadnienia.",
+          "eng": "Except as otherwise expressly provided in this Agreement, the provisions of this Agreement shall inure to the benefit of and be binding upon, the successors and permitted assigns of the parties. Neither party shall assign or transfer its rights or obligations under this Agreement without the prior written consent of the other party, which shall not be unreasonably withheld.",
           "keywords": [
-            "",
-            "",
-            ""
+    
           ]
         }
       },
-      "Description_PL": "",
+      "Description_PL": "Klauzula określa w jakim trybie i zakresie strony umowy mogą scedować przysługujqce im prawa na strony trzecie",
       "Description_EN": "",
       "Keywords": ""
     },
@@ -685,11 +710,181 @@
             "waive"
       
           ]
+        },
+        "5": {
+          "pl": "Strony będą próbować w dobrej wierze dążyć do zawarcia ugody w sprawie wszelkich roszczeń lub sporów między nimi wynikającymi lub związanymi z niniejszą Umową. Jeśli spór nie zostanie rozwiązany w drodze negocjacji, strony przekażą spór do mediacji zgodnie z obowiązującymi przepisami. Jeśli strony nie uzgodnią warunków ugody w ciągu 45 dni od rozpoczęcia procedury mediacyjnej, spór zostanie rozsztrzygnięty w postępowaniu w sądzie powszechnym Rzeczypospolitej Polskiej właściwym terytorialnie dla siedziby Klienta.",
+          "eng": "The parties will attempt in good faith to negotiate a settlement to any claim or dispute between them arising out of or in connection with this Agreement. If the matter is not resolved by negotiation, the parties will refer the dispute to mediation in accordance with applicable provisions. If the parties fail to agree terms of settlement within 45 days of the commencement of the procedure the dispute shall be subject to court procedure thought the common courts of the Republic of Poland, as per territorial jurisdiction of the Customer’s corporate seat.",
+          "keywords": [
+            "dobra wiara",
+            "ugoda",
+            "roszczenia",
+            "spór",
+            "negocjacje",
+            "mediacja",
+            "sąd powszechny",
+            "sąd właściwy",
+            "siedziba",
+
+            "common court",
+            "good faith",
+            "settlement",
+            "claim",
+            "dispute",
+            "negotiation",
+            "seat"
+     
+          ]
+        },
+        "6": {
+          "pl": "Jeśli spór dotyczy głównie kwestii technicznych lub finansowych, Strony mogą się porozumieć w sprawie wyznaczenia niezależnego eksperta, aby ten przygotował raport dotyczący kwestii technicznych lub finansowych, które doprowadziły do sporu.",
+          "eng": "If a dispute is substantially of a technical or financial nature the Parties may seek to obtain an agreement on appointing an independent expert, who may prepare a report on the technical or financial issues giving rise to the dispute.",
+          "keywords": [
+            "spór",
+            "ekspert",
+            "raport",
+
+            "dispute",
+            "expert",
+            "report"
+          ]
         }
       },
       "Description_PL": "",
       "Description_EN": "",
       "Keywords": ""
+    },
+
+    "Counterparts": {
+      "Examples": {
+        "0": {
+          "pl": "Wszystkie podpisane kopie niniejszej Umowy są równie ważne jak oryginał.",
+          "eng": "All executed copies of this Agreement are duplicate originals, equally admissible as evidence.",
+          "keywords": [
+            "kopia",
+            "oryginał",
+            "copy",
+            "original"
+          ]
+        },
+        "1": {
+          "pl": "Niniejsza Umowa może zostać zawarta za pomocą kopii jej oryginału, a wszystkie razem stanowią one jedną i tę samą Umowę.",
+          "eng": "This Agreement may be executed in counterparts, and such counterparts taken together shall be deemed the Agreement.",
+          "keywords": [
+            "kopia",
+            "podpisać",
+            "oryginał",
+
+
+            "execute",
+            "copy",
+            "original",
+            "counterpart"
+          ]
+        },
+        "2": {
+          "pl": "Kopia faksymile faksymile strony niniejszej umowy ma taki sam skutek i ważność jak oryginalny podpis.",
+          "eng": "A facsimile copy of a signature of a party hereto shall have the same effect and validity as an original signature.",
+          "keywords": [
+            "faksymile",
+            "podpis",
+            "facsimile",
+            "signature"
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+
+    "Waiver": {
+      "Examples": {
+        "0": {
+          "pl": "Niewykonanie przez którąkolwiek ze stron dowolnych uprawnień, praw, przywilejów lub środków zaradczych na mocy niniejszej Umowy lub opóźnienie tej strony w wykonywaniu nie będzie stanowiło odstąpienia przez tę stronę z uprawnień, praw, przywilejów lub środków zaradczych; podobnie, żadne pojedyncze lub częściowe wykonanie takiego uprawnienia, prawa, przywileju lub środka zaradczego lub odstąpienie od niego nie wykluczy żadnego innego lub dalszego wykonywania ich lub innego rodzaju uprawnień, praw, przywilejów lub środków zaradczych.",
+          "eng": "No failure on the part of either party to exercise any power, right, privilege or remedy under this Agreement, and no delay on the part of either party in exercising any power, right, privilege or remedy under this Agreement, shall operate as a waiver of such power, right, privilege or remedy; and no single or partial exercise or waiver of any such power, right, privilege or remedy shall preclude any other or further exercise thereof or of any other power, right, privilege or remedy.",
+          "keywords": [
+            "środek zaradczy",
+            "odstąpienie",
+
+            "waiver",
+            "remedy"
+          ]
+        },
+        "1": {
+          "pl": "Przyjęto, że żadna ze stron nie odstąpi od dochodzenia roszczeń wynikających z niniejszej Umowy, ani od jakichkolwiek uprawnień, praw, przywilejów lub środków zaradczych na mocy niniejszej Umowy, chyba że odstąpienie od dochodzenia takich roszczeń zostało wyraźnie określone w należycie podpisanym i dostarczonym dokumencie w imieniu takiej strony; przy czym takie odstąpienie dotyczy wyłącznie szczególnego przypadku, w którym zostało udzielone.",
+          "eng": "Neither party shall be deemed to have waived any claim arising out of this Agreement, or any power, right, privilege or remedy under this Agreement, unless the waiver of such claim, power, right, privilege or remedy is expressly set forth in a written instrument duly executed and delivered on behalf of such party; and any such waiver shall not be applicable or have any effect except in the specific instance in which it is given.",
+          "keywords": [
+            "roszczenie",
+            "podpisać",
+            "odstąpienie",
+            "środek zaradczy",
+
+            "claim",
+            "waiver",
+            "remedy",
+            "execute"
+          ]
+        }
+    
+      },
+      "Description_PL": "Klauzula określa skutki dobrowolnego odstąpienia przez stronę umowy od wykonywania przysługujących praw",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+    "Survival": {
+      "Examples": {
+        "0": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+       
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "",
+      "Description_EN": "",
+      "Keywords": ""
+    },
+
+    "Testimonium": {
+      "Examples": {
+        "0": {
+          "pl": "W DOWÓD CZEGO niniejsza Umowa została sporządzona w dwóch egzemplarzach i podpisana w imieniu Stron przez ich upoważnionych przedstawicieli.",
+          "eng": "IN WITNESS WHEREOF, this Agreement has been executed in duplicate on behalf of the PARTIES by their authorized officers",
+          "keywords": [
+            "podpisać",
+            "upoważniony",
+            "authorised",
+            "execute"
+       
+          ]
+        },
+        "1": {
+          "pl": "",
+          "eng": "",
+          "keywords": [
+            "",
+            "",
+            ""
+          ]
+        }
+      },
+      "Description_PL": "Formuła końcowa bezpośrednio poprzedzająca podpisy stron",
+      "Description_EN": "",
+      "Keywords": ""
     }
+
+
+
+
   }
 }

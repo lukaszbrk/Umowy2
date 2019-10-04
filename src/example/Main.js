@@ -1,10 +1,19 @@
+//TODO
 // add https://www.npmjs.com/package/natural
-// add highlighting labels when searching + hiding and expanding when selecting and searching
-// remove popup
+// add highlighting labels when searching
+// fix regex
+// add data validating tools
+// left right arrows for pagination
+// review showwords state
+// show all tags for the example in the clause
+// preview screen for clauses
+// local storage
+// review examples
+// stats w modalu
 
 import axios from "axios";
 import React, { Component, Ref } from "react";
-import { Segment, Label, Popup } from "semantic-ui-react";
+import { Segment, Label, Modal, Button } from "semantic-ui-react";
 import "./Example.css";
 import "./test.css";
 
@@ -16,13 +25,10 @@ import { getSource } from "./Keys_n_Clauses";
 
 const inputStyle = {
   padding: "5px 5px",
-  
+
   border: "1/2px solid ",
-  borderRadius: "3px",
-  
+  borderRadius: "3px"
 };
-
-
 
 //Clauses and keywords
 
@@ -37,11 +43,12 @@ const getSuggestions = value => {
   let found_clauses = [];
   let found_keywords = [];
 
-
-  //search for keywords
   if (inputLength < 1) {
+    //this.setState({showWords: false})
+
     return source;
   } else {
+    //search for keywords
     source.map(entry =>
       entry.keywords.pl
         .concat(entry.keywords.en)
@@ -79,8 +86,7 @@ const getSuggestions = value => {
 // When suggestion is clicked, Autosuggest needs to populate the input
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
-const getSuggestionValue = suggestion => "Selected: " + suggestion.clause;
-
+const getSuggestionValue = suggestion => suggestion.clause;
 
 export default class SearchExampleStandard extends Component {
   constructor() {
@@ -98,6 +104,7 @@ export default class SearchExampleStandard extends Component {
       selectedClause: false, //changed
       resetPagination: false,
       selectedKeyword: false,
+      showWords: false
     };
   }
   //sort keywords
@@ -118,45 +125,54 @@ export default class SearchExampleStandard extends Component {
     e.stopPropagation();
 
     this.setState({
-      selectedKeyword: e.target.className.slice(9)
+      selectedKeyword: e.target.className.slice(9),
+      showWords: false
     });
   };
 
   // Rendering suggestions
 
   //renderSuggestionsContainer
-  renderSuggestion = ( suggestion, isHighlighted) => (
-  
-        <Segment className="image-hover-opa">
-         <p> <b>{suggestion.clause}</b></p>
-          <p><small><i>{suggestion.description}</i></small></p>
+  renderSuggestion = (suggestion, isHighlighted) => (
+    <Segment className="image-hover-opa">
+      <p>
+        {" "}
+        <b>{suggestion.clause}</b>
+      </p>
+      <p>
+        <small>
+          <i>{suggestion.description}</i>
+        </small>
+      </p>
 
-          <div className="image-hover-opacity">
-            {this.sortAlph(suggestion.keywords.pl).map(keyword => (
-              <Label
-                style={{ marginTop: "2px" }}
-                onClick={this.onClickLabel}
-                className={keyword}
-                key={keyword}
-              >
-                {keyword}
-              </Label>
-            ))}
-            <br />
-            {this.sortAlph(suggestion.keywords.en).map(keyword => (
-              <Label
-                style={{ marginTop: "2px" }}
-                onClick={this.onClickLabel}
-                className={keyword}
-                key={keyword}
-              >
-                {keyword}
-              </Label>
-            ))}
-          </div>
-        </Segment>
- 
-
+      <div
+        className={
+          this.state.showWords ? "image-hover-opacity2" : "image-hover-opacity"
+        }
+      >
+        {this.sortAlph(suggestion.keywords.pl).map(keyword => (
+          <Label
+            style={{ marginTop: "2px" }}
+            onClick={this.onClickLabel}
+            className={keyword}
+            key={keyword}
+          >
+            {keyword}
+          </Label>
+        ))}
+        <br />
+        {this.sortAlph(suggestion.keywords.en).map(keyword => (
+          <Label
+            style={{ marginTop: "2px" }}
+            onClick={this.onClickLabel}
+            className={keyword}
+            key={keyword}
+          >
+            {keyword}
+          </Label>
+        ))}
+      </div>
+    </Segment>
   );
 
   onChange = (event, { newValue }) => {
@@ -166,29 +182,39 @@ export default class SearchExampleStandard extends Component {
   };
 
   // Autosuggest will call this function every time you need to update suggestions.
-
+  //
   onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({
-      suggestions: getSuggestions(value)
+    this.setState({ showWords: true }, () => {
+      this.setState({ suggestions: getSuggestions(value) });
     });
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
+
+  /*
   onSuggestionsClearRequested = () => {
     this.setState({
       suggestions: source,
-      selectedKeyword: false
+      selectedKeyword: false,
+      showWords: false
     });
   };
+*/
 
+  onSuggestionsClearRequested = () => {
+    this.setState({ showWords: false }, () =>
+      this.setState({ selectedKeyword: false }, () => {
+        this.setState({ suggestions: source });
+      })
+    );
+  };
   onSuggestionSelected = (e, { suggestionValue }) => {
-    this.setState(
-      //substr to remove ui id
-      { value: "", selectedClause: suggestionValue.substr(10) },
-      () =>
-        this.setState({ suggestions: source }, () => {
-          this.setState({ selectedKeyword: false });
-        })
+    this.setState({ value: "", selectedClause: suggestionValue }, () =>
+      this.setState({ showWords: false }, () => {
+        this.setState({ selectedKeyword: false }, () => {
+          this.setState({ suggestions: source });
+        });
+      })
     );
   };
 
@@ -209,7 +235,7 @@ export default class SearchExampleStandard extends Component {
   componentDidMount() {
     // db/local storage
     axios
-      .get("https://api.myjson.com/bins/k5s1t")
+      .get("https://api.myjson.com/bins/c8svj")
       .then(res => {
         this.setState({ data: res.data });
       })
@@ -229,7 +255,6 @@ export default class SearchExampleStandard extends Component {
 
     return (
       <React.Fragment>
-        
         <div style={{ height: "100%", width: "30%", left: 0 }}>
           <Autosuggest
             menuStyle={inputStyle}
@@ -261,12 +286,36 @@ export default class SearchExampleStandard extends Component {
             selectedKeyword={this.state.selectedKeyword}
           />
         </div>
-        <Segment   style={{
-            position: "fixed",
-            bottom: 0,
-            right: 5,
-
-          }}>Informacje o stronie</Segment>
+        <Modal
+          trigger={
+            <Button small
+              style={{
+                position: "fixed",
+                bottom: 0,
+                right: 5
+              }}
+            >
+              Informacje o stronie
+            </Button>
+          }
+        >
+          <Modal.Content>
+            <p>
+              Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
+              umowach gospodarczych w j. polskim i angielskim. Strona została
+              opracowana przez tłumacza, który uznał, że pamięci tłumaczeniowe i
+              glosariusze należy uzupełnić o inne narzędzia. Większość
+              przykładów została przetłumaczona przez autora strony. Strona jest
+              nieustannie, lecz nieregularnie rozbudowywana.{" "}
+            </p>{" "}
+            <p>
+              Będę wdzięczny za zgłoszenie błędów w tłumaczeniach czy też w
+              budowie samej strony. Liczę też, że użytkownicy podzielą się
+              własnymi tłumaczeniami, które chętnie dodam do zbioru, lub
+              zaproponują nowe funkcje strony.  </p><p><b> Kontakt: <a href="mailto:borkowskil@outlook.pl">borkowskil@outlook.pl</a></b></p>
+           
+          </Modal.Content>
+        </Modal>
       </React.Fragment>
     );
   }

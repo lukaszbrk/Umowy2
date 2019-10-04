@@ -80,7 +80,7 @@ export function getSource() {
           "upadłość",
           "wszczynać",
           "postępowanie",
- 
+
           "restrukturyzacja",
           "układ",
           "cesja",
@@ -88,12 +88,9 @@ export function getSource() {
           "syndyk",
           "likwidator",
           "powiernik",
-          "likwidacja",
-       
-          
+          "likwidacja"
         ],
         en: [
-          
           "insolvent",
           "bankrupt",
           "institute",
@@ -184,6 +181,51 @@ export function getSource() {
     },
 
     {
+      clause: "Assignment",
+      keywords: {
+        pl: [
+          "cesja",
+          "przenieść",
+          "łączyć",
+          "majątek",
+          "wiążące",
+          "następca",
+          "cedować"
+        ],
+
+        en: [
+          "assign",
+          "delegate",
+          "transfer",
+          "assets",
+          "binding",
+          "successor",
+
+          "merge"
+        ]
+      },
+      description: "Klauzula określa w jakim trybie i zakresie strony umowy mogą scedować przysługujqce im prawa na strony trzecie"
+    },
+
+    {
+      clause: "Waiver",
+      keywords: {
+        pl: [
+          "środek zaradczy",
+          "odstąpienie",
+          "roszczenie",
+          "podpisać",
+
+          "środek zaradczy"
+        ],
+
+        en: ["waiver", "claim", "remedy", "execute"]
+      },
+      description:
+        "Klauzula określa skutki dobrowolnego odstąpienia przez stronę umowy od wykonywania przysługujących praw"
+    },
+
+    {
       clause: "Force Majeure",
       keywords: {
         pl: [
@@ -235,7 +277,7 @@ export function getSource() {
         ]
       },
       description:
-        "Zdarzenia o charakterze przypadkowym lub naturalnym, nie do uniknięcia lub nad którym człowiek nie panuje"
+        "Klauzula wskazująca prawo, jakie strony przyjeły za nadrzędne w stosunku do zawartej przez siebie umowy, czyli prawo stanowiące podstawę wykładni jej postanowień"
     },
 
     {
@@ -247,19 +289,37 @@ export function getSource() {
           "arbitraż",
           "arbiter",
           "orzeczenie",
-      
+
           "sąd właściwy",
           "wydać",
           "postępowanie",
           "egzekwować",
-     
+
           "sąd stanowy",
           "zabezpieczenie",
           "nakaz sądowy",
-          "odstąpienie"
+          "odstąpienie",
+
+          "dobra wiara",
+          "ugoda",
+          "roszczenia",
+          "spór",
+          "negocjacje",
+          "mediacja",
+          "sąd powszechny",
+     
+          "siedziba",
+   
+            "ekspert",
+            "raport"
+
+           
         ],
 
         en: [
+        
+          "expert",
+          "report",
           "dispute",
           "claim",
           "controversy",
@@ -276,10 +336,16 @@ export function getSource() {
           "state court",
           "competent court",
           "injunctive relief",
-          "waive"
+          "waive",
+          "common court",
+          "good faith",
+          "settlement",
+          "negotiation",
+          "seat"
         ]
       },
-      description: ""
+      description:
+        "Klauzua, która zwalnia strony umowy od odpowiedzialności za zdarzenia nad którymi nie panują"
     },
 
     {
@@ -314,6 +380,24 @@ export function getSource() {
     },
 
     {
+      clause: "Counterparts",
+      keywords: {
+        pl: ["kopia", "oryginał", "podpisać", "faksymile", "podpisać"],
+
+        en: [
+          "copy",
+          "original",
+          "execute",
+
+          "counterpart",
+          "facsimile",
+          "signature"
+        ]
+      },
+      description:
+        "Klauzula określa liczbę egzemplarzy, w jakiej podpisana jest umowa oraz określa ich moc prawną"
+    },
+    {
       clause: "Confidentiality",
       keywords: {
         pl: [
@@ -324,7 +408,15 @@ export function getSource() {
           "zobowiązania",
           "domena publiczna",
           "nakaz",
-          "środek zaradczy"
+          "środek zaradczy",
+          "wiedza ogólna",
+          "poufność",
+          "domena publiczna",
+          "naruszenie",
+          "ujawnić",
+      
+      
+    
         ],
 
         en: [
@@ -337,11 +429,33 @@ export function getSource() {
           "obligation",
           "public domain",
           "order",
-          "remedy"
+          "remedy",
+          "general knowledge",
+          "public domain",
+   
         ]
       },
       description:
         "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w zwiazku z realizacją wiążącej je umowy"
+    },    {
+      clause: "Testimonium",
+      keywords: {
+        pl: [
+          "podpisać",
+          "upoważniony",
+         
+    
+
+        ],
+
+        en: [
+          "authorised",
+          "execute"
+ 
+        ]
+      },
+      description:
+        "Formuła końcowa bezpośrednio poprzedzająca podpisy stron"
     }
   ];
 
