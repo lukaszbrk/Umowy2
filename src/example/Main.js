@@ -1,4 +1,6 @@
 //TODO
+
+// fixed position for input
 // add https://www.npmjs.com/package/natural
 // add highlighting labels when searching
 // fix regex
@@ -10,6 +12,7 @@
 // local storage
 // review examples
 // stats w modalu
+// prepare form to add content for users
 
 import axios from "axios";
 import React, { Component, Ref } from "react";
@@ -235,7 +238,7 @@ export default class SearchExampleStandard extends Component {
   componentDidMount() {
     // db/local storage
     axios
-      .get("https://api.myjson.com/bins/c8svj")
+      .get("https://api.myjson.com/bins/6c9pv")
       .then(res => {
         this.setState({ data: res.data });
       })

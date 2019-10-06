@@ -136,6 +136,22 @@
             "claim",
             "injury"
           ]
+        },
+        "4": {
+          "pl": "Sprzedawca gwarantuje, że Towar dostarczony w ramach realizacji Umowy będzie zgodny ze specyfikacją zawartą w Załączniku nr 1 i wszelkimi innymi wymogami Umowy oraz że będzie dobrej jakości, nadający się do przewidywanych zastosowań, a także wolny od wad fizycznych i prawnych.",
+          "eng": "The Seller guarantees that the Goods delivered hereunder shall be in accordance with the specifications set forth in the Annex 1 and all other requirements hereof and that they shall be of good quality and suitable for their intended use and free from physical and legal defects.",
+          "keywords": [
+            "gwarantować",
+            "specyfikacja",
+            "wymóg",
+            "jakość",
+            "wada",
+            "guarantee",
+            "specifications",
+            "requirement",
+            "quality",
+            "defect"
+          ]
         }
       },
       "Description_PL": "Potwierdzenie prawdziwosci faktów, które skloniły strony do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
@@ -174,10 +190,8 @@
             "breach",
             "cure",
             "notice"
-       
           ]
         },
-
         "3": {
           "pl": "Każda ze Stron może rozwiązać niniejszą Umowę, jeżeli druga Strona zostanie uznana za niewypłacalną lub postawiona w stan upadłości, lub jeżeli zostanie wszczęte postępowanie przez stronę domagającą się odszkodowania, restrukturyzacji lub układu na podstawie przepisów prawa upadłościowego, dokonania cesji na rzecz wierzycieli, powołania syndyka, likwidatora, powiernika nieruchomości i aktywów Strony, likwidacji, rozwiązania i zakończenia działalności gospodarczej danej Strony.",
           "eng": "Either party may terminate this Agreement if the other party is adjudged insolvent or bankrupt, or if proceedings are instituted by or against a party seeking relief, reorganization or arrangement under any laws relating to insolvency, or seeking any assignment for the benefit of creditors, or seeking the appointment of a receiver, liquidator or trustee of a party's property or assets or the liquidation, dissolution or winding up of a party's business.",
@@ -196,7 +210,6 @@
             "powiernik",
             "likwidacja",
             "rozwiązanie",
-
             "insolvent",
             "bankrupt",
             "institute",
@@ -210,11 +223,28 @@
             "trustee",
             "disolution",
             "wind up"
-
-
-
-      
-       
+          ]
+        },
+        "4": {
+          "pl": "W przypadku istotnego naruszenia umowy przez jedną ze Stron, druga Strona ma prawo wypowiedzieć niniejszą Umowę i/lub odpowiednią Umowę Lokalną (w tym Zamówienia zawarte na jej mocy) w całości lub w części. Rozwiązanie Umowy Lokalnej wiąże się z rozwiązaniem Zamówień złożonych na mocy tej umowy. Naruszenie uważa się za istotne, jeśli w jego wyniku nie można w uzasadniony sposób oczekiwać , że druga strona pozostanie prawnie związana Umową/Umową Lokalną do czasu jej wygaśnięcia.",
+          "eng": "In the event of a Party's material breach, the other Party shall have the right to terminate this Agreement and/or the respective Local Agreement (including Orders covered hereby), wholly or partly. For the sake of order, termination of a Local Agreement shall include termination of the Orders given hereunder. A breach shall be considered material if the nature of the breach entails that the other party cannot reasonably be expected to remain legally bound by the Agreement/Local Agreement until expiration hereof.",
+          "keywords": [
+            "naruszenie",
+            "wypowiedzieć",
+            "związana",
+            "breach",
+            "terminate",
+            "bound"
+          ]
+        },
+        "5": {
+          "pl": "Wypowiedzenie lub wygaśnięcie niniejszej Umowy lub Umowy Lokalnej (niezależnie od przyczyny) nie będzie miało wpływu na wszelkie nabyte prawa i zobowiązania Stron, ani nie wpłynie na wejście w życie ani też obowiązywanie postanowień niniejszej Umowy lub Umowy Lokalnej, które wyraźnie lub w sposób dorozumiany mają wejść w życie lub dalej obowiązywać w dniu ich rozwiązania lub wygaśnięcia.",
+          "eng": "Any termination or expiry of this Agreement or any Local Agreement (however caused) shall not affect any accrued rights or liabilities of either Party, nor shall it affect the coming into force or the continuance in force of any provision of this Agreement or a Local Agreement which is expressly or by implication intended to come into or continue in force on or after such termination or expiry.",
+          "keywords": [
+            "nabyć",
+            "zobowiązania",
+            "accrue",
+            "liability"
           ]
         }
       },
@@ -267,7 +297,6 @@
             "reimburse"
           ]
         },
-
         "2": {
           "pl": "Rejestrator nie zawrze ugody ani żadnego porozumienia dotyczącego roszczeń, za które przejął odpowiedzialność bez uprzedniej pisemnej zgody xxx, której ta nie może odmówić bez uzasadnienia.",
           "eng": "Registrar will not enter into any settlement or compromise of any such indemnifiable claim without xxx’S prior written consent, which consent shall not be unreasonably withheld.",
@@ -281,8 +310,6 @@
             "consent"
           ]
         },
-
-        
         "3": {
           "pl": "Rejestrator pokryje  koszty, odszkodowania i wydatki, w tym uzasadnione koszty obsługi prawnej oraz koszty nałożone na xxx lub poniesione przez xxx w związku z takim roszczeniem, pozwem lub postępowaniem.",
           "eng": "Registrar will pay any and all costs, damages, and expenses, including, but not limited to, reasonable attorneys' fees and costs awarded against or otherwise incurred by xxx in connection with or arising from any such indemnifiable claim, suit, action or proceeding.",
@@ -397,7 +424,7 @@
           ]
         },
         "1": {
-          "pl": "Prawem właściwym dla wykładni niniejszej Umowy będzie prawo stanu Kalifornia, przy czym przyjęte w nim norm kolizyjne nie będą uwzględniane.",
+          "pl": "Prawem właściwym dla wykładni niniejszej Umowy będzie prawo stanu Kalifornia, przy czym przyjęte w nim normy kolizyjne nie będą uwzględniane.",
           "eng": "This Agreement will be governed by, and construed in accordance with the laws of the State of California without regard to its conflict of laws provisions.",
           "keywords": [
             "prawo właściwe",
@@ -412,8 +439,8 @@
           "pl": "Do niniejszej umowy ani transakcji w niej przewidzianych nie ma zastosowania Konwencja Narodów Zjednoczonych o umowach międzynarodowej sprzedaży towarów.",
           "eng": "The United Nations Convention on Contracts for the International Sale of Goods shall not apply to this contract or the transactions contemplated by this contract.",
           "keywords": [
-            "Konwencja Narodów Zjednoczonych o umowach międzynarodowej sprzedaży towarów",
-            "United Nations Convention on Contracts for the International Sale of Goods"
+            "Narody Zjednoczone",
+            "United Nations"
           ]
         },
         "3": {
@@ -445,7 +472,7 @@
             "deemed",
             "facsimile",
             "delivery",
-            "woking day",
+            "working day",
             "subject to"
           ]
         },
@@ -456,7 +483,6 @@
             "powiadomienie",
             "doręczanie",
             "kurier",
-  
             "adres",
             "notice",
             "deem",
@@ -545,7 +571,6 @@
             "poufne"
           ]
         },
-
         "6": {
           "pl": "Przez cały okres obowiązywania niniejszej Umowy i Umów Lokalnych zawartych na mocy niniejszej Umowy oraz przez okres pięciu (5) lat po ich upływie, każda ze Stron zobowiązuje się przestrzegać bezwzględnej poufności w odniesieniu do warunków niniejszej Umowy, Umów Lokalnych zawartych na mocy niniejszej Umowy, badań, wynalazków, specyfikacji, planów produktów, rozwoju, działalności biznesowej, szkoleń, instrukcji, strategii biznesowych itp., jak również wszelkich innych informacji, które należy traktować jako poufne, przekazane Stronie lub które Strona poznała i które nie należą do wiedzy ogólnej(„Informacje Poufne”).",
           "eng": "For the entire term of this Agreement and any Local Agreement hereunder and for a period[1} {2]of five (5) years thereafter, each Party agrees to observe absolute confidentiality with respect to the terms and conditions of this Agreement, any Local Agreements hereunder, research, inventions, specifications, product plans, development, business activities, training, manuals, business strategies etc. as well as any other information which by its nature should reasonably be understood to be confidential, submitted to the Party or which have come to the Party's attention and do not fall within general knowledge (Confidential Information).",
@@ -554,7 +579,6 @@
             "wiedza ogólna",
             "confidential",
             "general knowledge"
-      
           ]
         },
         "7": {
@@ -614,7 +638,6 @@
             "przenieść",
             "łączyć",
             "majątek",
-
             "assign",
             "delegate",
             "transfer",
@@ -625,9 +648,7 @@
         "1": {
           "pl": "O ile niniejsza Umowa nie stanowi inaczej, postanowienia niniejszej Umowy są wiążące dla następców i cesjonariuszy Stron. Żadna ze stron nie może cedować ani przenosić swoich praw lub obowiązków wynikających z niniejszej Umowy bez uprzedniej pisemnej zgody drugiej Strony, która nie może zostać odmówiona bez uzasadnienia.",
           "eng": "Except as otherwise expressly provided in this Agreement, the provisions of this Agreement shall inure to the benefit of and be binding upon, the successors and permitted assigns of the parties. Neither party shall assign or transfer its rights or obligations under this Agreement without the prior written consent of the other party, which shall not be unreasonably withheld.",
-          "keywords": [
-    
-          ]
+          "keywords": []
         }
       },
       "Description_PL": "Klauzula określa w jakim trybie i zakresie strony umowy mogą scedować przysługujqce im prawa na strony trzecie",
@@ -681,7 +702,6 @@
             "jurisdiction"
           ]
         },
-
         "3": {
           "pl": "Postępowania sądowe mające na celu wyegzekwowanie orzeczenia arbitrażowego będą wnoszone do sądów stanowych i federalnych stanu Virginia; strony mają również prawo wyegzekwowac orzeczenia takiego sądu przed każdym sądem właściwym.",
           "eng": "Any litigation brought to enforce an arbitration award shall be brought in the state or federal courts of the state of Virginia, U.S.A.; however, the parties shall also have the right to enforce a judgment of such a court in any court of competent jurisdiction.",
@@ -692,11 +712,11 @@
             "sąd właściwy",
             "sąd stanowy",
             "sąd właściwy",
-           "litigation",
-           "enforce",
-           "arbitration award",
-           "state court",
-           "competent court"
+            "litigation",
+            "enforce",
+            "arbitration award",
+            "state court",
+            "competent court"
           ]
         },
         "4": {
@@ -708,7 +728,6 @@
             "odstąpienie",
             "injunctive relief",
             "waive"
-      
           ]
         },
         "5": {
@@ -724,7 +743,6 @@
             "sąd powszechny",
             "sąd właściwy",
             "siedziba",
-
             "common court",
             "good faith",
             "settlement",
@@ -732,7 +750,6 @@
             "dispute",
             "negotiation",
             "seat"
-     
           ]
         },
         "6": {
@@ -742,7 +759,6 @@
             "spór",
             "ekspert",
             "raport",
-
             "dispute",
             "expert",
             "report"
@@ -753,40 +769,21 @@
       "Description_EN": "",
       "Keywords": ""
     },
-
     "Counterparts": {
       "Examples": {
         "0": {
-          "pl": "Wszystkie podpisane kopie niniejszej Umowy są równie ważne jak oryginał.",
-          "eng": "All executed copies of this Agreement are duplicate originals, equally admissible as evidence.",
+          "pl": "Wszystkie podpisane kopie niniejszej Umowy są równie ważne jak oryginał. Niniejsza Umowa może zostać zawarta za pomocą kopii jej oryginału, a wszystkie razem stanowią one jedną i tę samą Umowę. Kopia faksymile faksymile strony niniejszej umowy ma taki sam skutek i ważność jak oryginalny podpis.",
+          "eng": "All executed copies of this Agreement are duplicate originals, equally admissible as evidence. This Agreement may be executed in counterparts, and such counterparts taken together shall be deemed the Agreement. A facsimile copy of a signature of a party hereto shall have the same effect and validity as an original signature.",
           "keywords": [
             "kopia",
             "oryginał",
-            "copy",
-            "original"
-          ]
-        },
-        "1": {
-          "pl": "Niniejsza Umowa może zostać zawarta za pomocą kopii jej oryginału, a wszystkie razem stanowią one jedną i tę samą Umowę.",
-          "eng": "This Agreement may be executed in counterparts, and such counterparts taken together shall be deemed the Agreement.",
-          "keywords": [
-            "kopia",
             "podpisać",
-            "oryginał",
-
-
-            "execute",
-            "copy",
-            "original",
-            "counterpart"
-          ]
-        },
-        "2": {
-          "pl": "Kopia faksymile faksymile strony niniejszej umowy ma taki sam skutek i ważność jak oryginalny podpis.",
-          "eng": "A facsimile copy of a signature of a party hereto shall have the same effect and validity as an original signature.",
-          "keywords": [
             "faksymile",
             "podpis",
+            "copy",
+            "original",
+            "execute",
+            "counterpart",
             "facsimile",
             "signature"
           ]
@@ -796,7 +793,6 @@
       "Description_EN": "",
       "Keywords": ""
     },
-
     "Waiver": {
       "Examples": {
         "0": {
@@ -805,7 +801,6 @@
           "keywords": [
             "środek zaradczy",
             "odstąpienie",
-
             "waiver",
             "remedy"
           ]
@@ -818,14 +813,12 @@
             "podpisać",
             "odstąpienie",
             "środek zaradczy",
-
             "claim",
             "waiver",
             "remedy",
             "execute"
           ]
         }
-    
       },
       "Description_PL": "Klauzula określa skutki dobrowolnego odstąpienia przez stronę umowy od wykonywania przysługujących praw",
       "Description_EN": "",
@@ -836,9 +829,7 @@
         "0": {
           "pl": "",
           "eng": "",
-          "keywords": [
-       
-          ]
+          "keywords": []
         },
         "1": {
           "pl": "",
@@ -854,37 +845,75 @@
       "Description_EN": "",
       "Keywords": ""
     },
-
     "Testimonium": {
       "Examples": {
         "0": {
           "pl": "W DOWÓD CZEGO niniejsza Umowa została sporządzona w dwóch egzemplarzach i podpisana w imieniu Stron przez ich upoważnionych przedstawicieli.",
-          "eng": "IN WITNESS WHEREOF, this Agreement has been executed in duplicate on behalf of the PARTIES by their authorized officers",
+          "eng": "IN WITNESS WHEREOF, this Agreement has been executed in duplicate on behalf of the PARTIES by their authorised officers",
           "keywords": [
             "podpisać",
             "upoważniony",
             "authorised",
             "execute"
-       
           ]
         },
         "1": {
-          "pl": "",
-          "eng": "",
+          "pl": "Podpisując niniejszą Umowę strony potwierdzają, że ją przeczytały i zaakceptowały jej warunki oraz to, że Umowa jest wyczerpującym określeniem porozumienia między Stronami.",
+          "eng": "The Parties, by signing, acknowledges that they have read the Agreement, understood it and agreed to be bound by its terms and conditions and further agree that the Agreement is the complete statement of the agreement between the Parties.",
           "keywords": [
-            "",
-            "",
-            ""
+            "porozumienie",
+            "agreement"
           ]
         }
       },
       "Description_PL": "Formuła końcowa bezpośrednio poprzedzająca podpisy stron",
       "Description_EN": "",
       "Keywords": ""
+    },
+    "Amendments": {
+      "Examples": {
+        "0": {
+          "pl": "Niniejsza Umowa i Załączniki do niej oraz Umowy Lokalne nie mogą być zmieniane lub poprawiane, o ile Strony nie uzgodnią tego na piśmie.",
+          "eng": "This Agreement, the Appendices hereto and any Local Agreements may not be varied or amended unless such variation or amendment is agreed in writing by both Parties.",
+          "keywords": [
+            "zmieniać",
+            "amend"
+          ]
+        },
+        "1": {
+          "pl": "Wszelkie propozycje każdej ze Stron dotyczące zmian, udoskonaleń i wprowadzenia innowacji w Usługach i Produktach, w niniejszej Umowie lub Umowach Lokalnych zawartych na mocy niniejszej Umowy, będą składane tylko przez osoby odpowiednio upoważnione przez Stronę, a po ich złożeniu zostaną one poddane odpowiednim procedurom określonym w Załączniku F (Procedura Zmiany Umowy).",
+          "eng": "Any proposal by either Party for a change, enhancement, improvement or innovation to the Services and Deliverables, this Agreement or any Local Agreement hereunder shall only be made by duly appointed persons of the relevant Parties and once made shall be reviewed and progressed in accordance with Appendix F (Contract Change Procedure) as appropriate.",
+          "keywords": [
+            "upoważnić",
+            "załącznik",
+            "appointed",
+            "appendix"
+          ]
+        },
+        "2": {
+          "pl": "Żadne poprawki i zmiany w niniejszej Umowie lub Umowach Lokalnych nie będą wiążąca dla Stron, jeżeli nie zostaną sporządzone na piśmie i należycie podpisane przez obie Strony.",
+          "eng": "No amendments or alterations of this Agreement or any Local Agreement shall be binding upon either Party, unless in writing and duly signed by both Parties.",
+          "keywords": [
+            "poprawka",
+            "wiążące",
+            "amendment",
+            "binding"
+          ]
+        },
+        "3": {
+          "pl": "Wszelkie zmiany postanowień niniejszej Umowy wprowadzone w Umowie Lokalnej będą obowiązywać w przypadku odpowiednich Produktów i Usług, tylko jeśli taka zmiana wyraźnie odnosi się do stosownej Klauzuli niniejszej Umowy, która ma zostać zmieniona lub usunięta.",
+          "eng": "Any changes or modifications to the terms of this Agreement implemented into a Local Agreement will only be effective for the respective Deliverables and Services if such change or modification explicitly references the applicable Clause of this Agreement which is to be modified and/or deleted.",
+          "keywords": [
+            "zmienić",
+            "klauzula",
+            "amend",
+            "clause"
+          ]
+        }
+      },
+      "Description_PL": "Klauzula regulująca sposób wprowadzania zmian do treści umowy po jej podpisaniu",
+      "Description_EN": "",
+      "Keywords": ""
     }
-
-
-
-
   }
 }

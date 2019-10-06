@@ -1,3 +1,5 @@
+//add payment, renumeration, personal data
+
 export function getSource() {
   let source = [
     {
@@ -44,20 +46,28 @@ export function getSource() {
           "zaniedbanie",
           "niezgodność",
           "wymienić",
-          "zwrot"
+          "zwrot",
+
+          "specyfikacja",
+          "wymóg"
         ],
         en: [
           "warranty",
           "compliance",
           "liable",
-          "defect",
+
           "discovery",
           "notice",
           "consequential",
           "claim",
           "injury",
           "replace",
-          "refund"
+          "refund",
+          "guarantee",
+          "specifications",
+          "requirement",
+          "quality",
+          "defect"
         ]
       },
       description:
@@ -68,6 +78,8 @@ export function getSource() {
       clause: "Termination",
       keywords: {
         pl: [
+          "nabyć",
+          "zobowiązania",
           "wygaśnięcie",
           "rozwiązanie",
           "anulować",
@@ -88,9 +100,14 @@ export function getSource() {
           "syndyk",
           "likwidator",
           "powiernik",
-          "likwidacja"
+          "likwidacja",
+
+          "naruszenie",
+          "wypowiedzieć",
+          "związana"
         ],
         en: [
+          "bound",
           "insolvent",
           "bankrupt",
           "institute",
@@ -104,6 +121,8 @@ export function getSource() {
           "trustee",
           "disolution",
           "wind up",
+          "accrue",
+          "liability",
 
           "expiration",
           "termination",
@@ -204,7 +223,8 @@ export function getSource() {
           "merge"
         ]
       },
-      description: "Klauzula określa w jakim trybie i zakresie strony umowy mogą scedować przysługujqce im prawa na strony trzecie"
+      description:
+        "Klauzula określa w jakim trybie i zakresie strony umowy mogą scedować przysługujqce im prawa na strony trzecie"
     },
 
     {
@@ -263,18 +283,12 @@ export function getSource() {
           "prawo właściwe",
           "wykładnia",
           "norma kolizyjna",
-          "Konwencja Narodów Zjednoczonych",
+          "Narody Zjednoczone",
 
           "Kodeks cywilny"
         ],
 
-        en: [
-          "govern",
-          "construe",
-          "conflict",
-          "United Nations Convention",
-          "Civil Code"
-        ]
+        en: ["govern", "construe", "conflict", "United Nations", "Civil Code"]
       },
       description:
         "Klauzula wskazująca prawo, jakie strony przyjeły za nadrzędne w stosunku do zawartej przez siebie umowy, czyli prawo stanowiące podstawę wykładni jej postanowień"
@@ -307,17 +321,14 @@ export function getSource() {
           "negocjacje",
           "mediacja",
           "sąd powszechny",
-     
-          "siedziba",
-   
-            "ekspert",
-            "raport"
 
-           
+          "siedziba",
+
+          "ekspert",
+          "raport"
         ],
 
         en: [
-        
           "expert",
           "report",
           "dispute",
@@ -367,7 +378,7 @@ export function getSource() {
           "deem",
           "facsimile",
           "delivery",
-          "woking day",
+          "working day",
           "subject to",
           "courier",
           "registered mail",
@@ -397,6 +408,25 @@ export function getSource() {
       description:
         "Klauzula określa liczbę egzemplarzy, w jakiej podpisana jest umowa oraz określa ich moc prawną"
     },
+
+    {
+      clause: "Amendments",
+      keywords: {
+        pl: [
+          "zmieniać",
+          "upoważnić",
+          "załącznik",
+          "poprawka",
+          "wiążące",
+          "klauzula"
+        ],
+
+        en: ["amend", "appointed", "appendix", "amendment", "binding", "clause"]
+      },
+      description:
+        "Klauzula regulująca sposób wprowadzania zmian do treści umowy po jej podpisaniu"
+    },
+
     {
       clause: "Confidentiality",
       keywords: {
@@ -413,10 +443,7 @@ export function getSource() {
           "poufność",
           "domena publiczna",
           "naruszenie",
-          "ujawnić",
-      
-      
-    
+          "ujawnić"
         ],
 
         en: [
@@ -431,31 +458,20 @@ export function getSource() {
           "order",
           "remedy",
           "general knowledge",
-          "public domain",
-   
+          "public domain"
         ]
       },
       description:
         "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w zwiazku z realizacją wiążącej je umowy"
-    },    {
+    },
+    {
       clause: "Testimonium",
       keywords: {
-        pl: [
-          "podpisać",
-          "upoważniony",
-         
-    
+        pl: ["podpisać", "upoważniony", "porozumienie"],
 
-        ],
-
-        en: [
-          "authorised",
-          "execute"
- 
-        ]
+        en: ["authorised", "execute", "agreement"]
       },
-      description:
-        "Formuła końcowa bezpośrednio poprzedzająca podpisy stron"
+      description: "Formuła końcowa bezpośrednio poprzedzająca podpisy stron"
     }
   ];
 
