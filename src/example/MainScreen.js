@@ -35,7 +35,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
     
     return { _data, selectedClause };
   }
-  //TODO rewrite
+  //TODO rewrite as db query
   function prepDataforKeywordSelectionScreen(data, selectedKeyword) {
     let clause, example;
     let dataforColumns = [];
@@ -77,7 +77,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
       }
     }
 
-
+    console.log(dataforColumns)
 
     return { dataforColumns, _clauseDescription, clause_n_number, selectedKeyword };
   }

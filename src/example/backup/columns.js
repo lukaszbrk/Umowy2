@@ -44,11 +44,11 @@ const ClauseScreen = ({ data }) => {
 
   useEffect(() => {
 
-    console.log("In useEffect")
+    //console.log("In useEffect")
  
-    console.log("ActivePage before useEffect: "+activePage)
+    //console.log("ActivePage before useEffect: "+activePage)
     setactivePage(1);
-    console.log("ActivePage after useEffect: "+activePage)
+    //console.log("ActivePage after useEffect: "+activePage)
 
 
    
@@ -57,9 +57,9 @@ const ClauseScreen = ({ data }) => {
 
   const onPageChange = (e, { activePage }) => {
     //console.log("ActivePage is: "+activePage)
-    console.log("ActivePage before onclick: "+activePage)
+    //console.log("ActivePage before onclick: "+activePage)
     setactivePage(activePage);
-    console.log("ActivePage after onclick: "+activePage)
+    //console.log("ActivePage after onclick: "+activePage)
  
 
 

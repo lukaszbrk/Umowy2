@@ -1,18 +1,24 @@
 //TODO
 
-// fixed position for input
-// add https://www.npmjs.com/package/natural
+// move files to catalogues
+// rename
 // add highlighting labels when searching
 // fix regex
 // add data validating tools
 // left right arrows for pagination
 // review showwords state
-// show all tags for the example in the clause
-// preview screen for clauses
-// local storage
 // review examples
-// stats w modalu
 // prepare form to add content for users
+// rewrite prepDataforKeywordSelectionScreen as db query
+
+// bug when browsing examples; look into activepage
+/*
+ <p>
+        Słowa kluczowe:{" "}
+        {_data[activePage - 1].keywords.map(keyword => (
+          <i>{"#" + keyword + " "}</i>
+        ))}
+        */
 
 import axios from "axios";
 import React, { Component, Ref } from "react";
@@ -26,12 +32,31 @@ import Autosuggest from "react-autosuggest";
 
 import { getSource } from "./Keys_n_Clauses";
 
+
+
 const inputStyle = {
   padding: "5px 5px",
 
   border: "1/2px solid ",
   borderRadius: "3px"
 };
+
+const  calc = data =>{
+
+  let clause
+  let counter = 0
+
+  for (clause in data["Clauses"]) {
+   
+
+    counter = counter + Object.keys( data["Clauses"][clause]["Examples"]).length
+
+    
+  }
+
+  return counter
+}
+
 
 //Clauses and keywords
 
@@ -47,8 +72,6 @@ const getSuggestions = value => {
   let found_keywords = [];
 
   if (inputLength < 1) {
-    //this.setState({showWords: false})
-
     return source;
   } else {
     //search for keywords
@@ -235,15 +258,25 @@ export default class SearchExampleStandard extends Component {
     </div>
   );
 */
-  componentDidMount() {
-    // db/local storage
+componentDidMount() {
+  // query server for file size
+  if (!sessionStorage.getItem("data")) {
+
     axios
-      .get("https://api.myjson.com/bins/6c9pv")
+      .get("https://api.myjson.com/bins/sa5ob")
       .then(res => {
-        this.setState({ data: res.data });
+        this.setState({ data: res.data }, ()=>{sessionStorage.setItem("data", JSON.stringify(this.state.data));});
       })
       .catch(err => console.log(err));
+  } else {
+
+    var temp = sessionStorage.getItem("data");
+    var q = JSON.parse(temp);
+   
+    this.setState({data:q});
   }
+
+}
 
   render() {
     //console.log("Rendering Example screen");
@@ -291,7 +324,8 @@ export default class SearchExampleStandard extends Component {
         </div>
         <Modal
           trigger={
-            <Button small
+            <Button
+              small="true"
               style={{
                 position: "fixed",
                 bottom: 0,
@@ -303,20 +337,28 @@ export default class SearchExampleStandard extends Component {
           }
         >
           <Modal.Content>
+            <p>Liczba przykładów klauzul: {calc(this.state.data)}</p>
             <p>
-              Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
+            Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
               umowach gospodarczych w j. polskim i angielskim. Strona została
               opracowana przez tłumacza, który uznał, że pamięci tłumaczeniowe i
-              glosariusze należy uzupełnić o inne narzędzia. Większość
-              przykładów została przetłumaczona przez autora strony. Strona jest
+              glosariusze warto uzupełnić o inne narzędzia. Większość przykładów
+              została przetłumaczona przez autora strony. Strona jest
               nieustannie, lecz nieregularnie rozbudowywana.{" "}
             </p>{" "}
             <p>
               Będę wdzięczny za zgłoszenie błędów w tłumaczeniach czy też w
               budowie samej strony. Liczę też, że użytkownicy podzielą się
-              własnymi tłumaczeniami, które chętnie dodam do zbioru, lub
-              zaproponują nowe funkcje strony.  </p><p><b> Kontakt: <a href="mailto:borkowskil@outlook.pl">borkowskil@outlook.pl</a></b></p>
-           
+              własnymi tłumaczeniami, które chętnie dodam do zbioru, a także
+              zaproponują nowe funkcje strony.{" "}
+            </p>
+            <p>
+              <b>
+                {" "}
+                Kontakt:{" "}
+                <a href="mailto:borkowskil@outlook.pl">borkowskil@outlook.pl</a>
+              </b>
+            </p>
           </Modal.Content>
         </Modal>
       </React.Fragment>

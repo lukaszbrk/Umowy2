@@ -236,7 +236,7 @@ export function getSource() {
           "roszczenie",
           "podpisać",
 
-          "środek zaradczy"
+        
         ],
 
         en: ["waiver", "claim", "remedy", "execute"]
@@ -393,7 +393,7 @@ export function getSource() {
     {
       clause: "Counterparts",
       keywords: {
-        pl: ["kopia", "oryginał", "podpisać", "faksymile", "podpisać"],
+        pl: ["kopia", "oryginał", "podpisać", "faksymile"],
 
         en: [
           "copy",
@@ -441,7 +441,7 @@ export function getSource() {
           "środek zaradczy",
           "wiedza ogólna",
           "poufność",
-          "domena publiczna",
+   
           "naruszenie",
           "ujawnić"
         ],
@@ -458,7 +458,7 @@ export function getSource() {
           "order",
           "remedy",
           "general knowledge",
-          "public domain"
+  
         ]
       },
       description:

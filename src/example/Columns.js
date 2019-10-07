@@ -10,11 +10,10 @@ const columnsStyle = {
   border: "1px solid blue"
 };
 
-
 const Columns = ({ _data, activePage }) => {
   return (
     <Grid divided="vertically">
-      <Grid.Row columns={2} >
+      <Grid.Row columns={2}>
         <Grid.Column>
           <Container textAlign="justified">
             <p

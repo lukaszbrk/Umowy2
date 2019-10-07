@@ -10,9 +10,8 @@
           "eng": "This Purchase Agreement (“Agreement”) is entered into on ___ (the “Effective Date”) by and between ___, (“___”) and ___ (“Supplier”).",
           "keywords": [
             "enter into",
-            "zawrzeć",
-            "test",
-            "test2"
+            "zawrzeć"
+         
           ]
         },
         "1": {
@@ -64,8 +63,8 @@
           "keywords": [
             "definitions",
             "definicje",
-            "meaning",
-            "test"
+            "meaning"
+           
           ]
         },
         "1": {
@@ -76,7 +75,7 @@
             "definicje",
             "meaning",
             "termin",
-            "test2",
+           
             "terms"
           ]
         }
@@ -330,7 +329,7 @@
           ]
         }
       },
-      "Description_PL": "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie moga zostać  zgloszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkódd, kosztów, etc., jakie moze ona w związku z tym ponieść.",
+      "Description_PL": "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie moga zostać  zgloszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkód, kosztów, etc., jakie moze ona w związku z tym ponieść.",
       "Description_EN": "",
       "Keywords": ""
     },

@@ -14,6 +14,20 @@ function objectLength(obj) {
   return result;
 }
 
+function keyNav (e) {
+
+  if (e.keyCode === 37) {
+
+    console.log(`Key Number ${e.keyCode} pressed.`)
+  }
+
+  if (e.keyCode ===39) {
+
+    console.log(`Key Number ${e.keyCode} pressed.`)
+
+  }
+}
+
 const ClauseScreen = ({ data }) => {
   //console.log("rendering Clause screen");
 
@@ -32,17 +46,27 @@ const ClauseScreen = ({ data }) => {
 
   return (
     <div>
+      <p>Wybrana klauzula: {selectedClause}</p>
       <Pagination
         activePage={activePage}
-        boundaryRange={0}
-        ellipsisItem={null}
-        firstItem={null}
-        lastItem={null}
+        //boundaryRange={1}
+
+        //firstItem={null}
+        //lastItem={null}
         totalPages={objectLength(_data)}
         onPageChange={onPageChange}
+        onKeyDown={keyNav}
       />
 
       <Divider />
+      <p>
+        Słowa kluczowe:{" "}
+        {_data[activePage - 1]? (_data[activePage - 1].keywords.map(keyword => (
+          <i>{"#" + keyword + " "}</i>
+        ))):"Error"}
+
+      </p>
+
 
       {/*activepage does not reset immediately  */}
       {objectLength(_data) >= activePage ? (

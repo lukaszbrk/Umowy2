@@ -45,6 +45,8 @@ const ColumnsforKeyword = ({ data, RtrBtn, ListItem }) => {
   }
 
   let filtered = data["dataforColumns"].filter(filterbyListItem);
+  //console.log("After filter:");
+  //console.log(filtered);
   let _data = {};
   let counter = 0;
 
@@ -52,13 +54,14 @@ const ColumnsforKeyword = ({ data, RtrBtn, ListItem }) => {
     if (detLang(data["selectedKeyword"])) {
       _data[counter] = {
         pl: markKeywords(filtered[arr][1][0]["pl"], data["selectedKeyword"]),
-        eng: filtered[arr][1][0]["eng"]
+        eng: filtered[arr][1][0]["eng"],
+        keywords: filtered[arr][1][0]["keywords"]
       };
-
     } else {
       _data[counter] = {
         pl: filtered[arr][1][0]["pl"],
-        eng: markKeywords(filtered[arr][1][0]["eng"], data["selectedKeyword"])
+        eng: markKeywords(filtered[arr][1][0]["eng"], data["selectedKeyword"]),
+        keywords: filtered[arr][1][0]["keywords"]
       };
     }
 
@@ -73,7 +76,7 @@ const ColumnsforKeyword = ({ data, RtrBtn, ListItem }) => {
     <div>
       <Pagination
         activePage={activePage}
-        boundaryRange={0}
+        //boundaryRange={0}
         ellipsisItem={null}
         firstItem={null}
         lastItem={null}
@@ -84,7 +87,12 @@ const ColumnsforKeyword = ({ data, RtrBtn, ListItem }) => {
       <span> </span>
       <RtrBtn />
       <Divider />
-
+      <p>
+        Inne słowa kluczowe:{" "}
+        {_data[activePage - 1].keywords.map(keyword => (
+          <i>{"#" + keyword + " "}</i>
+        ))}
+      </p>
       <Columns _data={_data} activePage={activePage} />
     </div>
   );

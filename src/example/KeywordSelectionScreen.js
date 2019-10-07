@@ -67,7 +67,11 @@ const KeywordSelectionScreen = ({ data }) => {
 
   return (
     <div>
-      <p>{"Liczba przykładów: " + data["dataforColumns"].length}</p>
+      <p>
+        {"Liczba przykładów dla "}
+        <b>{data["selectedKeyword"]}</b>
+        {": " + data["dataforColumns"].length}
+      </p>
       {/*initial render - listitem not selected 
       OR
        no data for the given selection (after render ) => render the list */}
