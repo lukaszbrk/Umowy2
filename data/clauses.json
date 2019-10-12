@@ -614,12 +614,13 @@
           ]
         },
         "1": {
-          "pl": "",
-          "eng": "",
+          "pl": "Strony zobowiązują się podjąć wszelkie niezbędne czynności w celu osiągnięcia porozumienia i uzgodnienia nowych postanowień w miejsce postanowień uznanych za nieważne lub prawnie wadliwe.",
+          "eng": "The Parties shall endeavour and take all necessary steps to reach an agreement and agree on new provisions in place of provisions declared invalid or legally defective.",
           "keywords": [
-            "",
-            "",
-            ""
+            "nieważne",
+            "wadliwe",
+            "invalid",
+            "defective"
           ]
         }
       },

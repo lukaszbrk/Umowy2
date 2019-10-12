@@ -1,6 +1,6 @@
 import React from "react";
 import { Divider, Pagination } from "semantic-ui-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Columns from "./Columns.js";
 
 //no. of pages in pagination
@@ -35,8 +35,11 @@ const ClauseScreen = ({ data }) => {
 
   const [activePage, setactivePage] = useState(1);
 
+  //const txt1 = useRef(null);
+
   useEffect(() => {
     setactivePage(1);
+    //txt1.current.focus();
     //set pagination after selecting a new clause
   }, [selectedClause]);
 
@@ -56,6 +59,7 @@ const ClauseScreen = ({ data }) => {
         totalPages={objectLength(_data)}
         onPageChange={onPageChange}
         onKeyDown={keyNav}
+        //ref={txt1}
       />
 
       <Divider />

@@ -340,17 +340,11 @@ componentDidMount() {
             <p>Liczba przykładów klauzul: {calc(this.state.data)}</p>
             <p>
             Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
-              umowach gospodarczych w j. polskim i angielskim. Strona została
-              opracowana przez tłumacza, który uznał, że pamięci tłumaczeniowe i
-              glosariusze warto uzupełnić o inne narzędzia. Większość przykładów
-              została przetłumaczona przez autora strony. Strona jest
-              nieustannie, lecz nieregularnie rozbudowywana.{" "}
+              umowach gospodarczych w j. polskim i angielskim. Znaczna większość przykładów
+              została przetłumaczona przez autora strony. {" "}
             </p>{" "}
             <p>
-              Będę wdzięczny za zgłoszenie błędów w tłumaczeniach czy też w
-              budowie samej strony. Liczę też, że użytkownicy podzielą się
-              własnymi tłumaczeniami, które chętnie dodam do zbioru, a także
-              zaproponują nowe funkcje strony.{" "}
+            Strona jest nieustannie, lecz nieregularnie rozbudowywana. Będę wdzięczny za zgłoszenie błędów w tłumaczeniach czy też w budowie samej strony. Liczę też, że użytkownicy podzielą się własnymi tłumaczeniami, a także zaproponują nowe funkcje strony.{" "}
             </p>
             <p>
               <b>

@@ -1,4 +1,4 @@
-//add payment, renumeration, personal data
+//add payment, renumeration, personal data, condfidentiality
 
 export function getSource() {
   let source = [
