@@ -21,7 +21,7 @@
         */
 
 import axios from "axios";
-import React, { Component, Ref } from "react";
+import React, { Component } from "react";
 import { Segment, Label, Modal, Button } from "semantic-ui-react";
 import "./Example.css";
 import "./test.css";
