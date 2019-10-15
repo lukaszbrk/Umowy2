@@ -1,7 +1,7 @@
 import React from "react";
 import { Divider, Pagination } from "semantic-ui-react";
 import { useState, useEffect, useRef } from "react";
-import Columns from "./Columns.js";
+import Columns from "../Columns.js";
 
 //no. of pages in pagination
 function objectLength(obj) {

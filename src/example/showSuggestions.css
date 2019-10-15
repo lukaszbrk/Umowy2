@@ -1,15 +1,15 @@
 
-.image-hover-opacity {
+.notvisible {
     opacity: 0;
     height:1vh
   }
-.image-hover-opa:hover> div{
+.hover:hover> div{
 
   opacity: 1;
   height:100%
 }
 
-.image-hover-opacity2 {
+._visible {
   opacity: 1;
   height:100%
 }

@@ -3,12 +3,12 @@
 import React from "react";
 
 import { Divider, Pagination } from "semantic-ui-react";
-import Columns from "./Columns.js";
+import Columns from "../Columns.js";
 
 import { useState, useEffect } from "react";
 
-import { longestCommonSubstring, findWords } from "./utils.js";
-import { detLang } from "./Keys_n_Clauses";
+import { longestCommonSubstring, findWords } from "../utils.js";
+import { detLang } from "../Keys_n_Clauses";
 
 function markKeywords(text, ListItem) {
   let lcs = longestCommonSubstring(text, ListItem);

@@ -1,7 +1,5 @@
 //TODO
 
-// move files to catalogues
-// rename
 // add highlighting labels when searching
 // fix regex
 // add data validating tools
@@ -24,9 +22,9 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Segment, Label, Modal, Button } from "semantic-ui-react";
 import "./Example.css";
-import "./test.css";
+import "./showSuggestions.css";
 
-import MainScreen from "./MainScreen.js";
+import ScreenSelection from "./Base/ScreenSelection.js";
 
 import Autosuggest from "react-autosuggest";
 
@@ -41,7 +39,7 @@ const inputStyle = {
   borderRadius: "3px"
 };
 
-const  calc = data =>{
+const  calcExamples = data =>{
 
   let clause
   let counter = 0
@@ -160,7 +158,7 @@ export default class SearchExampleStandard extends Component {
 
   //renderSuggestionsContainer
   renderSuggestion = (suggestion, isHighlighted) => (
-    <Segment className="image-hover-opa">
+    <Segment className="hover">
       <p>
         {" "}
         <b>{suggestion.clause}</b>
@@ -173,7 +171,7 @@ export default class SearchExampleStandard extends Component {
 
       <div
         className={
-          this.state.showWords ? "image-hover-opacity2" : "image-hover-opacity"
+          this.state.showWords ? "_visible" : "notvisible"
         }
       >
         {this.sortAlph(suggestion.keywords.pl).map(keyword => (
@@ -270,8 +268,8 @@ componentDidMount() {
       .catch(err => console.log(err));
   } else {
 
-    var temp = sessionStorage.getItem("data");
-    var q = JSON.parse(temp);
+    let temp = sessionStorage.getItem("data");
+    let q = JSON.parse(temp);
    
     this.setState({data:q});
   }
@@ -316,7 +314,7 @@ componentDidMount() {
             width: "60%"
           }}
         >
-          <MainScreen
+          <ScreenSelection
             data={this.state.data}
             selectedClause={this.state.selectedClause}
             selectedKeyword={this.state.selectedKeyword}
@@ -337,15 +335,13 @@ componentDidMount() {
           }
         >
           <Modal.Content>
-            <p>Liczba przykładów klauzul: {calc(this.state.data)}</p>
+            <p>Liczba przykładów klauzul: {calcExamples(this.state.data)}</p>
             <p>
             Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
-              umowach gospodarczych w j. polskim i angielskim. Znaczna większość przykładów
-              została przetłumaczona przez autora strony. {" "}
+              umowach gospodarczych w j. polskim i angielskim. Prawie wszystkie przykłady
+              zostały przetłumaczona przez autora strony. {" "}
             </p>{" "}
-            <p>
-            Strona jest nieustannie, lecz nieregularnie rozbudowywana. Będę wdzięczny za zgłoszenie błędów w tłumaczeniach czy też w budowie samej strony. Liczę też, że użytkownicy podzielą się własnymi tłumaczeniami, a także zaproponują nowe funkcje strony.{" "}
-            </p>
+
             <p>
               <b>
                 {" "}
@@ -353,6 +349,8 @@ componentDidMount() {
                 <a href="mailto:borkowskil@outlook.pl">borkowskil@outlook.pl</a>
               </b>
             </p>
+      
+       
           </Modal.Content>
         </Modal>
       </React.Fragment>

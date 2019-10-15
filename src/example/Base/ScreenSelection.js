@@ -4,8 +4,8 @@ import React from "react";
 import { Grid, Segment, Divider } from "semantic-ui-react";
 
 import DefaultScreen from "./DefaultScreen.js";
-import KeywordSelectionScreen from "./KeywordSelectionScreen.js";
-import ClauseScreen from "./ClauseScreen.js";
+import KeywordSelectionScreen from "../Keywords/KeywordSelectionScreen.js";
+import ClauseScreen from "../Clauses/ClauseScreen.js";
 
 const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
 
