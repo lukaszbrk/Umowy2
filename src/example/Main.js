@@ -21,7 +21,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { Segment, Label, Modal, Button } from "semantic-ui-react";
-import "./Example.css";
+import "./Autosuggest.css";
 import "./showSuggestions.css";
 
 import ScreenSelection from "./Base/ScreenSelection.js";
@@ -69,7 +69,7 @@ const getSuggestions = value => {
   let found_clauses = [];
   let found_keywords = [];
 
-  if (inputLength < 1) {
+  if (inputLength < 3) {
     return source;
   } else {
     //search for keywords
@@ -128,7 +128,8 @@ export default class SearchExampleStandard extends Component {
       selectedClause: false, //changed
       resetPagination: false,
       selectedKeyword: false,
-      showWords: false
+      showWords: false,
+      regex:-1
     };
   }
   //sort keywords
@@ -158,22 +159,25 @@ export default class SearchExampleStandard extends Component {
 
   //renderSuggestionsContainer
   renderSuggestion = (suggestion, isHighlighted) => (
+    
     <Segment className="hover">
       <p>
-        {" "}
-        <b>{suggestion.clause}</b>
+ 
+        {/*rendering clauses*/}
+        {suggestion.clause}
       </p>
       <p>
         <small>
           <i>{suggestion.description}</i>
         </small>
       </p>
-
+   
       <div
         className={
           this.state.showWords ? "_visible" : "notvisible"
         }
       >
+                 {/*rendering keywords*/}
         {this.sortAlph(suggestion.keywords.pl).map(keyword => (
           <Label
             style={{ marginTop: "2px" }}
@@ -187,26 +191,59 @@ export default class SearchExampleStandard extends Component {
         <br />
         {this.sortAlph(suggestion.keywords.en).map(keyword => (
           <Label
-            style={{ marginTop: "2px" }}
+            //style={keyword.search(this.state.regex) !== -1 && this.state.value !==0 ? { marginTop: "2px", backgroundColor: 'yellow'}: { marginTop: "2px"  }}
+            style={ { marginTop: "2px"  }}
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
           >
-            {keyword}
+            {keyword}       {console.log("Search result: "+keyword.search(this.state.regex))}
+            {console.log("Regex: "+this.state.regex)}  {console.log("Keyword: "+keyword)}
           </Label>
         ))}
       </div>
     </Segment>
   );
+/*
+  onChange = (event, { newValue }) => {
+    this.setState({
+      value: newValue
+    }, this.setRegex(this.state.value));
+
+
+  };
+
+  setRegex = (value) => {
+
+    if (value.length>0) { let regex = new RegExp('^'+value, "gi");
+    this.setState({regex}) }
+
+    else {}
+
+   
+  }
+*/
+  // Autosuggest will call this function every time you need to update suggestions.
+  //
 
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue
-    });
+    }, this.setRegex(this.state.value));
+
+
   };
 
-  // Autosuggest will call this function every time you need to update suggestions.
-  //
+  setRegex = (value) => {
+
+    if (value.length>0) { let regex = new RegExp('^'+value, "gi");
+    this.setState({regex}) }
+
+    else {}
+
+   
+  }
+  
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({ showWords: true }, () => {
       this.setState({ suggestions: getSuggestions(value) });
