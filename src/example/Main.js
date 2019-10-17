@@ -54,17 +54,23 @@ const calcExamples = data => {
 
 let source = getSource();
 
-// 
+//
 
-const  filtering = (value, word) =>{
+const filtering = (input, word) => {
+  
+  var rgxp = new RegExp("(^"+input+")|(\\s"+input+")", "gi");
+  if (word ==="share capital") {
 
+    console.log(rgxp)
+  }
 
-  let regex = new RegExp("^" + value+"|\b"+value, "gi");
-
-  word.search(regex)
-
-  return regex;
-}
+  if (word.match(rgxp)) {
+   
+    return true;
+  } else {
+    return false;
+  }
+};
 
 // How to calculate suggestions for any given input value.
 const getSuggestions = value => {
@@ -80,20 +86,18 @@ const getSuggestions = value => {
   } else {
     //search for keywords
     source.map(entry =>
-      entry.keywords.pl
-        .concat(entry.keywords.en)
-        .map(keyword =>
-          keyword.toLowerCase().search(/^inputValue|\binputValue/) //replace with regex or split
-          //filtering(inputValue, keyword)
-            ? found_keywords.push(entry)
-            : {}
-        )
+      entry.keywords.pl.concat(entry.keywords.en).map(keyword =>
+        filtering(inputValue, keyword)
+        //keyword.toLowerCase().includes(inputValue, 0) //replace with regex or split
+          ? //filtering(inputValue, keyword)
+            found_keywords.push(entry)
+          : {}
+      )
     );
     //search for clauses
-    found_clauses = source.filter(lang =>
-      //filtering(inputValue, lang.clause)
-      lang.clause.toLowerCase().includes(inputValue)
- 
+    found_clauses = source.filter(
+      lang => filtering(inputValue, lang.clause)
+      //lang =>  lang.clause.toLowerCase().includes(inputValue)
     );
 
     const clauses_n_keywords = found_clauses.concat(found_keywords);
@@ -137,8 +141,7 @@ export default class SearchExampleStandard extends Component {
       selectedClause: false, //changed
       resetPagination: false,
       selectedKeyword: false,
-      showWords: false,
-      regex: -1
+      showWords: false
     };
   }
   //sort keywords
@@ -183,11 +186,14 @@ export default class SearchExampleStandard extends Component {
         {/*rendering keywords*/}
         {this.sortAlph(suggestion.keywords.pl).map(keyword => (
           <Label
-          style={
-            keyword.search(this.state.regex) !== -1 && this.state.value.length >2
-              ? { marginTop: "2px", backgroundColor: "#fbbd08" }
-              : { marginTop: "2px" }
-          }
+            style={
+              keyword.search(
+                new RegExp("^" + this.state.value + "|\\b" + this.state.value,
+                "gi")
+              ) !== -1 && this.state.value.length > 1
+                ? { marginTop: "2px", backgroundColor: "#fbbd08" }
+                : { marginTop: "2px" }
+            }
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
@@ -200,8 +206,11 @@ export default class SearchExampleStandard extends Component {
         {this.sortAlph(suggestion.keywords.en).map(keyword => (
           <Label
             style={
-              keyword.search(this.state.regex) !== -1 && this.state.value.length >1
-                ? { marginTop: "2px",backgroundColor: "#fbbd08" }
+              keyword.search(
+                new RegExp( "^" + this.state.value + "|\\b" + this.state.value,
+                "gi")
+              ) !== -1 && this.state.value.length > 1
+                ? { marginTop: "2px", backgroundColor: "#fbbd08" }
                 : { marginTop: "2px" }
             }
             //style={ { marginTop: "2px"  }}
@@ -209,10 +218,7 @@ export default class SearchExampleStandard extends Component {
             className={keyword}
             key={keyword}
           >
-            {keyword}{" "}
-            {console.log("Search result: " + keyword.search(this.state.regex))}
-            {console.log("Regex: " + this.state.regex)}{" "}
-            {console.log("Keyword: " + keyword)}
+            {keyword}
           </Label>
         ))}
       </div>
@@ -242,18 +248,7 @@ let regex = new RegExp('^'+value, "gi")
  
 */
   onChange = (event, { newValue }) => {
-    this.setState(
-      {
-        regex: this.setRegex(newValue)
-      },
-      () => this.setState({ value: newValue })
-    );
-  };
-
-  setRegex = value => {
-    let regex = new RegExp("^" + value, "gi");
-
-    return regex;
+    this.setState(this.setState({ value: newValue }));
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
