@@ -1,6 +1,8 @@
 //TODO
-
-// add highlighting labels when searching
+// main too bloated
+// move top button
+// polish chars regex
+// fix state onclick and search
 // fix regex
 // add data validating tools
 // left right arrows for pagination
@@ -30,8 +32,6 @@ import Autosuggest from "react-autosuggest";
 
 import { getSource } from "./Keys_n_Clauses";
 
-
-
 const inputStyle = {
   padding: "5px 5px",
 
@@ -39,26 +39,32 @@ const inputStyle = {
   borderRadius: "3px"
 };
 
-const  calcExamples = data =>{
-
-  let clause
-  let counter = 0
+const calcExamples = data => {
+  let clause;
+  let counter = 0;
 
   for (clause in data["Clauses"]) {
-   
-
-    counter = counter + Object.keys( data["Clauses"][clause]["Examples"]).length
-
-    
+    counter = counter + Object.keys(data["Clauses"][clause]["Examples"]).length;
   }
 
-  return counter
-}
-
+  return counter;
+};
 
 //Clauses and keywords
 
 let source = getSource();
+
+// 
+
+const  filtering = (value, word) =>{
+
+
+  let regex = new RegExp("^" + value+"|\b"+value, "gi");
+
+  word.search(regex)
+
+  return regex;
+}
 
 // How to calculate suggestions for any given input value.
 const getSuggestions = value => {
@@ -69,7 +75,7 @@ const getSuggestions = value => {
   let found_clauses = [];
   let found_keywords = [];
 
-  if (inputLength < 3) {
+  if (inputLength < 1) {
     return source;
   } else {
     //search for keywords
@@ -77,17 +83,20 @@ const getSuggestions = value => {
       entry.keywords.pl
         .concat(entry.keywords.en)
         .map(keyword =>
-          keyword.toLowerCase().includes(inputValue)
+          keyword.toLowerCase().search(/^inputValue|\binputValue/) //replace with regex or split
+          //filtering(inputValue, keyword)
             ? found_keywords.push(entry)
             : {}
         )
     );
     //search for clauses
     found_clauses = source.filter(lang =>
+      //filtering(inputValue, lang.clause)
       lang.clause.toLowerCase().includes(inputValue)
+ 
     );
 
-    const all = found_clauses.concat(found_keywords);
+    const clauses_n_keywords = found_clauses.concat(found_keywords);
 
     //remove duplicates (copy pasted)
     function getUnique(arr, comp) {
@@ -103,7 +112,7 @@ const getSuggestions = value => {
       return unique;
     }
 
-    return getUnique(all, "clause");
+    return getUnique(clauses_n_keywords, "clause");
   }
 };
 
@@ -129,7 +138,7 @@ export default class SearchExampleStandard extends Component {
       resetPagination: false,
       selectedKeyword: false,
       showWords: false,
-      regex:-1
+      regex: -1
     };
   }
   //sort keywords
@@ -159,10 +168,8 @@ export default class SearchExampleStandard extends Component {
 
   //renderSuggestionsContainer
   renderSuggestion = (suggestion, isHighlighted) => (
-    
     <Segment className="hover">
       <p>
- 
         {/*rendering clauses*/}
         {suggestion.clause}
       </p>
@@ -171,19 +178,20 @@ export default class SearchExampleStandard extends Component {
           <i>{suggestion.description}</i>
         </small>
       </p>
-   
-      <div
-        className={
-          this.state.showWords ? "_visible" : "notvisible"
-        }
-      >
-                 {/*rendering keywords*/}
+
+      <div className={this.state.showWords ? "_visible" : "notvisible"}>
+        {/*rendering keywords*/}
         {this.sortAlph(suggestion.keywords.pl).map(keyword => (
           <Label
-            style={{ marginTop: "2px" }}
+          style={
+            keyword.search(this.state.regex) !== -1 && this.state.value.length >2
+              ? { marginTop: "2px", backgroundColor: "#fbbd08" }
+              : { marginTop: "2px" }
+          }
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
+            //color={"yellow"}
           >
             {keyword}
           </Label>
@@ -191,59 +199,63 @@ export default class SearchExampleStandard extends Component {
         <br />
         {this.sortAlph(suggestion.keywords.en).map(keyword => (
           <Label
-            //style={keyword.search(this.state.regex) !== -1 && this.state.value !==0 ? { marginTop: "2px", backgroundColor: 'yellow'}: { marginTop: "2px"  }}
-            style={ { marginTop: "2px"  }}
+            style={
+              keyword.search(this.state.regex) !== -1 && this.state.value.length >1
+                ? { marginTop: "2px",backgroundColor: "#fbbd08" }
+                : { marginTop: "2px" }
+            }
+            //style={ { marginTop: "2px"  }}
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
           >
-            {keyword}       {console.log("Search result: "+keyword.search(this.state.regex))}
-            {console.log("Regex: "+this.state.regex)}  {console.log("Keyword: "+keyword)}
+            {keyword}{" "}
+            {console.log("Search result: " + keyword.search(this.state.regex))}
+            {console.log("Regex: " + this.state.regex)}{" "}
+            {console.log("Keyword: " + keyword)}
           </Label>
         ))}
       </div>
     </Segment>
   );
-/*
-  onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue
-    }, this.setRegex(this.state.value));
-
-
-  };
-
-  setRegex = (value) => {
-
-    if (value.length>0) { let regex = new RegExp('^'+value, "gi");
-    this.setState({regex}) }
-
-    else {}
-
-   
-  }
-*/
   // Autosuggest will call this function every time you need to update suggestions.
   //
-
+  /*
   onChange = (event, { newValue }) => {
     this.setState({
       value: newValue
-    }, this.setRegex(this.state.value));
+    }, ()=> this.setRegex(this.state.value));
 
 
   };
 
   setRegex = (value) => {
 
-    if (value.length>0) { let regex = new RegExp('^'+value, "gi");
-    this.setState({regex}) }
+let regex = new RegExp('^'+value, "gi")
+    this.setState({regex}) 
 
-    else {}
+  
 
    
   }
-  
+
+ 
+*/
+  onChange = (event, { newValue }) => {
+    this.setState(
+      {
+        regex: this.setRegex(newValue)
+      },
+      () => this.setState({ value: newValue })
+    );
+  };
+
+  setRegex = value => {
+    let regex = new RegExp("^" + value, "gi");
+
+    return regex;
+  };
+
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({ showWords: true }, () => {
       this.setState({ suggestions: getSuggestions(value) });
@@ -293,25 +305,24 @@ export default class SearchExampleStandard extends Component {
     </div>
   );
 */
-componentDidMount() {
-  // query server for file size
-  if (!sessionStorage.getItem("data")) {
+  componentDidMount() {
+    // query server for file size
+    if (!sessionStorage.getItem("data")) {
+      axios
+        .get("https://api.myjson.com/bins/sa5ob")
+        .then(res => {
+          this.setState({ data: res.data }, () => {
+            sessionStorage.setItem("data", JSON.stringify(this.state.data));
+          });
+        })
+        .catch(err => console.log(err));
+    } else {
+      let temp = sessionStorage.getItem("data");
+      let q = JSON.parse(temp);
 
-    axios
-      .get("https://api.myjson.com/bins/sa5ob")
-      .then(res => {
-        this.setState({ data: res.data }, ()=>{sessionStorage.setItem("data", JSON.stringify(this.state.data));});
-      })
-      .catch(err => console.log(err));
-  } else {
-
-    let temp = sessionStorage.getItem("data");
-    let q = JSON.parse(temp);
-   
-    this.setState({data:q});
+      this.setState({ data: q });
+    }
   }
-
-}
 
   render() {
     //console.log("Rendering Example screen");
@@ -374,11 +385,10 @@ componentDidMount() {
           <Modal.Content>
             <p>Liczba przykładów klauzul: {calcExamples(this.state.data)}</p>
             <p>
-            Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
-              umowach gospodarczych w j. polskim i angielskim. Prawie wszystkie przykłady
-              zostały przetłumaczona przez autora strony. {" "}
+              Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
+              umowach gospodarczych w j. polskim i angielskim. Prawie wszystkie
+              przykłady zostały przetłumaczona przez autora strony.{" "}
             </p>{" "}
-
             <p>
               <b>
                 {" "}
@@ -386,8 +396,6 @@ componentDidMount() {
                 <a href="mailto:borkowskil@outlook.pl">borkowskil@outlook.pl</a>
               </b>
             </p>
-      
-       
           </Modal.Content>
         </Modal>
       </React.Fragment>

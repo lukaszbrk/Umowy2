@@ -64,7 +64,7 @@ export function longestCommonSubstring(string1, string2) {
 }
 
 export function findWords(str, text_to_process) {
-  let color = "<mark style='background-color: yellow;'>";
+  let color = "<mark style='background-color: #fbbd08;'>";
   //TODO polish characters not recognized, e.g. następca
   let myRegexp = new RegExp("([A-Za-z]?)(" + str + ")([^A-Za-z]?|[A-Za-z]+)", "giu");
   var match = myRegexp.exec(text_to_process);
