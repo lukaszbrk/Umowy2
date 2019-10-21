@@ -1,4 +1,9 @@
 //TODO
+
+
+// fix unique keys errors
+// escape regex
+// use memo
 // main too bloated
 // move top button
 // polish chars regex
@@ -6,7 +11,7 @@
 // fix regex
 // add data validating tools
 // left right arrows for pagination
-// review showwords state
+// review showKeywords state
 // review examples
 // prepare form to add content for users
 // rewrite prepDataforKeywordSelectionScreen as db query
@@ -21,7 +26,7 @@
         */
 
 import axios from "axios";
-import React, { Component } from "react";
+import React, { Component, Ref } from "react";
 import { Segment, Label, Modal, Button } from "semantic-ui-react";
 import "./Autosuggest.css";
 import "./showSuggestions.css";
@@ -36,7 +41,7 @@ const inputStyle = {
   padding: "5px 5px",
 
   border: "1/2px solid ",
-  borderRadius: "3px"
+  //borderRadius: "3px"
 };
 
 const calcExamples = data => {
@@ -128,6 +133,7 @@ const getSuggestionValue = suggestion => suggestion.clause;
 export default class SearchExampleStandard extends Component {
   constructor() {
     super();
+    this.myRef = React.createRef() 
 
     // Autosuggest is a controlled component.
     // This means that you need to provide an input value
@@ -141,8 +147,11 @@ export default class SearchExampleStandard extends Component {
       selectedClause: false, //changed
       resetPagination: false,
       selectedKeyword: false,
-      showWords: false
+      showKeywords: false
+     
     };
+
+    this.baseState = this.state
   }
   //sort keywords
   sortAlph = arr => {
@@ -163,7 +172,7 @@ export default class SearchExampleStandard extends Component {
 
     this.setState({
       selectedKeyword: e.target.className.slice(9),
-      showWords: false
+      showKeywords: false
     });
   };
 
@@ -182,7 +191,7 @@ export default class SearchExampleStandard extends Component {
         </small>
       </p>
 
-      <div className={this.state.showWords ? "_visible" : "notvisible"}>
+      <div className={this.state.showKeywords ? "_visible" : "notvisible"}>
         {/*rendering keywords*/}
         {this.sortAlph(suggestion.keywords.pl).map(keyword => (
           <Label
@@ -197,7 +206,7 @@ export default class SearchExampleStandard extends Component {
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
-            //color={"yellow"}
+        
           >
             {keyword}
           </Label>
@@ -213,7 +222,7 @@ export default class SearchExampleStandard extends Component {
                 ? { marginTop: "2px", backgroundColor: "#fbbd08" }
                 : { marginTop: "2px" }
             }
-            //style={ { marginTop: "2px"  }}
+    
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
@@ -224,53 +233,37 @@ export default class SearchExampleStandard extends Component {
       </div>
     </Segment>
   );
+
+ //hide keywords when input length is 0
+    hideKeywords = () => {
+    
+      if (this.state.value.length ===0) {
+
+        this.setState({showKeywords: false} )
+      }  else {
+  
+  
+      }
+    };
   // Autosuggest will call this function every time you need to update suggestions.
   //
-  /*
+
+    
   onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue
-    }, ()=> this.setRegex(this.state.value));
-
-
-  };
-
-  setRegex = (value) => {
-
-let regex = new RegExp('^'+value, "gi")
-    this.setState({regex}) 
-
-  
-
-   
-  }
-
- 
-*/
-  onChange = (event, { newValue }) => {
-    this.setState(this.setState({ value: newValue }));
+    this.setState(this.setState({ value: newValue }, ()=>{this.hideKeywords()}));
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({ showWords: true }, () => {
+    this.setState({ showKeywords: true }, () => {
       this.setState({ suggestions: getSuggestions(value) });
     });
   };
 
   // Autosuggest will call this function every time you need to clear suggestions.
 
-  /*
+  //review this
   onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: source,
-      selectedKeyword: false,
-      showWords: false
-    });
-  };
-*/
-
-  onSuggestionsClearRequested = () => {
-    this.setState({ showWords: false }, () =>
+    this.setState({ showKeywords: false }, () =>
       this.setState({ selectedKeyword: false }, () => {
         this.setState({ suggestions: source });
       })
@@ -278,7 +271,7 @@ let regex = new RegExp('^'+value, "gi")
   };
   onSuggestionSelected = (e, { suggestionValue }) => {
     this.setState({ value: "", selectedClause: suggestionValue }, () =>
-      this.setState({ showWords: false }, () => {
+      this.setState({ showKeywords: false }, () => {
         this.setState({ selectedKeyword: false }, () => {
           this.setState({ suggestions: source });
         });
@@ -286,21 +279,20 @@ let regex = new RegExp('^'+value, "gi")
     );
   };
 
-  /* renderSuggestionsContainer = ({ containerProps, children, query }) => (
-    <div {...containerProps}>
-        {
-        <div style={{position:'relative'}}>
-          
-          <br/>
-     
-        </div>
-      }
-      {children}
-    
-    </div>
-  );
-*/
+  //needed for focusing
+  storeInputReference = autosuggest => {
+    if (autosuggest !== null) {
+      this.input = autosuggest.input;
+      console.log(this.input )
+    }
+  };
+
+
   componentDidMount() {
+
+    //focusing on input component
+
+    //this.input.focus();
     // query server for file size
     if (!sessionStorage.getItem("data")) {
       axios
@@ -318,6 +310,7 @@ let regex = new RegExp('^'+value, "gi")
       this.setState({ data: q });
     }
   }
+
 
   render() {
     //console.log("Rendering Example screen");
@@ -344,8 +337,9 @@ let regex = new RegExp('^'+value, "gi")
             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
             onSuggestionSelected={this.onSuggestionSelected}
             focusInputOnSuggestionClick={false}
-            //renderSuggestionsContainer={this.renderSuggestionsContainer}
-            //highlightFirstSuggestion={true}
+            //ref={this.storeInputReference} 
+          
+         
           />
         </div>
         {/*TODO add menu below; add styling */}

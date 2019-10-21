@@ -63,13 +63,7 @@ const ClauseScreen = ({ data }) => {
       />
 
       <Divider />
-      <p>
-        Słowa kluczowe:{" "}
-        {_data[activePage - 1]? (_data[activePage - 1].keywords.map(keyword => (
-          <i>{"#" + keyword + " "}</i>
-        ))):"Error"}
-
-      </p>
+ 
 
 
       {/*activepage does not reset immediately  */}
@@ -78,6 +72,15 @@ const ClauseScreen = ({ data }) => {
       ) : (
         <Columns _data={_data} activePage={1} />
       )}
+
+<p>
+        Słowa kluczowe:{" "}
+        {_data[activePage - 1]? (_data[activePage - 1].keywords.map(keyword => (
+          <i>{"#" + keyword + " "}</i>
+        ))):"Error"}
+
+      </p>
+      
     </div>
   );
 };

@@ -9,7 +9,10 @@ body {
 .react-autosuggest__input {
   
   
+  padding: c5px 5px;
 
+  border: 1/2px solid;
+  border-radius: 3px;
 
   border: 1px solid #aaa;
   

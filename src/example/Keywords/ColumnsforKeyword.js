@@ -87,13 +87,14 @@ const ColumnsforKeyword = ({ data, RtrBtn, ListItem }) => {
       <span> </span>
       <RtrBtn />
       <Divider />
+  
+      <Columns _data={_data} activePage={activePage} />
       <p>
         Inne słowa kluczowe:{" "}
         {_data[activePage - 1].keywords.map(keyword => (
           <i>{"#" + keyword + " "}</i>
         ))}
       </p>
-      <Columns _data={_data} activePage={activePage} />
     </div>
   );
 };
