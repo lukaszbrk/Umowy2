@@ -2,7 +2,7 @@
 
 import React from "react";
 
-
+import image from "./paragraph.png"
 
 import {
    
@@ -23,12 +23,12 @@ const DefaultScreen = () => {
     <Grid.Row columns={2}>
       <Grid.Column>
       
-          <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+          <Image src={image} />
         
       </Grid.Column>
       <Grid.Column>
       
-          <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+          <Image src={image} />
         
       </Grid.Column>
     </Grid.Row>

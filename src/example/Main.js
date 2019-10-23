@@ -363,7 +363,7 @@ export default class SearchExampleStandard extends Component {
               small="true"
               style={{
                 position: "fixed",
-                bottom: 0,
+                bottom: 10,
                 right: 5
               }}
             >
