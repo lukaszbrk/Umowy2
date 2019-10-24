@@ -1,8 +1,8 @@
 //TODO
-
+// escape regex
 // Demo
 // fix unique keys errors
-// escape regex
+
 // use memo
 // main too bloated
 // move top button
@@ -26,7 +26,7 @@
         */
 
 import axios from "axios";
-import React, { Component, Ref } from "react";
+import React, { Component } from "react";
 import { Segment, Label, Modal, Button } from "semantic-ui-react";
 import "./Autosuggest.css";
 import "./showSuggestions.css";
@@ -296,7 +296,7 @@ export default class SearchExampleStandard extends Component {
     // query server for file size
     if (!sessionStorage.getItem("data")) {
       axios
-        .get("https://api.myjson.com/bins/sa5ob")
+        .get("https://api.myjson.com/bins/enfwk")
         .then(res => {
           this.setState({ data: res.data }, () => {
             sessionStorage.setItem("data", JSON.stringify(this.state.data));
@@ -348,8 +348,12 @@ export default class SearchExampleStandard extends Component {
             position: "fixed",
             right: 5,
             top: 20,
-            width: "60%"
-          }}
+            width: "60%",
+      
+   
+            overflow: 'auto', maxHeight: 500 }}
+ 
+        
         >
           <ScreenSelection
             data={this.state.data}
@@ -360,14 +364,14 @@ export default class SearchExampleStandard extends Component {
         <Modal
           trigger={
             <Button
-              small="true"
+              size='tiny'
               style={{
                 position: "fixed",
                 bottom: 10,
                 right: 5
               }}
             >
-              Informacje o stronie
+              <b>O stronie</b>
             </Button>
           }
         >

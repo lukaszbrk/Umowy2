@@ -196,7 +196,7 @@ export function getSource() {
         ]
       },
       description:
-        "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie moga zostać  zgloszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkód, kosztów, etc., jakie moze ona w związku z tym ponieść."
+        "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie mogą zostać zgłoszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkód, kosztów, etc., jakie może ona w związku z tym ponieść."
     },
 
     {
@@ -209,7 +209,15 @@ export function getSource() {
           "majątek",
           "wiążące",
           "następca",
-          "cedować"
+          "cedować",
+
+          "cesjonariusz",
+          "obowiązywać",
+       
+
+    
+  
+   
         ],
 
         en: [
@@ -356,7 +364,7 @@ export function getSource() {
         ]
       },
       description:
-        "Klauzua, która zwalnia strony umowy od odpowiedzialności za zdarzenia nad którymi nie panują"
+        "Klauzula w której strony uzgadniają, że spory między nimi będzie rozstrzygać sąd arbitrażowy "
     },
 
     {
@@ -462,7 +470,7 @@ export function getSource() {
         ]
       },
       description:
-        "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w zwiazku z realizacją wiążącej je umowy"
+        "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w związku z realizacją wiążącej je umowy"
     },
     {
       clause: "Testimonium",

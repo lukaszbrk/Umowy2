@@ -8,6 +8,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 const columnsStyle = {
   padding: "10px",
   border: "1px solid blue"
+  
 };
 
 const Columns = ({ _data, activePage }) => {

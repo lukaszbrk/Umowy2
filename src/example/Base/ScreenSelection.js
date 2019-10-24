@@ -8,18 +8,15 @@ import KeywordSelectionScreen from "../Keywords/KeywordSelectionScreen.js";
 import ClauseScreen from "../Clauses/ClauseScreen.js";
 
 const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
-
-
   //console.log("Rendering Main screen");
 
-
   function selectScreen(selectedClause, selectedKeyword) {
-
-
     if (selectedKeyword) {
       prepDataforKeywordSelectionScreen(data, selectedKeyword);
       return (
-        <KeywordSelectionScreen data={prepDataforKeywordSelectionScreen(data, selectedKeyword)} />
+        <KeywordSelectionScreen
+          data={prepDataforKeywordSelectionScreen(data, selectedKeyword)}
+        />
       );
     } else if (selectedClause) {
       return (
@@ -32,7 +29,7 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
 
   function prepDataforClauseScreen(data, selectedClause) {
     let _data = data["Clauses"][selectedClause]["Examples"];
-    
+
     return { _data, selectedClause };
   }
   //TODO rewrite as db query
@@ -52,40 +49,44 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
             selectedKeyword
           )
         ) {
-          clause_n_number[clause] = clause_n_number[clause] ? clause_n_number[clause] + 1 : 1;
+          clause_n_number[clause] = clause_n_number[clause]
+            ? clause_n_number[clause] + 1
+            : 1;
 
           dataforColumns.push([
             clause,
-            [
-              data["Clauses"][clause]["Examples"][example]
-            ]
+            [data["Clauses"][clause]["Examples"][example]]
           ]);
 
           if (!aux.includes(clause)) {
             _clauseDescription.push([
               clause,
               data["Clauses"][clause]["Description_PL"],
-              data["Clauses"][clause]["Description_EN"],
-              
+              data["Clauses"][clause]["Description_EN"]
             ]);
 
             aux.push(clause);
-
-       
           }
         }
       }
     }
 
-    console.log(dataforColumns)
+    console.log(dataforColumns);
 
-    return { dataforColumns, _clauseDescription, clause_n_number, selectedKeyword };
+    return {
+      dataforColumns,
+      _clauseDescription,
+      clause_n_number,
+      selectedKeyword
+    };
   }
 
   return (
     <Grid.Column width={10} >
       <Segment >
-        <p><b>Przykłady</b></p>
+        <p>
+          <b>Przykłady</b>
+        </p>
         <Divider />
 
         {/*<p>Content: {selectedKeyword}</p>*/}

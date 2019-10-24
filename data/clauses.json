@@ -6,7 +6,7 @@
       "Keywords": "",
       "Examples": {
         "0": {
-          "pl": "Niniejsza Umowa Zakupu („Umowa”) zostaje zawarta w dniu ___ roku („Data Wejścia w Życie”) między ___, („___”) i ___ („Dostawca”).",
+          "pl": "Niniejsza Umowa Zakupu („Umowa”) zostaje zawarta w dniu ___  („Data Zawarcia”) między ___, („___”) i ___ („Dostawca”).",
           "eng": "This Purchase Agreement (“Agreement”) is entered into on ___ (the “Effective Date”) by and between ___, (“___”) and ___ (“Supplier”).",
           "keywords": [
             "enter into",
@@ -32,15 +32,15 @@
     "Recitals": {
       "Examples": {
         "0": {
-          "pl": "Nabywca, działający na zlecenie Leasingobiorcy i podpisawszy Umowę Leasingową nr ___, zleca skonstruowanie i nwyraża chęć zakupu Żurawia Portowego Jezdnego (zwanego dalej „Żurawiem”) nopisanego w niniejszej Umowie, a Wykonawca zobowiązuje się do skonstruowania i sprzedaży dla Nabywcy jednego, nowego Żurawia typu ___, zgodnie z postanowieniami niniejszej Umowy. W związku z powyższym strony wspólnie uzgodniły, co następuje:",
-          "eng": "WHEREAS the Purchaser acting on the order of the Lessee and having executed Lease Agreement no. ___, desires to have constructed and to purchase the Mobile Harbor Crane (hereinafter referred to as\n“the Crane”) described herein AND WHEREAS the Contractor engages to construct\nand to sell to the Purchaser one brand new Crane, type ___ in accordance with the provisions of this Contract. THEREFORE the contracting parties mutually agree as follows:",
+          "pl": "Nabywca, działający na zlecenie Leasingobiorcy i podpisawszy Umowę Leasingową nr ___, zleca skonstruowanie i wyraża chęć zakupu Żurawia Portowego Jezdnego (zwanego dalej „Żurawiem”) opisanego w niniejszej Umowie, a Wykonawca zobowiązuje się do skonstruowania i sprzedaży dla Nabywcy jednego, nowego Żurawia typu ___, zgodnie z postanowieniami niniejszej Umowy. W związku z powyższym strony wspólnie uzgodniły, co następuje:",
+          "eng": "WHEREAS the Purchaser acting on the order of the Lessee and having executed Lease Agreement no. ___, desires to have constructed and to purchase the Mobile Harbor Crane (hereinafter referred to as 'Crane') described herein AND WHEREAS the Contractor engages to construct and to sell to the Purchaser one brand new Crane, type ___ in accordance with the provisions of this Contract. THEREFORE the contracting parties mutually agree as follows:",
           "keywords": [
             "whereas",
             "therefore"
           ]
         },
         "1": {
-          "pl": "ZWAŻYWSZY, że ___ zawarł Umowę rejestracyjną z Internet  Corporation for Assigned Names and Numbers („ICANN”) w celu obsługi wspólnego  Systemu Rejestracji, serwerów nazw TLD i innych urządzeń dla domeny  najwyższego poziomu .ORG; ZWAŻYWSZY, że wielu rejestratorów świadczy usługi  rejestracji nazw domen w ramach domeny najwyższego poziomu .ORG; ZWAŻYWSZY, że Rejestrator chce działać jako rejestrator  nazw domen najwyższego poziomu .ORG. W związku z obustronnymi obietnicami, korzyściami i  zobowiązaniami zawartymi w niniejszej Umowie, w zamian za odpowiednie wynagrodzenie, którego odbiór, adekwatność i wystarczalność są niniejszym potwierdzone, ___ i Rejestrator, niniejszym uzgadniają, co następuje:",
+          "pl": "ZWAŻYWSZY, że ___ zawarł Umowę rejestracyjną z Internet  Corporation for Assigned Names and Numbers („ICANN”) w celu obsługi wspólnego Systemu Rejestracji, serwerów nazw TLD i innych urządzeń dla domeny najwyższego poziomu .ORG; ZWAŻYWSZY, że wielu rejestratorów świadczy usługi  rejestracji nazw domen w ramach domeny najwyższego poziomu .ORG; ZWAŻYWSZY, że Rejestrator chce działać jako rejestrator  nazw domen najwyższego poziomu .ORG. W związku z obustronnymi zobowiązaniami zawartymi w niniejszej Umowie, w zamian za odpowiednie wynagrodzenie, którego odbiór i adekwatność są niniejszym potwierdzone, ___ i Rejestrator niniejszym uzgadniają, co następuje:",
           "eng": "WHEREAS, ___ has entered a Registry Agreement with the Internet Corporation for Assigned Names and Numbers to operate a shared  registration system, TLD nameservers, and other equipment for the .ORG  top-level domain; WHEREAS, multiple registrars provide Internet domain name registration services within the .ORG top-level domain; WHEREAS, Registrar wishes to act as a registrar for domain names within the .ORG top-level domain. NOW, THEREFORE, for and in consideration of the mutual  promises, benefits and covenants contained herein and for other good and  valuable consideration, the receipt, adequacy and sufficiency of which are  hereby acknowledged, ___ and Registrar, intending to be legally bound, hereby agree as follows:",
           "keywords": [
             "therefore",
@@ -51,7 +51,7 @@
           ]
         }
       },
-      "Description_PL": "Przedstawienie okolicznosci poprzedzających zawarcie umowy",
+      "Description_PL": "Przedstawienie okoliczności poprzedzających zawarcie umowy",
       "Description_EN": "The recitals to a contract state any background information that the parties regard as relevant.",
       "Keywords": ""
     },
@@ -80,14 +80,14 @@
           ]
         }
       },
-      "Description_PL": "Definicje kluczowych terminöw",
+      "Description_PL": "Definicje kluczowych terminów",
       "Description_EN": "Defined term makes a contract easier to read by allowing the drafter to use throughout the contract the shorter defined term instead of the longer definition. It also ensures that whatever is defined is expressed consistently throughout the contract ",
       "Keywords": ""
     },
     "Warranties and Representations": {
       "Examples": {
         "0": {
-          "pl": "Dostawca gwarantuje Klientowi, że dostarczone Produkty są odpowiedniej jakości oraz są zgodne ze wszystkimi istotnymi danymi w specyfikacji Produktu.",
+          "pl": "Dostawca gwarantuje Klientowi, że dostarczone Produkty będą odpowiedniej jakości oraz zgodne ze wszystkimi istotnymi danymi w specyfikacji Produktu.",
           "eng": "The Supplier warrants to the Customer that the Products, as delivered to the Customer, will be of sound materials and workmanship and will comply in all material respects with the Specification.",
           "keywords": [
             "gwarantować",
@@ -97,7 +97,7 @@
           ]
         },
         "1": {
-          "pl": "Dostawca ponosi odpowiedzialność z tytułu niniejszej gwarancji, tylko jeśli Klient pisemnie powiadomi dostawcę o wszelkich wadach w ciągu trzydziestu (30) dni od daty, kiedy zostały one wykryte.",
+          "pl": "Dostawca ponosi odpowiedzialność z tytułu niniejszej gwarancji, tylko jeśli Klient pisemnie powiadomi dostawcę o wszelkich wadach w ciągu trzydziestu (30) dni od daty, kiedy zostały wykryte lub powinny zostać wykryte.",
           "eng": "The Supplier shall only be liable under this warranty provided that the Customer gives written notice of any defects to the Supplier within thirty (30) days after such date as they are or should first reasonably have been discovered.",
           "keywords": [
             "odpowiedzialność",
@@ -110,7 +110,7 @@
           ]
         },
         "2": {
-          "pl": "Jeśli okaże się, że w ciągu pierwszych dwunastu miesięcy od dostarczenia Produktów do Klienta, Produkty te są niezgodne z gwarancjami podanynymi w pkt 9.1, Dostawca, wedle wyboru Klienta, wymieni te Produkty na Produkty zgodne z wymaganiami lub zwróci kwotę zapłaconą za takie niezgodne Produkty, pod warunkiem, że zostały spełnione wymagania określone w pkt 9.2",
+          "pl": "Jeśli okaże się, że w ciągu pierwszych dwunastu miesięcy od dostarczenia Produktów do Klienta, Produkty te są niezgodne z gwarancjami określonymi w pkt 9.1, Dostawca, wedle wyboru Klienta, wymieni te Produkty na Produkty zgodne z wymaganiami lub zwróci kwotę zapłaconą za takie niezgodne Produkty, pod warunkiem, że zostały spełnione wymagania określone w pkt 9.2",
           "eng": "If it is shown that the Products or any of them fail to comply with the warranties given under Clause 9.1 within the first twelve months after their delivery to the Customer and provided the requirements detailed in Clause 9.2 have been met, the Supplier will at the Customer’s option, either replace the Products with compliant Products or refund the price paid in respect of such non-compliant Products.",
           "keywords": [
             "gwarancja",
@@ -124,7 +124,7 @@
           ]
         },
         "3": {
-          "pl": "Dostawca nie ponosi odpowiedzialności za szkody pośrednie lub wtórne, utratę zysków lub roszczenia osób trzecich w odniesieniu do Produktów (Dostawca ponosi odpowiedzialność za śmierć lub uszkodzenie ciała wynikające z wad Produktów spowodowanych zaniedbaniem Dostawcy).",
+          "pl": "Dostawca nie ponosi odpowiedzialności za szkody pośrednie lub wtórne, utratę zysków lub roszczenia stron trzecich w odniesieniu do Produktów. Dostawca ponosi odpowiedzialność za śmierć lub uszkodzenie ciała wynikające z wad Produktów spowodowanych zaniedbaniem Dostawcy.",
           "eng": "The Supplier shall not be liable for any indirect or consequential losses, loss of profits or third party claims in relation to the Products (with the exception that the Supplier shall remain liable for death or personal injury arising out of defects in the Products to the extent attributable to the Supplier’s negligence).",
           "keywords": [
             "odpowiedzialność",
@@ -153,7 +153,7 @@
           ]
         }
       },
-      "Description_PL": "Potwierdzenie prawdziwosci faktów, które skloniły strony do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
+      "Description_PL": "Potwierdzenie prawdziwosci faktów, które skłoniły strony do przystąpienia do umowy; udzielenie rękojmi za ewentualne wady prawne lub wady fizyczne rzeczy, których umowa dotyczy",
       "Description_EN": "Representations and warranties are assurances that one party gives to another party; assurances are statements that the party can rely on as factual.",
       "Keywords": ""
     },
@@ -225,7 +225,7 @@
           ]
         },
         "4": {
-          "pl": "W przypadku istotnego naruszenia umowy przez jedną ze Stron, druga Strona ma prawo wypowiedzieć niniejszą Umowę i/lub odpowiednią Umowę Lokalną (w tym Zamówienia zawarte na jej mocy) w całości lub w części. Rozwiązanie Umowy Lokalnej wiąże się z rozwiązaniem Zamówień złożonych na mocy tej umowy. Naruszenie uważa się za istotne, jeśli w jego wyniku nie można w uzasadniony sposób oczekiwać , że druga strona pozostanie prawnie związana Umową/Umową Lokalną do czasu jej wygaśnięcia.",
+          "pl": "W przypadku istotnego naruszenia umowy przez jedną ze Stron, druga Strona ma prawo wypowiedzieć niniejszą Umowę i/lub odpowiednią Umowę Lokalną (w tym Zamówienia zawarte na jej mocy) w całości lub w części. Rozwiązanie Umowy Lokalnej wiąże się z rozwiązaniem Zamówień złożonych na mocy tej umowy. Naruszenie uważa się za istotne, jeśli w jego wyniku nie jest zasadne oczekiwać, że druga strona pozostanie prawnie związana Umową/Umową Lokalną do czasu jej wygaśnięcia.",
           "eng": "In the event of a Party's material breach, the other Party shall have the right to terminate this Agreement and/or the respective Local Agreement (including Orders covered hereby), wholly or partly. For the sake of order, termination of a Local Agreement shall include termination of the Orders given hereunder. A breach shall be considered material if the nature of the breach entails that the other party cannot reasonably be expected to remain legally bound by the Agreement/Local Agreement until expiration hereof.",
           "keywords": [
             "naruszenie",
@@ -237,7 +237,7 @@
           ]
         },
         "5": {
-          "pl": "Wypowiedzenie lub wygaśnięcie niniejszej Umowy lub Umowy Lokalnej (niezależnie od przyczyny) nie będzie miało wpływu na wszelkie nabyte prawa i zobowiązania Stron, ani nie wpłynie na wejście w życie ani też obowiązywanie postanowień niniejszej Umowy lub Umowy Lokalnej, które wyraźnie lub w sposób dorozumiany mają wejść w życie lub dalej obowiązywać w dniu ich rozwiązania lub wygaśnięcia.",
+          "pl": "Wypowiedzenie lub wygaśnięcie niniejszej Umowy lub Umowy Lokalnej (niezależnie od przyczyny) nie ma wpływu na wszelkie nabyte prawa i zobowiązania Stron, ani nie wpływa na wejście w życie ani też obowiązywanie postanowień niniejszej Umowy lub Umowy Lokalnej, które wyraźnie lub w sposób dorozumiany mają wejść w życie lub dalej obowiązywać w dniu ich rozwiązania lub wygaśnięcia.",
           "eng": "Any termination or expiry of this Agreement or any Local Agreement (however caused) shall not affect any accrued rights or liabilities of either Party, nor shall it affect the coming into force or the continuance in force of any provision of this Agreement or a Local Agreement which is expressly or by implication intended to come into or continue in force on or after such termination or expiry.",
           "keywords": [
             "nabyć",
@@ -329,7 +329,7 @@
           ]
         }
       },
-      "Description_PL": "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie moga zostać  zgloszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkód, kosztów, etc., jakie moze ona w związku z tym ponieść.",
+      "Description_PL": "W klauzuli tej jedna ze stron umowy przejmuje na siebie odpowiedzialność z tytułu wybranych roszczeń, jakie mogą zostać zgłoszone w stosunku do drugiej ze stron oraz zobowiązuje się do zrekompensowania jej strat, szkód, kosztów, etc., jakie może ona w związku z tym ponieść.",
       "Description_EN": "",
       "Keywords": ""
     },
@@ -373,7 +373,7 @@
           ]
         },
         "1": {
-          "pl": "Gdy Dostawca dowie się o okolicznościach opisanych pkt 10.1, niezwłocznie powiadomi Klienta o tych okolicznościach i ich przewidywanym wpływie na wykonywane przez niego zobowiązania Umowy.",
+          "pl": "Jeżeli Dostawca dowie się o okolicznościach opisanych pkt 10.1, niezwłocznie powiadomi Klienta o tych okolicznościach i ich przewidywanym wpływie na wykonywane przez niego zobowiązania Umowy.",
           "eng": "In the event that the Supplier becomes aware of any such circumstances, as described in clause 10.1, the Supplier shall as soon as is reasonably practicable notify the Customer of the circumstances and the anticipated effect on performance of this contract by the Supplier.",
           "keywords": [
             "okoliczności",
@@ -382,7 +382,7 @@
           ]
         },
         "2": {
-          "pl": "Sprzedawca nie będzie ponosił odpowiedzialności za niedotrzymanie warunków Umowy wynikające z okoliczności (w tym także obejmujące zaniedbania ze strony Sprzedawcy), które znajdują się poza kontrolą Sprzedawcy i które uniemożliwiają Sprzedawcy dotrzymanie warunków umowy lub ograniczają go w tym względzie.",
+          "pl": "Sprzedawca nie ponosi odpowiedzialności za niedotrzymanie warunków Umowy wynikające z okoliczności (w tym także obejmujące zaniedbania ze strony Sprzedawcy), które znajdują się poza kontrolą Sprzedawcy i które uniemożliwiają Sprzedawcy dotrzymanie warunków umowy lub ograniczają go w tym względzie.",
           "eng": "Seller shall not be liable for any failure to comply with the contract related to any circumstances whatever (whether or not involving Seller's negligence) which are beyond Seller's reasonable control and which prevent or restrict Seller from complying with the contract.",
           "keywords": [
             "odpowiedzialność",
@@ -394,7 +394,7 @@
           ]
         },
         "3": {
-          "pl": "Niemniej Sprzedawca może w zasadnych przypadkach oraz bez ponoszenia odpowiedzialności zawiesić wykonywanie wszystkich lub niektórych jego zobowiązań na mocy Umowy lub odstąpić od ich wykonywania , jeśli zdolność Sprzedawcy do dotrzymania takich zobowiązań zostanie w znacznym stopniu ograniczona.",
+          "pl": "Niemniej Sprzedawca może w zasadnych przypadkach oraz bez ponoszenia odpowiedzialności zawiesić wykonywanie wszystkich lub niektórych jego zobowiązań na mocy Umowy lub odstąpić od ich wykonywania, jeśli zdolność Sprzedawcy do dotrzymania takich zobowiązań zostanie w znacznym stopniu ograniczona.",
           "eng": "However, Seller may where reasonable and without liability suspend or terminate all or some of its obligations under the contract if Seller’s ability to fulfil such obligations is materially impaired.",
           "keywords": [
             "odpowiedzialność",
@@ -424,7 +424,7 @@
         },
         "1": {
           "pl": "Prawem właściwym dla wykładni niniejszej Umowy będzie prawo stanu Kalifornia, przy czym przyjęte w nim normy kolizyjne nie będą uwzględniane.",
-          "eng": "This Agreement will be governed by, and construed in accordance with the laws of the State of California without regard to its conflict of laws provisions.",
+          "eng": "This Agreement will be governed by and construed in accordance with the laws of the State of California without regard to its conflict of laws provisions.",
           "keywords": [
             "prawo właściwe",
             "wykładnia",
@@ -458,7 +458,7 @@
     "Notices": {
       "Examples": {
         "0": {
-          "pl": "Powiadomienia muszą mieć formę pisemną i być przesyłane na adres Sprzedającego lub Nabywcy, przy czym zostaną uznane za doręczone w pierwszym dniu roboczym po ich doręczeniu osobistym lub (z zastrzeżeniem potwierdzenia nadania) faksem, lub - w przypadku nadania przesyłką priorytetową lub ekspresową - po upływie pięciu dni roboczych od daty nadania na adres Nabywcy lub Sprzedającego.",
+          "pl": "Powiadomienia muszą mieć formę pisemną i być przesyłane na adres Sprzedającego lub Nabywcy, przy czym zostaną uznane za doręczone w pierwszym dniu roboczym po ich doręczeniu osobistym lub faksem (dostarczenie należy potwierdzić), lub - w przypadku nadania przesyłką priorytetową lub ekspresową - po upływie pięciu dni roboczych od daty nadania na adres Nabywcy lub Sprzedającego.",
           "eng": "Notices must be in writing to Seller's or Buyer's address and are deemed delivered on the first working day after delivery by hand or (subject to confirmation of transmission) by facsimile, or, where sent by first class or express post, five clear working days after the date of posting to Buyer's or Seller's address.",
           "keywords": [
             "z zastrzeżeniem",
@@ -594,7 +594,7 @@
           ]
         }
       },
-      "Description_PL": "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w zwiazku z realizacją wiążącej je umowy",
+      "Description_PL": "Klauzula ta określa, w jaki sposób strony zobowiązują się korzystać z informacji poufnych pozyskanych od siebie w związku z realizacją wiążącej je umowy",
       "Description_EN": "",
       "Keywords": ""
     },
@@ -631,7 +631,7 @@
     "Assignment": {
       "Examples": {
         "0": {
-          "pl": "Żadna ze stron nie ma prawa cedować, przekazywać ani w inny sposób przenosić (dobrowolnie, z mocy prawa lub w inny sposób) niniejszej Umowy lub praw lub obowiązków z niej wynikających bez uprzedniej pisemnej zgody drugiej strony, przy czym kaźda strona może przenieść (bez konieczności uzyskania zgody drugiej strony) niniejszą Umowę wraz ze wszystkimi prawami i obowiązkami z niej wynikającymi na stronę trzecią która nabyła wszystkie lub większość majątku takiej strony, lub z którą się łączy.",
+          "pl": "Żadna ze stron nie ma prawa cedować, przekazywać ani w inny sposób przenosić (dobrowolnie, z mocy prawa lub w inny sposób) niniejszej Umowy lub praw lub obowiązków z niej wynikających bez uprzedniej pisemnej zgody drugiej strony, przy czym każda strona może przenieść (bez konieczności uzyskania zgody drugiej strony) niniejszą Umowę wraz ze wszystkimi prawami i obowiązkami z niej wynikającymi na stronę trzecią która nabyła wszystkie lub większość majątku takiej strony, lub z którą się łączy.",
           "eng": "Neither party will, or will have the right to, assign, delegate or otherwise transfer (whether voluntarily, by operation of law or otherwise) this Agreement or any of its rights or obligations hereunder without the prior written consent of the other party; provided, however, that either party may assign (without the need to obtain the other party’s consent) this Agreement, together with all of its rights and obligations hereunder, to a third party that acquires all or substantially all of such party’s assets or into which such party is merged.",
           "keywords": [
             "cesja",
@@ -648,7 +648,20 @@
         "1": {
           "pl": "O ile niniejsza Umowa nie stanowi inaczej, postanowienia niniejszej Umowy są wiążące dla następców i cesjonariuszy Stron. Żadna ze stron nie może cedować ani przenosić swoich praw lub obowiązków wynikających z niniejszej Umowy bez uprzedniej pisemnej zgody drugiej Strony, która nie może zostać odmówiona bez uzasadnienia.",
           "eng": "Except as otherwise expressly provided in this Agreement, the provisions of this Agreement shall inure to the benefit of and be binding upon, the successors and permitted assigns of the parties. Neither party shall assign or transfer its rights or obligations under this Agreement without the prior written consent of the other party, which shall not be unreasonably withheld.",
-          "keywords": []
+          "keywords": [
+
+            "następca",
+            "cesjonariusz",
+            "obowiązywać",
+            "cesja",
+            "successor",
+            "bind",
+            "assign" ,
+            "transfer"
+        
+
+
+          ]
         }
       },
       "Description_PL": "Klauzula określa w jakim trybie i zakresie strony umowy mogą scedować przysługujqce im prawa na strony trzecie",
@@ -703,7 +716,7 @@
           ]
         },
         "3": {
-          "pl": "Postępowania sądowe mające na celu wyegzekwowanie orzeczenia arbitrażowego będą wnoszone do sądów stanowych i federalnych stanu Virginia; strony mają również prawo wyegzekwowac orzeczenia takiego sądu przed każdym sądem właściwym.",
+          "pl": "Postępowania sądowe mające na celu wyegzekwowanie orzeczenia arbitrażowego będą wnoszone do sądów stanowych i federalnych stanu Virginia; strony mają również prawo wyegzekwować orzeczenia takiego sądu przed każdym sądem właściwym.",
           "eng": "Any litigation brought to enforce an arbitration award shall be brought in the state or federal courts of the state of Virginia, U.S.A.; however, the parties shall also have the right to enforce a judgment of such a court in any court of competent jurisdiction.",
           "keywords": [
             "postępowanie",
@@ -731,7 +744,7 @@
           ]
         },
         "5": {
-          "pl": "Strony będą próbować w dobrej wierze dążyć do zawarcia ugody w sprawie wszelkich roszczeń lub sporów między nimi wynikającymi lub związanymi z niniejszą Umową. Jeśli spór nie zostanie rozwiązany w drodze negocjacji, strony przekażą spór do mediacji zgodnie z obowiązującymi przepisami. Jeśli strony nie uzgodnią warunków ugody w ciągu 45 dni od rozpoczęcia procedury mediacyjnej, spór zostanie rozsztrzygnięty w postępowaniu w sądzie powszechnym Rzeczypospolitej Polskiej właściwym terytorialnie dla siedziby Klienta.",
+          "pl": "Strony będą próbować w dobrej wierze zawrzeć ugodę w sprawie wszelkich roszczeń lub sporów między nimi wynikającymi lub związanymi z niniejszą Umową. Jeśli spór nie zostanie rozwiązany w drodze negocjacji, strony przekażą spór do mediacji zgodnie z obowiązującymi przepisami. Jeśli strony nie uzgodnią warunków ugody w ciągu 45 dni od rozpoczęcia procedury mediacyjnej, spór zostanie rozstrzygnięty w postępowaniu w sądzie powszechnym Rzeczypospolitej Polskiej właściwym dla siedziby Klienta.",
           "eng": "The parties will attempt in good faith to negotiate a settlement to any claim or dispute between them arising out of or in connection with this Agreement. If the matter is not resolved by negotiation, the parties will refer the dispute to mediation in accordance with applicable provisions. If the parties fail to agree terms of settlement within 45 days of the commencement of the procedure the dispute shall be subject to court procedure thought the common courts of the Republic of Poland, as per territorial jurisdiction of the Customer’s corporate seat.",
           "keywords": [
             "dobra wiara",
@@ -765,14 +778,14 @@
           ]
         }
       },
-      "Description_PL": "",
+      "Description_PL": "Klauzula w której strony uzgadniają, że spory między nimi będzie rozstrzygać sąd arbitrażowy ",
       "Description_EN": "",
       "Keywords": ""
     },
     "Counterparts": {
       "Examples": {
         "0": {
-          "pl": "Wszystkie podpisane kopie niniejszej Umowy są równie ważne jak oryginał. Niniejsza Umowa może zostać zawarta za pomocą kopii jej oryginału, a wszystkie razem stanowią one jedną i tę samą Umowę. Kopia faksymile faksymile strony niniejszej umowy ma taki sam skutek i ważność jak oryginalny podpis.",
+          "pl": "Wszystkie podpisane kopie niniejszej Umowy są równie ważne jak oryginał. Niniejsza Umowa może zostać zawarta za pomocą kopii jej oryginału, a wszystkie razem stanowią one jedną i tę samą Umowę. Kopia faksymile strony niniejszej umowy ma taki sam skutek i ważność jak oryginalny podpis.",
           "eng": "All executed copies of this Agreement are duplicate originals, equally admissible as evidence. This Agreement may be executed in counterparts, and such counterparts taken together shall be deemed the Agreement. A facsimile copy of a signature of a party hereto shall have the same effect and validity as an original signature.",
           "keywords": [
             "kopia",
@@ -796,7 +809,7 @@
     "Waiver": {
       "Examples": {
         "0": {
-          "pl": "Niewykonanie przez którąkolwiek ze stron dowolnych uprawnień, praw, przywilejów lub środków zaradczych na mocy niniejszej Umowy lub opóźnienie tej strony w wykonywaniu nie będzie stanowiło odstąpienia przez tę stronę z uprawnień, praw, przywilejów lub środków zaradczych; podobnie, żadne pojedyncze lub częściowe wykonanie takiego uprawnienia, prawa, przywileju lub środka zaradczego lub odstąpienie od niego nie wykluczy żadnego innego lub dalszego wykonywania ich lub innego rodzaju uprawnień, praw, przywilejów lub środków zaradczych.",
+          "pl": "Niewykorzystanie przez którąkolwiek ze stron dowolnych uprawnień, praw, przywilejów lub środków zaradczych na mocy niniejszej Umowy lub opóźnienie tej strony w ich wykorzystaniu nie będzie stanowiło odstąpienia od nich przez tę stronę; podobnie, żadne pojedyncze lub częściowe wykorzystanie ich nie wyklucza żadnego innego lub dalszego wykonywania ich lub innego rodzaju uprawnień, praw, przywilejów lub środków zaradczych.",
           "eng": "No failure on the part of either party to exercise any power, right, privilege or remedy under this Agreement, and no delay on the part of either party in exercising any power, right, privilege or remedy under this Agreement, shall operate as a waiver of such power, right, privilege or remedy; and no single or partial exercise or waiver of any such power, right, privilege or remedy shall preclude any other or further exercise thereof or of any other power, right, privilege or remedy.",
           "keywords": [
             "środek zaradczy",
