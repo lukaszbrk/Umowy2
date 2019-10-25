@@ -7,7 +7,7 @@ import DefaultScreen from "./DefaultScreen.js";
 import KeywordSelectionScreen from "../Keywords/KeywordSelectionScreen.js";
 import ClauseScreen from "../Clauses/ClauseScreen.js";
 
-const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
+const MainScreen = ({ data, selectedClause, selectedKeyword, RefButton }) => {
   //console.log("Rendering Main screen");
 
   function selectScreen(selectedClause, selectedKeyword) {
@@ -92,6 +92,8 @@ const MainScreen = ({ data, selectedClause, selectedKeyword }) => {
         {/*<p>Content: {selectedKeyword}</p>*/}
         {selectScreen(selectedClause, selectedKeyword)}
       </Segment>
+
+      <RefButton />
     </Grid.Column>
   );
 };

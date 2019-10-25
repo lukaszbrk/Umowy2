@@ -24,10 +24,10 @@
           <i>{"#" + keyword + " "}</i>
         ))}
         */
-
+import image from "./bojler.png";
 import axios from "axios";
 import React, { Component } from "react";
-import { Segment, Label, Modal, Button } from "semantic-ui-react";
+import { Segment, Label, Modal, Button, Icon, Image } from "semantic-ui-react";
 import "./Autosuggest.css";
 import "./showSuggestions.css";
 
@@ -40,11 +40,24 @@ import { getSource } from "./Keys_n_Clauses";
 const inputStyle = {
   padding: "5px 5px",
 
-  border: "1/2px solid ",
+  border: "1/2px solid "
   //borderRadius: "3px"
 };
 
-const calcExamples = data => {
+function escapeRegexCharacters(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+const utilizeScroll = () => {
+  const htmlElRef = React.createRef();
+  const executeScroll = () => {
+    window.scrollTo(0, htmlElRef.current.offsetTop);
+  };
+
+  return { executeScroll, htmlElRef };
+};
+
+const countExamples = data => {
   let clause;
   let counter = 0;
 
@@ -62,15 +75,12 @@ let source = getSource();
 //
 
 const filtering = (input, word) => {
-  
-  var rgxp = new RegExp("(^"+input+")|(\\s"+input+")", "gi");
-  if (word ==="share capital") {
-
-    console.log(rgxp)
+  var rgxp = new RegExp("(^" + input + ")|(\\s" + input + ")", "gi");
+  if (word === "share capital") {
+    console.log(rgxp);
   }
 
   if (word.match(rgxp)) {
-   
     return true;
   } else {
     return false;
@@ -80,7 +90,7 @@ const filtering = (input, word) => {
 // How to calculate suggestions for any given input value.
 const getSuggestions = value => {
   //TODO check every word in the input
-  const inputValue = value.trim().toLowerCase();
+  const inputValue = escapeRegexCharacters(value.trim().toLowerCase());
   const inputLength = inputValue.length;
 
   let found_clauses = [];
@@ -93,8 +103,8 @@ const getSuggestions = value => {
     source.map(entry =>
       entry.keywords.pl.concat(entry.keywords.en).map(keyword =>
         filtering(inputValue, keyword)
-        //keyword.toLowerCase().includes(inputValue, 0) //replace with regex or split
-          ? //filtering(inputValue, keyword)
+          ? //keyword.toLowerCase().includes(inputValue, 0) //replace with regex or split
+            //filtering(inputValue, keyword)
             found_keywords.push(entry)
           : {}
       )
@@ -133,7 +143,7 @@ const getSuggestionValue = suggestion => suggestion.clause;
 export default class SearchExampleStandard extends Component {
   constructor() {
     super();
-    this.myRef = React.createRef() 
+    this.elScroll = utilizeScroll();
 
     // Autosuggest is a controlled component.
     // This means that you need to provide an input value
@@ -148,10 +158,9 @@ export default class SearchExampleStandard extends Component {
       resetPagination: false,
       selectedKeyword: false,
       showKeywords: false
-     
     };
 
-    this.baseState = this.state
+    this.baseState = this.state;
   }
   //sort keywords
   sortAlph = arr => {
@@ -197,8 +206,13 @@ export default class SearchExampleStandard extends Component {
           <Label
             style={
               keyword.search(
-                new RegExp("^" + this.state.value + "|\\b" + this.state.value,
-                "gi")
+                new RegExp(
+                  "^" +
+                    escapeRegexCharacters(this.state.value) +
+                    "|\\b" +
+                    escapeRegexCharacters(this.state.value),
+                  "gi"
+                )
               ) !== -1 && this.state.value.length > 1
                 ? { marginTop: "2px", backgroundColor: "#fbbd08" }
                 : { marginTop: "2px" }
@@ -206,7 +220,6 @@ export default class SearchExampleStandard extends Component {
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
-        
           >
             {keyword}
           </Label>
@@ -216,13 +229,17 @@ export default class SearchExampleStandard extends Component {
           <Label
             style={
               keyword.search(
-                new RegExp( "^" + this.state.value + "|\\b" + this.state.value,
-                "gi")
+                new RegExp(
+                  "^" +
+                    escapeRegexCharacters(this.state.value) +
+                    "|\\b" +
+                    escapeRegexCharacters(this.state.value),
+                  "gi"
+                )
               ) !== -1 && this.state.value.length > 1
                 ? { marginTop: "2px", backgroundColor: "#fbbd08" }
                 : { marginTop: "2px" }
             }
-    
             onClick={this.onClickLabel}
             className={keyword}
             key={keyword}
@@ -234,23 +251,22 @@ export default class SearchExampleStandard extends Component {
     </Segment>
   );
 
- //hide keywords when input length is 0
-    hideKeywords = () => {
-    
-      if (this.state.value.length ===0) {
-
-        this.setState({showKeywords: false} )
-      }  else {
-  
-  
-      }
-    };
+  //hide keywords when input length is 0
+  hideKeywords = () => {
+    if (this.state.value.length === 0) {
+      this.setState({ showKeywords: false });
+    } else {
+    }
+  };
   // Autosuggest will call this function every time you need to update suggestions.
   //
 
-    
   onChange = (event, { newValue }) => {
-    this.setState(this.setState({ value: newValue }, ()=>{this.hideKeywords()}));
+    this.setState(
+      this.setState({ value: newValue }, () => {
+        this.hideKeywords();
+      })
+    );
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
@@ -283,20 +299,18 @@ export default class SearchExampleStandard extends Component {
   storeInputReference = autosuggest => {
     if (autosuggest !== null) {
       this.input = autosuggest.input;
-      console.log(this.input )
+      console.log(this.input);
     }
   };
 
-
   componentDidMount() {
-
     //focusing on input component
 
     //this.input.focus();
     // query server for file size
     if (!sessionStorage.getItem("data")) {
       axios
-        .get("https://api.myjson.com/bins/enfwk")
+        .get("https://api.myjson.com/bins/nz4uw")
         .then(res => {
           this.setState({ data: res.data }, () => {
             sessionStorage.setItem("data", JSON.stringify(this.state.data));
@@ -311,6 +325,17 @@ export default class SearchExampleStandard extends Component {
     }
   }
 
+  RefButton = () => {
+    return (
+      <Button  color="green"  style={{
+        position: "fixed",
+        bottom: 10
+     
+      }}onClick={this.elScroll.executeScroll}>
+        Do góry
+      </Button>
+    );
+  };
 
   render() {
     //console.log("Rendering Example screen");
@@ -325,6 +350,7 @@ export default class SearchExampleStandard extends Component {
 
     return (
       <React.Fragment>
+      
         <div style={{ height: "100%", width: "30%", left: 0 }}>
           <Autosuggest
             menuStyle={inputStyle}
@@ -337,9 +363,7 @@ export default class SearchExampleStandard extends Component {
             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
             onSuggestionSelected={this.onSuggestionSelected}
             focusInputOnSuggestionClick={false}
-            //ref={this.storeInputReference} 
-          
-         
+            ref={this.elScroll.htmlElRef}
           />
         </div>
         {/*TODO add menu below; add styling */}
@@ -349,48 +373,52 @@ export default class SearchExampleStandard extends Component {
             right: 5,
             top: 20,
             width: "60%",
-      
-   
-            overflow: 'auto', maxHeight: 500 }}
- 
-        
+
+            overflow: "auto",
+            maxHeight: 500
+          }}
         >
           <ScreenSelection
+            RefButton={this.RefButton}
             data={this.state.data}
             selectedClause={this.state.selectedClause}
             selectedKeyword={this.state.selectedKeyword}
           />
         </div>
-        <Modal
-          trigger={
-            <Button
-              size='tiny'
-              style={{
+
+     
+
+          <Modal
+            trigger={
+              <Button size="tiny"    style={{
                 position: "fixed",
                 bottom: 10,
                 right: 5
-              }}
-            >
-              <b>O stronie</b>
-            </Button>
-          }
-        >
-          <Modal.Content>
-            <p>Liczba przykładów klauzul: {calcExamples(this.state.data)}</p>
-            <p>
-              Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
-              umowach gospodarczych w j. polskim i angielskim. Prawie wszystkie
-              przykłady zostały przetłumaczona przez autora strony.{" "}
-            </p>{" "}
-            <p>
-              <b>
-                {" "}
-                Kontakt:{" "}
-                <a href="mailto:borkowskil@outlook.pl">borkowskil@outlook.pl</a>
-              </b>
-            </p>
-          </Modal.Content>
-        </Modal>
+              }}>
+                <b>O stronie</b>
+              </Button>
+            }
+          >
+            <Modal.Content>
+              <Image src={image} size="tiny" centered />
+              <p>Liczba przykładów klauzul: {countExamples(this.state.data)}</p>
+              <p>
+                Wersja demonstracyjna strony do wyszukiwania typowych klauzul w
+                umowach gospodarczych w j. polskim i angielskim. Prawie
+                wszystkie przykłady zostały przetłumaczona przez autora strony.{" "}
+              </p>{" "}
+              <p>
+                <b>
+                  {" "}
+                  Kontakt:{" "}
+                  <a href="mailto:borkowskil@outlook.pl">
+                    borkowskil@outlook.pl
+                  </a>
+                </b>
+              </p>
+            </Modal.Content>
+          </Modal>
+  
       </React.Fragment>
     );
   }
