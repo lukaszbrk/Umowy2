@@ -10,7 +10,7 @@ const KeywordSelectionScreen = ({ data }) => {
   function returntoKeywordSelectionScreen() {
     setListItem("");
   }
-  // btn for returning to this component; passed as props
+  // btn for returning to this component; passed further as props
   const RtrBtn = () => {
     return (
       <Button
