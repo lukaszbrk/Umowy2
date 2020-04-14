@@ -310,7 +310,7 @@ export default class SearchExampleStandard extends Component {
     // query server for file size
     if (!sessionStorage.getItem("data")) {
       axios
-        .get("https://api.myjson.com/bins/nz4uw")
+        .get("https://api.npoint.io/e835640185c25f9adbd7")
         .then(res => {
           this.setState({ data: res.data }, () => {
             sessionStorage.setItem("data", JSON.stringify(this.state.data));
