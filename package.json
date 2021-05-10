@@ -6,7 +6,7 @@
     "@welldone-software/why-did-you-render": "^3.3.3",
     "axios": "^0.19.0",
     "faker": "^4.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-autosuggest": "^9.4.3",
     "react-copy-to-clipboard": "^5.0.1",
